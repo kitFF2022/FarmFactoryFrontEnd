@@ -2,7 +2,7 @@
 
 
 ## start
-###start project with git clone
+### start project with git clone
 
 ## init 
 ### init with npm install
