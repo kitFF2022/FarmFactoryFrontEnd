@@ -22,6 +22,7 @@ https://www.cssscript.com/background-image-slider/
 }
 .Description>div>img {
     float:left;
+    padding: 15px
 }
 
 .Description>div>p>.D_title {
