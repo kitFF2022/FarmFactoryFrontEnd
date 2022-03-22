@@ -5,7 +5,8 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="Footer">
-                copyright &copy; 이계?외됨 all rights reserved
+                <span className="Footer_title">Farm Factory</span> 
+                <span> &copy; copyright</span>
             </div>
             
             

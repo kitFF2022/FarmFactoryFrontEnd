@@ -25,11 +25,27 @@ https://www.cssscript.com/background-image-slider/
 }
 
 .Description>div>p>.D_title {
-    
+    color: green;
     vertical-align: top;
 }
 .Description>div>p>.D_decs {
     
     clear:both;
     vertical-align: top;
+}
+
+.Download {
+    text-align: center;
+}
+.Download>h1 {
+    font-size: 50px;
+    color: green;
+}
+.Download>span {
+    font-size: 25px;
+    color: green;
+}
+.Download>span>a {
+    color: rgb(0, 197, 89);
+    text-decoration : none;
 }

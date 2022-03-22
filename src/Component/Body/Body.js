@@ -30,8 +30,8 @@ const Hover = () => {
     return(
         <div className="Hover">
             <span><a>VR</a></span>
-            <span>APP</span>
-            <span>WEB</span>
+            <span><a helf="">APP</a></span>
+            <span><a helf="">WEB</a></span>
         </div>
     )
 }
@@ -55,11 +55,11 @@ const Download = () => {
         <div className="Download">
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             <h1> Get Start!</h1>
-            <span><a>VR</a></span>
-            <span>|</span>
-            <span><a>APP</a></span>
-            <span>|</span>
-            <span><a>WEB</a></span>
+            <span><a href="http://www.google.com">VR</a></span>
+            <span>    |    </span>
+            <span><a href="www.naver.com">APP</a></span>
+            <span>   |    </span>
+            <span><a href="www.daum.net">WEB</a></span>
             
         </div>
     )
