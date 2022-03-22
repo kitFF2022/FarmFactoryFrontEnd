@@ -4,15 +4,12 @@ https://www.cssscript.com/background-image-slider/
 .Hover {
     text-align: center;
     color: green;
-    
-
 }
 .Hover>span {
     font-size: 50px;
     padding:5px 20px 5px 20px;
     display:inline-block; 
 }
-
 .Hover>span:after {
     display:block;
     content: '';
@@ -20,7 +17,19 @@ https://www.cssscript.com/background-image-slider/
     transform: scaleX(0);  
     transition: transform 100ms ease-in-out;
 }
-
 .Hover>span:hover:after {
     transform: scaleX(1);
+}
+.Description>div>img {
+    float:left;
+}
+
+.Description>div>p>.D_title {
+    
+    vertical-align: top;
+}
+.Description>div>p>.D_decs {
+    
+    clear:both;
+    vertical-align: top;
 }

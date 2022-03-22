@@ -39,8 +39,27 @@ const Hover = () => {
 const Description = () => {
     return (
         <div className="Description">
-            <img class = "image" src="" alt="미리보기">
-            </img>
+            <div>
+                <img src='https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/uPd/image/i7otegJ8UuUstpqoCEv7uOnS4vM.jpg' alt="사진1"></img>
+                <p>
+                    <h1 className="D_title">VR</h1>
+                    <span className="D_desc">응애응애</span>
+                </p>
+            </div>
+        </div>
+    )
+}
+
+const Download = () => {
+    return (
+        <div className="Download">
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <h1> Get Start!</h1>
+            <span><a>VR</a></span>
+            <span>|</span>
+            <span><a>APP</a></span>
+            <span>|</span>
+            <span><a>WEB</a></span>
             
         </div>
     )
@@ -53,7 +72,10 @@ class Body extends React.Component {
                 <Slideshow />
                 <Hover/>
                 <Description/>
+                <Download/>
             </div>
+            
+            
         );
     }
 }
