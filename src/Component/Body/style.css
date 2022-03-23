@@ -1,0 +1,25 @@
+/*
+...normalize
+*/
+
+
+.menuBar{
+    /* padding: 1rem; */
+    background: rgb(0, 197, 89);
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.tabs li{
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #efefef;
+    padding: 1rem;
+}
+.tabs li.active{
+    background-color: green;
+    height: 100%;
+}
+.textbox {
+    padding: 0px 16px 0px 16px;
+}

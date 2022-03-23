@@ -4,6 +4,7 @@ import './Body.css'
 import Img1 from './img1.jpg';
 import Img2 from './img2.jpg';
 import Img3 from './img3.jpg';
+import Tabmenu from './Tabmenu';
 
 const images = [
     { url: Img1 },
@@ -29,26 +30,19 @@ const Slideshow = () => {
 const Hover = () => {
     return(
         <div className="Hover">
-            <span><a>VR</a></span>
-            <span><a helf="">APP</a></span>
-            <span><a helf="">WEB</a></span>
+            <span><button >VR</button></span>
+            <span>
+                {/* <a> */}
+                <button >
+                    APP
+                </button>
+                {/* </a> */}
+            </span>
+            <span><button>WEB</button></span>
         </div>
     )
 }
 
-const Description = () => {
-    return (
-        <div className="Description">
-            <div>
-                <img src='https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/uPd/image/i7otegJ8UuUstpqoCEv7uOnS4vM.jpg' alt="사진1"></img>
-                <p>
-                    <h1 className="D_title">VR</h1>
-                    <span className="D_desc">응애응애</span>
-                </p>
-            </div>
-        </div>
-    )
-}
 
 const Download = () => {
     return (
@@ -66,12 +60,26 @@ const Download = () => {
 }
 
 class Body extends React.Component {
+    
+    constructor(props) {
+        super();
+    
+        this.state = {
+          menu: 0,
+        };
+      }
+    
+      changeMenu = (menuIndex) =>{
+        this.setState({menu : menuIndex});
+      }
+    
+
     render() {
         return (
             <div>
                 <Slideshow />
                 <Hover/>
-                <Description/>
+                <Tabmenu/>
                 <Download/>
             </div>
             
