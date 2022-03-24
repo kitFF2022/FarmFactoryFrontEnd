@@ -1,0 +1,12 @@
+.Footer{
+    background-color: rgb(32, 32, 32);
+    color: aliceblue;
+}
+.Footer>.Footer_title {
+    color: rgb(1, 197, 132);
+    font-size: 40px;
+}
+.Footer>span {
+    
+    font-size: 15px;
+}
