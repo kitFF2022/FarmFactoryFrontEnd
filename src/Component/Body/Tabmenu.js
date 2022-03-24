@@ -26,7 +26,7 @@ class App extends React.Component{
 
   render(){
     return(
-      <div className="wrap">
+      <div className="Tabmenuwrap">
         <div className="menuBar">
           <ul className="tabs">
             <li className={`${this.state.menu === 0? 'active': ''}`} onClick={() => this.changeMenu(0)}>VR</li>
