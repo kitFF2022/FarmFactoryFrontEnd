@@ -11,4 +11,4 @@
 ### run with npm start
 
 ## todo
-### 디자인 확정
+### ~~디자인 확정~~
