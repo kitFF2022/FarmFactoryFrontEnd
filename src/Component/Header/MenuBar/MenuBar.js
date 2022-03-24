@@ -1,7 +1,5 @@
 import React from 'react'
 import './MenuBar.css'
-import Logo from './logo.png'
-import User from './user.png'
 
 function MenuBarMenu(props) {
     return (
@@ -29,7 +27,7 @@ class MenuBar extends React.Component {
             <nav className="MenuBar">
                 <ul>
                     <li className='MenuBarLiLogo'>
-                        <img src={Logo}></img>
+                        <img src={process.env.PUBLIC_URL + '/img/logo.png'}></img>
                     </li>
                     <li className='MenuBarLiLogoText'>
                         <div>
@@ -40,7 +38,7 @@ class MenuBar extends React.Component {
                         <ul>
                             {this.renderMenu(0)}
                             {this.renderMenu(1)}
-                            <li><img className='MenuBarLiUser' src={User}></img></li>
+                            <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/user.png'}></img></li>
                         </ul>
                     </li>
                 </ul>

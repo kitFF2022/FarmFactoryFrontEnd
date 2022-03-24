@@ -1,0 +1,32 @@
+.Slideshowli1 {
+    list-style: none;
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.Slideshowli2 {
+    list-style: none;
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.Slideshowul2 {
+    display: block !important;
+    list-style: none;
+}
+
+.SlideshowTitle {
+    font-size: 50px;
+    color: yellowgreen;
+}
+
+.SlideshowName {
+    font-size: 40px;
+    color: green;
+}
+
+.SlideshowSubs {
+    font-size: 20px;
+}

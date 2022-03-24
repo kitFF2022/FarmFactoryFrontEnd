@@ -1,0 +1,14 @@
+.textbox {
+    padding: 0px 16px 0px 16px;
+}
+.textbox img {
+    padding: 16px;
+    float: left;
+    max-width: auto;
+    max-width: 480px;
+}
+.textbox > .start_button{
+    text-align: center;
+    vertical-align: middle;
+    left: 60%;
+}

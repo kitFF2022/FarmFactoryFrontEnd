@@ -1,8 +1,12 @@
-/*
-...normalize
-*/
-
-
+.menuBar{
+    /* padding: 1rem; */
+    
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+    left : 50%;
+    right: 50%;
+}
 
 .tabs li{
     font-size: 30px;
