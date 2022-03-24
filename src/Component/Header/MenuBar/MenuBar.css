@@ -1,28 +1,31 @@
-.MenuBar {
-    display: relative;
-    width: 100%;
-}
-
-ul li {
+.MenuBar ul li {
+    list-style: none;
     display: inline-block;
+    width: 33%;
+    vertical-align: middle;
 }
 
-.MenuBarLiLogo {
+.MenuBarLiLogo img{
     float: left;
+    height: 50px;
 }
 
-.MenuBarLiLogoText {
-    float: right;
-    position: relative;
-    left:-50%;
-    margin-top: 20px;
-}
-.MenuBarLiLogoText div {
-    float: left;
-    position: relative;
-    left:50%;
+.MenuBarLiLogoText div{
+    vertical-align: middle;
+    color: green;
+    font-weight: bold;
+    font-size: 27px;
 }
 
 .MenuBarLiMenu {
     float: right;
+}
+
+.MenuBarMenuItem {
+    margin: 15px;
+}
+
+.MenuBarLiUser {
+    vertical-align: middle;
+    height: 30px;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './MenuBar.css'
 import Logo from './logo.png'
+import User from './user.png'
 
 function MenuBarMenu(props) {
     return (
@@ -13,7 +14,7 @@ class MenuBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menu: ['HOME', '공지사항', '서비스']
+            menu: ['HOME', '서비스']
         }
     }
 
@@ -39,7 +40,7 @@ class MenuBar extends React.Component {
                         <ul>
                             {this.renderMenu(0)}
                             {this.renderMenu(1)}
-                            {this.renderMenu(2)}
+                            <li><img className='MenuBarLiUser' src={User}></img></li>
                         </ul>
                     </li>
                 </ul>
