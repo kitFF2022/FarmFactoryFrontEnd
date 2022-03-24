@@ -6,7 +6,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className="wrap">
+            <div className="HeaderWrap">
                 <div className="menuBar">
                     <MenuBar />
                 </div>
