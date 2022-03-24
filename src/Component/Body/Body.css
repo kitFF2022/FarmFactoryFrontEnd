@@ -20,20 +20,6 @@ https://www.cssscript.com/background-image-slider/
 .Hover>span:hover:after {
     transform: scaleX(1);
 }
-.Description>div>img {
-    float:left;
-    padding: 15px
-}
-
-.Description>div>p>.D_title {
-    color: green;
-    vertical-align: top;
-}
-.Description>div>p>.D_decs {
-    
-    clear:both;
-    vertical-align: top;
-}
 
 .Download {
     text-align: center;

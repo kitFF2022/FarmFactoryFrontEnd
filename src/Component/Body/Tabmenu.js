@@ -1,13 +1,13 @@
 
 import React, { Component } from "react";
 import './style.css';
-import Mail from './Mail';
-import Cafe from './Cafe';
+import Vr from './Vr';
+import Application from './Application';
 import Web from './Web';
 
 const menuList = {
-  0: <Mail />,
-  1: <Cafe />,
+  0: <Vr />,
+  1: <Application />,
   2: <Web />,
 };
 
@@ -30,7 +30,9 @@ class App extends React.Component{
         <div className="menuBar">
           <ul className="tabs">
             <li className={`${this.state.menu === 0? 'active': ''}`} onClick={() => this.changeMenu(0)}>VR</li>
+            <li> | </li>
             <li className={`${this.state.menu === 1? 'active': ''}`} onClick={() => this.changeMenu(1)}>App</li>
+            <li> | </li>
             <li className={`${this.state.menu === 2? 'active': ''}`} onClick={() => this.changeMenu(2)}>Web</li>
           </ul>
         </div>

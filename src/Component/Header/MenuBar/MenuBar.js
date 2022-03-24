@@ -25,16 +25,18 @@ class MenuBar extends React.Component {
 
     render() {
         return (
-            <nav className="MenuBar">
-                <img className="MenuBarLogo" src={Logo}></img>
-                <div className="MenuBarLogoText">
-                    Farm Factory
+            <nav>
+                <div className="MenuBar">
+                    <img className="MenuBarLogo" src={Logo}></img>
+                    <div className="MenuBarLogoText">
+                        Farm Factory
+                    </div>
+                    <ul className="MenuBarMenu">
+                        {this.renderMenu(0)}
+                        {this.renderMenu(1)}
+                        {this.renderMenu(2)}
+                    </ul>
                 </div>
-                <ul className="MenuBarMenu">
-                    {this.renderMenu(0)}
-                    {this.renderMenu(1)}
-                    {this.renderMenu(2)}
-                </ul>
             </nav>
         );
     }

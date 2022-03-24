@@ -27,58 +27,27 @@ const Slideshow = () => {
     )
 }
 
-const Hover = () => {
-    return(
-        <div className="Hover">
-            <span><button >VR</button></span>
-            <span>
-                {/* <a> */}
-                <button >
-                    APP
-                </button>
-                {/* </a> */}
-            </span>
-            <span><button>WEB</button></span>
-        </div>
-    )
-}
-
-
 const Download = () => {
     return (
         <div className="Download">
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/>
             <h1> Get Start!</h1>
-            <span><a href="http://www.google.com">VR</a></span>
+            <span><a href="#">VR</a></span>
             <span>    |    </span>
-            <span><a href="www.naver.com">APP</a></span>
+            <span><a href="#">APP</a></span>
             <span>   |    </span>
-            <span><a href="www.daum.net">WEB</a></span>
-            
+            <span><a href="#">WEB</a></span>
+            <br/>
+            <span><button>실행하기</button></span>
         </div>
     )
 }
 
 class Body extends React.Component {
-    
-    constructor(props) {
-        super();
-    
-        this.state = {
-          menu: 0,
-        };
-      }
-    
-      changeMenu = (menuIndex) =>{
-        this.setState({menu : menuIndex});
-      }
-    
-
     render() {
         return (
             <div>
                 <Slideshow />
-                <Hover/>
                 <Tabmenu/>
                 <Download/>
             </div>

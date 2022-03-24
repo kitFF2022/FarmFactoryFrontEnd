@@ -3,6 +3,10 @@
     color: aliceblue;
 }
 .Footer>.Footer_title {
-    color: aquamarine;
-    font-size: 20;
+    color: rgb(1, 197, 132);
+    font-size: 40px;
+}
+.Footer>span {
+    
+    font-size: 15px;
 }
