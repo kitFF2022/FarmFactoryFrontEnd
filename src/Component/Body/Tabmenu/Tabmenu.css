@@ -1,3 +1,6 @@
+.Tabmenuwrap {
+    background-color: gray;
+}
 .menuBar{
     /* padding: 1rem; */
     
@@ -7,7 +10,9 @@
     left : 50%;
     right: 50%;
 }
-
+.tabs {
+    padding: 36px;
+}
 .tabs li{
     font-size: 30px;
     font-weight: bold;

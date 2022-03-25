@@ -27,6 +27,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="Tabmenuwrap">
+      <br/>
         <div className="menuBar">
           <ul className="tabs">
             <li className={`${this.state.menu === 0 ? 'active' : ''}`} onClick={() => this.changeMenu(0)}>VR</li>
@@ -40,6 +41,8 @@ class App extends React.Component {
           {menuList[this.state.menu]}
         </div>
         <Loginbutton/>
+        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
       </div>
     )
   }

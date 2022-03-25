@@ -1,11 +1,14 @@
 .textbox {
-    padding: 0px 16px 0px 16px;
+    padding: 0px 100px 0px 100px;
 }
 .textbox img {
-    padding: 16px;
+    padding: 1px;
     float: left;
     width: 60%;
     min-width: 320px;
     max-width: 640px;
     /* max-width: 480px; */
+}
+.textbox > {
+    padding: 0px 100px 0px 100px;
 }
