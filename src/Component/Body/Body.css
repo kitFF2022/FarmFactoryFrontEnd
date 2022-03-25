@@ -36,3 +36,10 @@ https://www.cssscript.com/background-image-slider/
     color: rgb(0, 197, 89);
     text-decoration : none;
 }
+.Bodycontainer {
+    position: relative;
+    width: 1130px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    letter-spacing: -.2px;
+}

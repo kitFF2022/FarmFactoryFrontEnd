@@ -8,7 +8,7 @@ import Slideshow from "./Slideshow/Slideshow";
 class Body extends React.Component {
     render() {
         return (
-            <div>
+            <div className="Bodycontainer">
                 <Slideshow />
                 <Tabmenu />
                 <Download />
