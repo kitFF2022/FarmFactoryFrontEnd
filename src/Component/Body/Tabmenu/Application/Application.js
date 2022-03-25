@@ -18,6 +18,7 @@ class Application extends React.Component {
         <img src='/img/img2.jpg' alt="APP 사진">
         </img>
         <span className='h1'>APP</span><br/>
+        <span>
         응용 소프트웨어란 말이 바로 이 application 
         software의 번역어로, 운영체제를 제외한 나머지 
         소프트웨어/프로그램을 말한다.
@@ -50,7 +51,7 @@ class Application extends React.Component {
         모바일에서의 인지도가 워낙 큰 탓에 대중의 
         인식은 '애플리케이션 = 스마트폰용 소프트웨어', 
         '프로그램 = PC용 소프트웨어'로 고정되어 버렸다. 
-        
+        </span>
         <br />
         
       </div>

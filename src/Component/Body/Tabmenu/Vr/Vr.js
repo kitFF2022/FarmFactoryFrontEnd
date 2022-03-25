@@ -17,6 +17,7 @@ class Vr extends React.Component {
         <img src='/img/img1.jpg' alt="VR 사진">
         </img>
         <span className='h1'> VR </span><br/>
+        <span>
         가상현실의 기본 개념은 '실제와 유사하지만 
         실제가 아닌 인공 환경'을 의미한다. 따라서 
         넓은 의미로 보면 플라이트 시뮬레이터 등의 
@@ -33,7 +34,7 @@ class Vr extends React.Component {
         너무나도 사실적이라 구별이 불가능하다는 차이점이 
         있다. 물리학에선 현실을 100% 완벽하게 재현하는 
         건 불가능하지만[2], 사람을 속일 수 있는 정도의 
-        시뮬레이션은 충분히 가능하다고 한다.
+        시뮬레이션은 충분히 가능하다고 한다.</span>
         <br />
         
       </div>
