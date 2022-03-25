@@ -1,5 +1,8 @@
 .Tabmenuwrap {
-    background-color: gray;
+    background-color: rgb(214, 214, 214);
+    padding: 0px 5% 0px 5%;
+    width: 100%;
+    height: 780px;
 }
 .menuBar{
     /* padding: 1rem; */
@@ -11,15 +14,24 @@
     right: 50%;
 }
 .tabs {
-    padding: 36px;
+    position: relative;
+    Top : 0px;
+    bottom: 0px;
+    /* padding: 0px 200px 0px 200px; */
 }
 .tabs li{
-    font-size: 30px;
+    
+    font-size: 40px;
     font-weight: bold;
     display: inline-block;
-    color: rgb(0, 197, 89);
-    padding: 1rem;
+    color: #57CC99;
+    padding: 3px 20px 3px 20px;
+    margin: 0px 10% 0px 10%;;
 }
+
+.tabs li:hover{
+    transform: scale(1.15);
+}    
 
 .tabs li:hover:after{
     transform: scaleX(1);
@@ -35,11 +47,12 @@
 .tabs li.active{
     color: white;
     height: 100%;
-    background-color: aquamarine;
+    background-color: #57CC99;
     border-radius: 15px;
-    transform: scale(1.15);   
+    transform: scale(1.30);   
     transition: transform 100ms ease-in-out;
 }
-.tabs li.active:hover:after{
+.tabs li.active:after:hover{
+    transform: scale(1.3); 
     transform: scaleX(1);
 }

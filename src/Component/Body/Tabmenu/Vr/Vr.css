@@ -1,18 +1,28 @@
-.textbox {
-    padding: 0px 16px 0px 16px;
-}
-.textbox img {
-    padding: 16px;
+
+.Vrtextbox> .Vrimg {
+    padding: 40px;
     float: left;
-    width: 60%;
-    
-    min-width: 320px;
-    max-width: 640px;
+    width: 45%;
+    min-width: 240px;
+    max-width: 60%;
     /* max-width: 480px; */
 }
 
-.textbox > .h1{
+.Vrtextbox > .h1{
+    font-weight: 400;
+    word-break: keep-all;
     font-size: 50px;
-    color: rgb(164, 231, 164);
-    padding: 0px 16px 0px 16px;
+    color: #A3DA8D;
+    position: relative;
+    Top : 10px;
+    left: 40px;
+    
+}
+.Vrtextbox > .Vrtext{
+    position: relative;
+    Top : 10px;
+    left: 40px;
+    word-break: keep-all;
+    
+    /* padding: 0px 16px 0px 16px; */
 }

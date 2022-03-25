@@ -1,21 +1,31 @@
 
 .Download {
     text-align: left;
-    
+    padding: 0px 60px 0px 60px;
 }
 .Download>.h1 {
+    position: relative;
+    Top : 10px;
+    left: 40px;
+    word-break: keep-all;
     font-size: 50px;
-    color: rgb(164, 231, 164);
-    padding: 0px 16px 0px 16px;
+    color: #A3DA8D;
+    
 }
 .Download>.h2 {
+    position: relative;
+    Top : 10px;
+    left: 40px;
     font-size: 40px;
-    color: rgb(103, 221, 156);
-    padding: 0px 16px 0px 16px;
+    color: #57CC99;
+    
 }
 .Download>span {
-    padding: 0px 16px 0px 16px;
-    left: auto;
+    position: relative;
+    Top : 10px;
+    left: 40px;
+    word-break: keep-all;
+    
     font-size:18px;
     color: black;
 }
@@ -29,6 +39,6 @@
     float: left;
     width: 60%;
     min-width: 320px;
-    max-width: 640px;
+    max-width: 50%;
     /* max-width: 480px; */
 }
