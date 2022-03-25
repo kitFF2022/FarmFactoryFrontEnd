@@ -1,0 +1,34 @@
+
+.Download {
+    text-align: left;
+    
+}
+.Download>.h1 {
+    font-size: 50px;
+    color: rgb(164, 231, 164);
+    padding: 0px 16px 0px 16px;
+}
+.Download>.h2 {
+    font-size: 40px;
+    color: rgb(103, 221, 156);
+    padding: 0px 16px 0px 16px;
+}
+.Download>span {
+    padding: 0px 16px 0px 16px;
+    left: auto;
+    font-size:18px;
+    color: black;
+}
+.Download>span>a {
+    color: rgb(0, 197, 89);
+    text-decoration : none;
+}
+
+.Download img {
+    padding: 16px;
+    float: left;
+    width: 60%;
+    min-width: 320px;
+    max-width: 640px;
+    /* max-width: 480px; */
+}

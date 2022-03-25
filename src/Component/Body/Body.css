@@ -21,25 +21,11 @@ https://www.cssscript.com/background-image-slider/
     transform: scaleX(1);
 }
 
-.Download {
-    text-align: center;
-}
-.Download>h1 {
-    font-size: 50px;
-    color: green;
-}
-.Download>span {
-    font-size: 25px;
-    color: green;
-}
-.Download>span>a {
-    color: rgb(0, 197, 89);
-    text-decoration : none;
-}
 .Bodycontainer {
     position: relative;
-    width: 1130px;
-    padding: 20px 30px;
+    max-width: 1230px;
+    width: 90%;
+    padding: 20px 20px;
     margin: 0 auto;
     letter-spacing: -.2px;
 }

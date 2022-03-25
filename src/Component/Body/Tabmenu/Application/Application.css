@@ -2,6 +2,7 @@
     padding: 0px 16px 0px 16px;
 }
 .textbox img {
+    
     padding: 16px;
     float: left;
     width: 60%;
@@ -9,8 +10,8 @@
     max-width: 640px;
     /* max-width: 480px; */
 }
-.textbox > .start_button{
-    text-align: center;
-    vertical-align: middle;
-    left: 60%;
+.textbox > .h1{
+    font-size: 50px;
+    color: rgb(164, 231, 164);
+    padding: 0px 16px 0px 16px;
 }

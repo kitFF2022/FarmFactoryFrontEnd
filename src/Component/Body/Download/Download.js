@@ -1,19 +1,30 @@
 import React from 'react'
-
+import './Download.css'
+import Loginbutton from '../Loginbutton/Loginbutton';
 
 const Download = () => {
     return (
         <div className="Download">
-            <br /><br /><br /><br /><br /><br /><br />
-            <h1> Get Start!</h1>
-            <span><a href="#">VR</a></span>
-            <span>    |    </span>
-            <span><a href="#">APP</a></span>
-            <span>   |    </span>
-            <span><a href="#">WEB</a></span>
-            <br />
-            <span><button>실행하기</button></span>
+            <br /><br /><br /><br /><br />
+            <img src='/img/img1.jpg' alt="VR 사진">
+            </img>
+            <span className='h1'>간편하게</span><br/>
+            <span className='h1'>내손안에서</span><br/>
+            <span className='h2'>Farm Factory</span><br/>
+            <span>
+            WEB, APP 그리고 VR을 통한 다양한 방법으로
+            </span><br/>
+            <span>
+                자신의 농장을 설계하고, 이를 통한 설계에 필요한 자원을 낮추세요!
+            </span><br />
+            <span>
+            설계를 더욱더 손쉽게 프로젝트로!
+            </span>
+            <br /><br /><br /><br />
+           <Loginbutton/>
+           <br /><br /><br /><br /><br />
         </div>
+        
     )
 }
 

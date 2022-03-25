@@ -1,7 +1,7 @@
 import React from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
 import './Slideshow.css'
-
+import Loginbutton from '../Loginbutton/Loginbutton';
 const images = [
     {
         url: process.env.PUBLIC_URL + '/img/img1.jpg',
@@ -26,6 +26,7 @@ const Slideshow = () => {
                         <li><h2 className='SlideshowTitle'>나만의<br />개인농장</h2></li>
                         <li><h3 className='SlideshowName'>Farm Factory</h3></li>
                         <li><h4 className='SlideshowSubs'>asdfasdfasdfasdfasdfasdf</h4></li>
+                        <Loginbutton/>
                     </ul>
                 </li>
                 <li className='Slideshowli2'>

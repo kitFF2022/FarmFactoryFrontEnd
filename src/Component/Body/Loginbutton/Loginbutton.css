@@ -1,0 +1,14 @@
+.Loginbutton {
+    text-align: center;
+    padding: 20px
+}
+.Loginbutton a {
+    word-break: keep-all;
+    border-radius: 15px;
+    padding: 1px 80px 1px 80px;
+    font-size: 35px;
+    min-width: 60px;
+    background-color: rgb(36, 168, 124);
+    color : white;
+    text-decoration : none;
+}

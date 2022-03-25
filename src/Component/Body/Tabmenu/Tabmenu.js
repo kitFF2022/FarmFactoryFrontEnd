@@ -3,6 +3,7 @@ import './Tabmenu.css';
 import Vr from './Vr/Vr';
 import Application from './Application/Application';
 import Web from './Web/Web';
+import Loginbutton from '../Loginbutton/Loginbutton';
 
 const menuList = {
   0: <Vr />,
@@ -38,6 +39,7 @@ class App extends React.Component {
         <div className="contentArea">
           {menuList[this.state.menu]}
         </div>
+        <Loginbutton/>
       </div>
     )
   }
