@@ -4,8 +4,10 @@
 .textbox img {
     padding: 16px;
     float: left;
-    max-width: auto;
-    max-width: 480px;
+    width: 60%;
+    min-width: 320px;
+    max-width: 640px;
+    /* max-width: 480px; */
 }
 .textbox > .start_button{
     text-align: center;
