@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Web.css';
 class Web extends React.Component {
   constructor(props) {
     super();

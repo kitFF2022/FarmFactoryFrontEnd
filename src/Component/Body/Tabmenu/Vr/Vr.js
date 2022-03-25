@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Vr.css';
 
 class Vr extends React.Component {
   constructor(props) {
