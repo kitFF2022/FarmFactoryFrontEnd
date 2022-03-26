@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Vr.css';
 
+
 class Vr extends React.Component {
   constructor(props) {
     super();
@@ -12,10 +13,10 @@ class Vr extends React.Component {
 
   render() {
     return (
-
       <div className="Vrtextbox">
         <img className="Vrimg" src='/img/img1.jpg' alt="VR 사진">
         </img>
+        
         <br/>
         <span className='h1'>3D로<br/>입체감있게 </span><br/>
         <span className="Vrtext">

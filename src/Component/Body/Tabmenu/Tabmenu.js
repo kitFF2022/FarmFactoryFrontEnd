@@ -40,8 +40,7 @@ class App extends React.Component {
           {menuList[this.state.menu]}
         </div>
         <Loginbutton/>
-        <br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/>
+        
       </div>
     )
   }

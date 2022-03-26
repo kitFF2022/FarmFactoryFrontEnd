@@ -15,9 +15,11 @@
     color: #A3DA8D;
     position: relative;
     Top : 10px;
-    left: 40px;
+    left: 40px; 
     
+
 }
+
 .Vrtextbox > .Vrtext{
     position: relative;
     Top : 10px;
@@ -25,4 +27,35 @@
     word-break: keep-all;
     
     /* padding: 0px 16px 0px 16px; */
+}
+
+@media screen and (max-width : 1052px) {
+    .Vrtextbox {
+        text-align: center;
+    }
+    .Vrtextbox> .Vrimg {
+        /* padding: 40px; */
+        float :none;
+        width: 70%;
+        min-width: 240px;
+        
+        /* max-width: 480px; */
+    }
+    .Vrtextbox > .h1{
+        font-weight: 400;
+        word-break: keep-all;
+        font-size: 50px;
+        color: #A3DA8D;
+        position: relative;
+        Top : 10px;
+        left: 0px; 
+    }
+    .Vrtextbox > .Vrtext{
+        position: relative;
+        Top : 10px;
+        left: 0px;
+        word-break: keep-all;
+        
+        /* padding: 0px 16px 0px 16px; */
+    }
 }

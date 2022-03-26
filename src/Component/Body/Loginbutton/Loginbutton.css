@@ -12,7 +12,29 @@
     padding: 1px 80px 1px 80px;
     font-size: 35px;
     min-width: 60px;
-    background-color: #146356;
+    background-color: #23ad96;
     color : white;
     text-decoration : none;
+}
+
+@media screen and (max-width : 1052px) {
+    .Loginbutton {
+        text-align: center;
+        padding: 20px
+    }
+    .Loginbutton a {
+        position: relative;
+        left: 0px;
+        right: 00px;
+        top: 30px;
+        word-break: keep-all;
+        border-radius: 15px;
+        padding: 1px 80px 1px 80px;
+        font-size: 35px;
+        min-width: 60px;
+        background-color: #23ad96;
+        color : white;
+        text-decoration : none;
+    }
+    
 }

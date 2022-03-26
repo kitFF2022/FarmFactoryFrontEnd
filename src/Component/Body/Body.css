@@ -20,7 +20,9 @@ https://www.cssscript.com/background-image-slider/
 .Hover>span:hover:after {
     transform: scaleX(1);
 }
-
+@media screen and (max-width : 917px) {
+    
+}
 /* .Bodycontainer {
     position: relative;
     max-width: 1230px;
