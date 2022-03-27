@@ -35,3 +35,25 @@
 .SlideshowSubs {
     font-size: 20px;
 }
+
+@media screen and (max-width : 1083px) {
+    .Slideshowul{
+        width: 100%;
+        height: 1000px;
+    }
+    .Slideshowli1 {
+        text-align: center;
+    }
+    .Slideshowul2 {
+        width: 100%;
+        text-align: left;
+    }
+    .Slideshowli2 {
+        position: relative;
+        Top : 100px;
+        list-style: none;
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+    }
+}

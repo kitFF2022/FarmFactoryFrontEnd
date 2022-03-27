@@ -25,7 +25,11 @@ const Slideshow = () => {
                     <ul className='Slideshowul2'>
                         <li><h2 className='SlideshowTitle'>나만의<br />개인농장</h2></li>
                         <li><h3 className='SlideshowName'>Farm Factory</h3></li>
-                        <li><h4 className='SlideshowSubs'>asdfasdfasdfasdfasdfasdf</h4></li>
+                        <li><h4 className='SlideshowSubs'>
+                            당신의 손안에서 만들어가는 지하철 농장,<br/>
+                            가정내의 작은 농장 그리고, 스마트 농장을 위한 프로젝트<br/>
+                            설계, 디자인, 설비를 보고, 나만의 농장을 만들어 보세요!
+                        </h4></li>
                         <Loginbutton/>
                     </ul>
                 </li>

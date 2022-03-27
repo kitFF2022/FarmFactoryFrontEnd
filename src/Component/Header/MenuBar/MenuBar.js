@@ -27,7 +27,7 @@ class MenuBar extends React.Component {
             <nav className="MenuBar">
                 <ul>
                     <li className='MenuBarLiLogo'>
-                        <img src={process.env.PUBLIC_URL + '/img/logo.png'}></img>
+                        <img src={process.env.PUBLIC_URL + '/img/logo.jpg'}></img>
                     </li>
                     <li className='MenuBarLiLogoText'>
                         <div>
