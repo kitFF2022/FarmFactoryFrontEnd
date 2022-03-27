@@ -19,8 +19,11 @@
 
 @media screen and (max-width : 1052px) {
     .Loginbutton {
-        text-align: center;
-        padding: 20px
+        text-align: left;
+        padding: 20px;
+        position: relative;
+        Top : 0px;
+        left: 20px;
     }
     .Loginbutton a {
         position: relative;

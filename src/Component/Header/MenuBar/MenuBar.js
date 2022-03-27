@@ -12,7 +12,7 @@ class MenuBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menu: ['HOME', '서비스']
+            menu: ['서비스']
         }
     }
 
@@ -31,14 +31,17 @@ class MenuBar extends React.Component {
                     </li>
                     <li className='MenuBarLiLogoText'>
                         <div>
-                            Farm Factory
+                            {/* Farm Factory */}
                         </div>
                     </li>
                     <li className='MenuBarLiMenu'>
                         <ul>
-                            {this.renderMenu(0)}
-                            {this.renderMenu(1)}
+                            <a href='#'>
+                                {this.renderMenu(0)}
+                            </a>
+                            <a href='#'>
                             <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/user.png'}></img></li>
+                            </a>
                         </ul>
                     </li>
                 </ul>

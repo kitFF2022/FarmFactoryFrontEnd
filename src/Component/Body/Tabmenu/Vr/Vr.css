@@ -31,29 +31,42 @@
 
 @media screen and (max-width : 1052px) {
     .Vrtextbox {
-        text-align: center;
+        
+        text-align: left;
     }
     .Vrtextbox> .Vrimg {
         /* padding: 40px; */
         float :none;
-        width: 70%;
+        padding: 0px;
+        width: 90%;
         min-width: 240px;
+        max-width: 100%;
         
         /* max-width: 480px; */
     }
-    .Vrtextbox > .h1{
+
+    .Vrtextbox >.Vrpaddingbox> { 
+        position: relative;
+        Top : 10px;
+        left: 100px; 
+        margin :10px;
+        text-align: left;
+    }
+    
+    .Vrtextbox > .Vrpaddingbox > .h1{
+        
         font-weight: 400;
         word-break: keep-all;
         font-size: 50px;
         color: #A3DA8D;
         position: relative;
         Top : 10px;
-        left: 0px; 
+        left: 40px;
     }
-    .Vrtextbox > .Vrtext{
+    .Vrtextbox >.Vrpaddingbox> .Vrtext{
         position: relative;
         Top : 10px;
-        left: 0px;
+        left: 40px;
         word-break: keep-all;
         
         /* padding: 0px 16px 0px 16px; */

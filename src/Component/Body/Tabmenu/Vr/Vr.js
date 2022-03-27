@@ -16,8 +16,7 @@ class Vr extends React.Component {
       <div className="Vrtextbox">
         <img className="Vrimg" src='/img/img1.jpg' alt="VR 사진">
         </img>
-        
-        <br/>
+        <div className="Vrpaddingbox"><br/>
         <span className='h1'>3D로<br/>입체감있게 </span><br/>
         <span className="Vrtext">
         <b>
@@ -25,8 +24,7 @@ class Vr extends React.Component {
         VR 기기가 있다면, MR을 통한 설계가 가능한 프로젝트.
         </b>
         </span>
-        <br />
-        
+        <br /></div>
       </div>
 
     )

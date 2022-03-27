@@ -37,8 +37,57 @@
 .Download img {
     padding: 16px;
     float: left;
-    width: 60%;
-    min-width: 320px;
-    max-width: 50%;
+    width: 45%;
+    min-width: 240px;
+    max-width: 60%;
     /* max-width: 480px; */
+}
+
+@media screen and (max-width : 1052px) {
+    .Download {
+        text-align: left;
+        padding: 0px 60px 0px 60px;
+    }
+    .Download img {
+        float :none;
+        padding: 0px;
+        width: 90%;
+        min-width: 240px;
+        max-width: 100%;
+        /* max-width: 480px; */
+    }
+    .Download>.h1 {
+        font-weight: 400;
+        position: relative;
+        Top : 10px;
+        left: 40px;
+        word-break: keep-all;
+        font-size: 50px;
+        color: #A3DA8D;
+        
+    }
+    .Download>.h2 {
+        position: relative;
+        Top : 10px;
+        left: 40px;
+        font-size: 40px;
+        color: #57CC99;
+        
+    }
+    .Download>span {
+        position: relative;
+        word-break: keep-all;
+        
+        font-size:18px;
+        color: black;
+        position: relative;
+        Top : 10px;
+        left: 40px;
+        
+    }
+    .Download>span>a {
+        color: rgb(0, 197, 89);
+        text-decoration : none;
+        
+    }
 }

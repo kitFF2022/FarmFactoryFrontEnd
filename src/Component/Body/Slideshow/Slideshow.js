@@ -2,6 +2,7 @@ import React from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
 import './Slideshow.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
+
 const images = [
     {
         url: process.env.PUBLIC_URL + '/img/img1.jpg',
@@ -42,7 +43,9 @@ const Slideshow = () => {
                         showNavs={true}
                         autoPlay={true}
                         useGPURender={true}
+                        
                     />
+                    
                 </li>
             </ul>
 

@@ -80,4 +80,7 @@
         padding: 3px 20px 3px 20px;
         margin: 0px 20% 0px 20%;;
     }
+    .contentArea { 
+        text-align: center;
+    }
 }

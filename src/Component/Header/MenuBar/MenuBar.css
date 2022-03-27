@@ -19,6 +19,22 @@
 
 .MenuBarLiMenu {
     float: right;
+    
+}
+.MenuBarLiMenu > ul > a {
+    
+    color: black;
+}
+
+.MenuBarLiMenu > ul > a:hover,
+.MenuBarLiMenu > ul > a:visited:hover
+ {
+    
+    color: gray;
+}
+
+.MenuBarLiMenu > ul > a:visited {
+    color: black;
 }
 
 .MenuBarMenuItem {
