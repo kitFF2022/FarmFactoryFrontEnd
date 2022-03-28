@@ -28,18 +28,18 @@
 }
 .MenuBarLiMenu > ul > a {
     
-    color: black;
+    color: white;
 }
 
 .MenuBarLiMenu > ul > a:hover,
 .MenuBarLiMenu > ul > a:visited:hover
  {
     
-    color: gray;
+    color: rgb(228, 228, 228);
 }
 
 .MenuBarLiMenu > ul > a:visited {
-    color: black;
+    color: white;
 }
 
 .MenuBarMenuItem {
