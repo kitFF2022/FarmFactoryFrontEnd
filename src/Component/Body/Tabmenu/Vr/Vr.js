@@ -1,6 +1,21 @@
-import React, { Component } from "react";
+import React, { Component,useEffect,useState } from "react";
 import './Vr.css';
 
+const ResizeComponent = () => {
+  const [windowSize,setWindowSize] = useState({
+    width : window.innerWidth,
+    height: window.innerHeight
+  });
+  const Handleresize = () => {
+    console.log(`브라우저 화면 사이즈 x : ${window.innerWidth}, y : ${window.innerHeight}`);
+  }
+  useEffect(()=> {
+    window.addEventListener('resize',Handleresize);
+    return () => {
+      window.removeEventListener('resize',Handleresize);
+    }
+  },[]);
+}
 
 class Vr extends React.Component {
   constructor(props) {
@@ -12,6 +27,11 @@ class Vr extends React.Component {
   }
 
   render() {
+    const Vrstyle = {
+      color: "black",
+      backgroundColor: "blue",
+      fontFamily: "Arial"
+    }
     return (
       <div className="Vrtextbox">
         <img className="Vrimg" src='/img/img1.jpg' alt="VR 사진">
@@ -25,6 +45,7 @@ class Vr extends React.Component {
           </b>
           </span>
         <br /></div>
+        <div>브라우저 화면 사이즈 x:{window.innerWidth}, y:{window.innerHeight}</div>
       </div>
 
     )

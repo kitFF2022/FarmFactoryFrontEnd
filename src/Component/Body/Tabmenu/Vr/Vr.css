@@ -2,9 +2,9 @@
 .Vrtextbox> .Vrimg {
     padding: 40px;
     float: left;
-    width: 45%;
+    width: 45vh;
     min-width: 240px;
-    max-width: 60%;
+    max-width: 60vh;
     /* max-width: 480px; */
 }
 
@@ -29,20 +29,20 @@
     /* padding: 0px 16px 0px 16px; */
 }
 
-@media screen and (max-width : 1052px) {
+/* @media screen and (max-width : 1052px) {
     .Vrtextbox {
         
         text-align: left;
     }
     .Vrtextbox> .Vrimg {
-        /* padding: 40px; */
+        
         float :none;
         padding: 0px;
         width: 90%;
         min-width: 240px;
         max-width: 584px;
         
-        /* max-width: 480px; */
+        
     }
 
     .Vrtextbox >.Vrpaddingbox> { 
@@ -69,6 +69,6 @@
         left: 40px;
         word-break: keep-all;
         
-        /* padding: 0px 16px 0px 16px; */
+        
     }
-}
+} */

@@ -43,7 +43,7 @@ class MenuBar extends React.Component {
                             <a href='#'>
                                 {this.renderMenu(1)}
                             </a>
-                            <a href='#'>
+                            <a href='./Login/Login.js'>
                             <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/user.png'}></img></li>
                             </a>
                         </ul>
