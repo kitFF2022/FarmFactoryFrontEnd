@@ -12,7 +12,8 @@ class MenuBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menu: ['서비스']
+            menu: ['home','서비스']
+            
         }
     }
 
@@ -38,6 +39,9 @@ class MenuBar extends React.Component {
                         <ul>
                             <a href='#'>
                                 {this.renderMenu(0)}
+                            </a>
+                            <a href='#'>
+                                {this.renderMenu(1)}
                             </a>
                             <a href='#'>
                             <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/user.png'}></img></li>
