@@ -8,7 +8,7 @@
     /* max-width: 480px; */
 }
 
-.Vrtextbox > .h1{
+.Vrtextbox > .Vrpaddingbox > .h1{
     font-weight: 400;
     word-break: keep-all;
     font-size: 50px;
@@ -20,7 +20,7 @@
 
 }
 
-.Vrtextbox > .Vrtext{
+.Vrtextbox >.Vrpaddingbox> .Vrtext{
     position: relative;
     Top : 10px;
     left: 40px;
@@ -40,7 +40,7 @@
         padding: 0px;
         width: 90%;
         min-width: 240px;
-        max-width: 100%;
+        max-width: 584px;
         
         /* max-width: 480px; */
     }
