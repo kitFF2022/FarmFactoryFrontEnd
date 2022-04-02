@@ -11,7 +11,6 @@ class Body extends React.Component {
         return (
             <div className="Bodycontainer">
                 <Slideshow />
-
                 <Tabmenu />
                 <Download />
                 
