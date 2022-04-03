@@ -4,7 +4,7 @@ import './Loginbutton.css';
 const Loginbutton = () => {
     return (
         <div className="Loginbutton">
-            <a href="#">설계하기</a>
+            <a href="./Login">설계하기</a>
         </div>
     )
 }

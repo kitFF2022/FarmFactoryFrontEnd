@@ -1,5 +1,5 @@
 .Slideshowul{
-    width: 100%;
+    width: auto;
     height: 720px;
     
 }
@@ -13,7 +13,7 @@
 .Slideshowli2 {
     list-style: none;
     display: inline-block;
-    width: 50%;
+    width: 0%;
     vertical-align: middle;
 }
 
