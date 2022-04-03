@@ -38,6 +38,11 @@
         background-color: #23ad96;
         color : white;
         text-decoration : none;
+
+        font-family: 'ELAND_Choice_L';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_L.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
     }
     
 }

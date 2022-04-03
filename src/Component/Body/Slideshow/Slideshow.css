@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ELAND_Choice_L';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_L.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RixYeoljeongdo_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
 .Slideshowul{
     width: auto;
     height: 720px;
@@ -25,15 +50,21 @@
 .SlideshowTitle {
     font-size: 50px;
     color: yellowgreen;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    
 }
 
 .SlideshowName {
     font-size: 40px;
     color: green;
+    font-family: 'RixYeoljeongdo_Regular';
+    
 }
 
 .SlideshowSubs {
     font-size: 20px;
+    font-family: 'GmarketSansLight';
+    
 }
 
 @media screen and (max-width : 1083px) {
