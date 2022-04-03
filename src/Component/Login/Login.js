@@ -1,6 +1,7 @@
 import React from "react";
 import './Login.css'
 import Header from "../Header/Header";
+import Signup from "./Signup";
 import { withRouter } from 'react-router-dom';
 
 
@@ -16,10 +17,11 @@ class Login extends React.Component {
                 <div className = "LoginWrap">
                 <img className="Loginlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'}></img>
                 {/* <h1 className = "Logintitle">로그인 페이지</h1> */}
-                <p className = "id">ID: <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일"/></p>
-                <p className = "pw">PW: <input type="text" placeholder="비밀번호"/></p>
-                <p className = "button"><button type="button" onClick={this.goToMain}>로그인 하기</button></p> 
+                <p className = "id"><input type="text" placeholder="전화번호, 사용자 이름 또는 이메일"/></p>
+                <p className = "pw"><input type="text" placeholder="비밀번호"/></p>
+                <p><button className = "Loginbutton" type="button" onClick={this.goToMain}>로그인 하기</button></p> 
                 </div>
+                <Signup/>
             </div>
         );
     }

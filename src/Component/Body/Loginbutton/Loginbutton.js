@@ -3,7 +3,7 @@ import './Loginbutton.css';
 
 const Loginbutton = () => {
     return (
-        <div className="Loginbutton">
+        <div className="designbutton">
             <a href="./Login">설계하기</a>
         </div>
     )

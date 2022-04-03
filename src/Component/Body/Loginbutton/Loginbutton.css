@@ -1,8 +1,8 @@
-.Loginbutton {
+.designbutton {
     text-align: left;
     padding: 20px
 }
-.Loginbutton a {
+.designbutton a {
     position: relative;
     left: 40px;
     right: 20px;
@@ -18,14 +18,14 @@
 }
 
 @media screen and (max-width : 1052px) {
-    .Loginbutton {
+    .designbutton {
         text-align: left;
         padding: 20px;
         position: relative;
         Top : 0px;
         left: 20px;
     }
-    .Loginbutton a {
+    .designbutton a {
         position: relative;
         left: 0px;
         right: 00px;
