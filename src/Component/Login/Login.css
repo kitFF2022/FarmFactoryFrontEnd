@@ -1,5 +1,6 @@
-.login {
+.Login {
     width: 500px;
     margin: 200px auto auto auto;
     text-align: center;
+    background-image: url("public/img1.jpg");
 }

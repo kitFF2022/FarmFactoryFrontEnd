@@ -1,20 +1,11 @@
 import React, { Component,useEffect,useState } from "react";
 import './Vr.css';
+// import styled from 'styled-components';
 
-const ResizeComponent = () => {
-  const [windowSize,setWindowSize] = useState({
-    width : window.innerWidth,
-    height: window.innerHeight
-  });
-  const Handleresize = () => {
-    console.log(`브라우저 화면 사이즈 x : ${window.innerWidth}, y : ${window.innerHeight}`);
-  }
-  useEffect(()=> {
-    window.addEventListener('resize',Handleresize);
-    return () => {
-      window.removeEventListener('resize',Handleresize);
-    }
-  },[]);
+if (window.innerWidth <= 1052) {
+  
+} else {
+  
 }
 
 class Vr extends React.Component {
@@ -26,6 +17,7 @@ class Vr extends React.Component {
     };
   }
 
+  
   render() {
     const Vrstyle = {
       color: "black",
@@ -45,7 +37,6 @@ class Vr extends React.Component {
           </b>
           </span>
         <br /></div>
-        <div>브라우저 화면 사이즈 x:{window.innerWidth}, y:{window.innerHeight}</div>
       </div>
 
     )

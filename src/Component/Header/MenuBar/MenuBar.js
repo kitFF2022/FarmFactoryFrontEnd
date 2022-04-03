@@ -28,7 +28,9 @@ class MenuBar extends React.Component {
             <nav className="MenuBar">
                 <ul>
                     <li className='MenuBarLiLogo'>
-                        <img src={process.env.PUBLIC_URL + '/img/logo.jpg'}></img>
+                    <a href='./'>
+                        <img src={process.env.PUBLIC_URL + '/img/logo.png'}></img>
+                    </a>
                     </li>
                     <li className='MenuBarLiLogoText'>
                         <div>
@@ -37,14 +39,14 @@ class MenuBar extends React.Component {
                     </li>
                     <li className='MenuBarLiMenu'>
                         <ul>
-                            <a href='#'>
+                            <a href='./'>
                                 {this.renderMenu(0)}
                             </a>
-                            <a href='#'>
+                            <a href='./'>
                                 {this.renderMenu(1)}
                             </a>
                             <a href='./Login'>
-                            <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/user.png'}></img></li>
+                            <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'}></img></li>
                             </a>
                         </ul>
                     </li>
