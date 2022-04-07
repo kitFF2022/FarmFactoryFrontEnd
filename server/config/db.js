@@ -1,10 +1,10 @@
-// const mysql = require('mysql');
+const mysql = require('mysql');
  
-// const db = mysql.createPool({
-//     host: 'localhost',
-//     user: 'test',
-//     password: '1111',
-//     database: 'reactboard'
-// });
+const db = mysql.createPool({
+    host: 'localhost',
+    user: 'test',
+    password: '1111',
+    database: 'reactboard'
+});
  
-// module.exports = db;
+module.exports = db;
