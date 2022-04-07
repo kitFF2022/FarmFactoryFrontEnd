@@ -1,5 +1,5 @@
 import React from "react";
-import './Signup.css'
+import './Tosignup.css'
 import Header from "../Header/Header";
 import { withRouter } from 'react-router-dom';
 
@@ -11,9 +11,9 @@ class Login extends React.Component {
   }
     render() {
         return (
-            <div className = "SignupPageWrap">
-                <div className = "SignupWrap">
-                <p>계정이 없으신가요? | <a href="./">가입하기</a></p>
+            <div className = "TosignupPageWrap">
+                <div className = "TosignupWrap">
+                <p>계정이 없으신가요? | <a href="/Signup">가입하기</a></p>
                 </div>
             </div>
         );

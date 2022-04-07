@@ -1,4 +1,4 @@
-.SignupWrap {
+.TosignupWrap {
     width: 400px;
     margin: 10px auto auto auto;
     text-align: center;
@@ -8,7 +8,7 @@
     border-radius: 5px;
     padding: 10px;
 }
-.Loginlogo {
+.Tosignuplogo {
     padding: 40px 0px 0px 0px;
     width: 300px;
 }

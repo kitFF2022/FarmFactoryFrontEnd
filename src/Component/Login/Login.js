@@ -1,7 +1,7 @@
 import React from "react";
 import './Login.css'
 import Header from "../Header/Header";
-import Signup from "./Signup";
+import Tosignup from "./Tosignup";
 import { withRouter } from 'react-router-dom';
 
 
@@ -21,7 +21,7 @@ class Login extends React.Component {
                 <p className = "pw"><input type="text" placeholder="비밀번호"/></p>
                 <p><button className = "Loginbutton" type="button" onClick={this.goToMain}>로그인 하기</button></p> 
                 </div>
-                <Signup/>
+                <Tosignup/>
             </div>
         );
     }

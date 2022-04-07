@@ -10,7 +10,7 @@
 
 .Vrtextbox > .Vrpaddingbox > .h1{
     font-weight: 400;
-    word-break: keep-all;
+    /* word-break: keep-all; */
     font-size: 50px;
     color: #A3DA8D;
     position: relative;
@@ -61,12 +61,12 @@
         color: #A3DA8D;
         position: relative;
         Top : 10px;
-        left: 40px;
+        left: 20px;
     }
     .Vrtextbox >.Vrpaddingbox> .Vrtext{
         position: relative;
         Top : 10px;
-        left: 40px;
+        left: 20px;
         word-break: keep-all;
         
         
