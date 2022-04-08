@@ -12,7 +12,8 @@ class Web extends React.Component {
   render() {
     return (
       <div className="Webtextbox">
-        <img className="Webimg" src={process.env.PUBLIC_URL + '/img/img3.jpg'} alt="Web 사진">
+        <img className="Webimg" src={process.env.PUBLIC_URL + '/img/WEB_image_confirmed.png'} alt="Web 사진">
+        
         </img>
         <br/>
         <span className='h1'>웹으로<br/>간편하게</span><br/>

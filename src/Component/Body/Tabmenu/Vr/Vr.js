@@ -26,7 +26,7 @@ class Vr extends React.Component {
     }
     return (
       <div className="Vrtextbox">
-        <img className="Vrimg" src='/img/img1.jpg' alt="VR 사진">
+        <img className="Vrimg" src='/img/VR_image_confirmed.png' alt="VR 사진">
         </img>
         <div className="Vrpaddingbox"><br/>
           <span className='h1'>3D로<br/>입체감 있게 </span><br/>
