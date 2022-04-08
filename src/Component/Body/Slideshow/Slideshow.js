@@ -24,7 +24,7 @@ const Slideshow = () => {
             <ul className='Slideshowul'>
                 <li className='Slideshowli1'>
                     <ul className='Slideshowul2'>
-                        <li><h2 className='SlideshowTitle'>나만의<br />개인농장</h2></li>
+                        <li><h2 className='SlideshowTitle'>나만의<br />개인 농장</h2></li>
                         <li><h3 className='SlideshowName'>Farm Factory</h3></li>
                         <li><h4 className='SlideshowSubs'>
                             당신의 손안에서 만들어가는 지하철 농장,<br/>

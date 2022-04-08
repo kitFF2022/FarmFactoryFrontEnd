@@ -21,10 +21,12 @@
 }
 .tabs li{
     
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     display: inline-block;
     color: #57CC99;
+    letter-spacing: 1px;
+   
     padding: 3px 20px 3px 20px;
     margin: 0px 10% 0px 10%;;
 }

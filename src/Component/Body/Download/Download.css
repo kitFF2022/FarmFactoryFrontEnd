@@ -9,7 +9,10 @@
     left: 40px;
     word-break: keep-all;
     font-size: 50px;
-    color: #A3DA8D;
+    color: #98D680;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-weight: normal;
+   font-style: normal;
     
 }
 .Download>.h2 {
@@ -17,7 +20,12 @@
     Top : 10px;
     left: 40px;
     font-size: 40px;
-    color: #57CC99;
+    color: #4EC993;
+    letter-spacing: 4px;
+    font-family: 'KoPubDotumMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
     
 }
 .Download>span {
@@ -27,7 +35,11 @@
     word-break: keep-all;
     
     font-size:18px;
-    color: black;
+    color: #555555;
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 .Download>span>a {
     color: rgb(0, 197, 89);

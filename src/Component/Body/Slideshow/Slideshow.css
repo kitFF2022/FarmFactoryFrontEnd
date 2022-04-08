@@ -49,21 +49,31 @@
 
 .SlideshowTitle {
     font-size: 50px;
-    color: yellowgreen;
+    color: #98D680;
     font-family: 'NEXON Lv1 Gothic OTF Light';
+     font-weight: normal;
+    font-style: normal;
     
 }
 
 .SlideshowName {
     font-size: 40px;
-    color: green;
-    font-family: 'RixYeoljeongdo_Regular';
+    color: #4EC993;
+    letter-spacing: 4px;
+    font-family: 'KoPubDotumMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
     
 }
 
 .SlideshowSubs {
     font-size: 20px;
+    color: #555555;
     font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
     
 }
 
