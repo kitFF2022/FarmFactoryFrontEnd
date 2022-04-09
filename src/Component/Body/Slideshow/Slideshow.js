@@ -3,24 +3,38 @@ import SimpleImageSlider from "react-simple-image-slider";
 import './Slideshow.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
 
-const images = [
-    {
-        url: process.env.PUBLIC_URL + '/img/img1.jpg',
-        caption: 'Slide 1'
-    },
-    {
-        url: process.env.PUBLIC_URL + '/img/img2.jpg',
-        caption: 'Slide 2'
-    },
-    {
-        url: process.env.PUBLIC_URL + '/img/img3.jpg',
-        caption: 'Slide 3'
-    },
-];
 
-const Slideshow = () => {
-    return (
-        <div className='Slideshow'>
+
+class Slideshow extends React.Component {
+    constructor(props) {
+      super();
+      this.state = {
+        menu: 0,
+        images:[{  
+            url: process.env.PUBLIC_URL + '/img/img1.jpg',
+            caption: 'Slide 1'
+        },
+        {
+            url: process.env.PUBLIC_URL + '/img/img2.jpg',
+            caption: 'Slide 2'
+        },
+        {
+            url: process.env.PUBLIC_URL + '/img/img3.jpg',
+            caption: 'Slide 3'
+        }],
+        width: 500,
+        height:300,
+      }
+        if (window.innerWidth < 640){
+            return (this.state.width =300, this.state.height =210);
+        }
+        else {
+            return (this.state.width =500, this.state.height =350);
+        }
+    }
+    render() {
+        return (
+            <div className='Slideshow'>
             <ul className='Slideshowul'>
                 <li className='Slideshowli1'>
                     <ul className='Slideshowul2'>
@@ -35,22 +49,19 @@ const Slideshow = () => {
                     </ul>
                 </li>
                 <li className='Slideshowli2'>
+                    
                     <SimpleImageSlider
-                        width={500}
-                        height={350}
-                        images={images}
+                        width={this.state.width}
+                        height={this.state.height}
+                        images={this.state.images}
                         showBullets={true}
                         showNavs={true}
                         autoPlay={true}
                         useGPURender={true}
-                        
                     />
-                    
                 </li>
             </ul>
-
         </div>
-    )
-}
-
-export default Slideshow
+        )
+      }
+} export default Slideshow

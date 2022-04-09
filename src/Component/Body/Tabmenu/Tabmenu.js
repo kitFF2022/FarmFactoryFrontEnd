@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import './Tabmenu.css';
 import Vr from './Vr/Vr';
 import Application from './Application/Application';

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import './Web.css';
 class Web extends React.Component {
   constructor(props) {

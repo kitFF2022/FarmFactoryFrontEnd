@@ -30,7 +30,7 @@ class MenuBar extends React.Component {
                 <ul>
                     <li className='MenuBarLiLogo'>
                     <a href='./'>
-                        <img src={process.env.PUBLIC_URL + '/img/logo2.png'}></img>
+                        <img src={process.env.PUBLIC_URL + '/img/logo2.png'} alt="logo"></img>
                     </a>
                     </li>
                     <li className='MenuBarLiLogoText'>
@@ -47,7 +47,7 @@ class MenuBar extends React.Component {
                                 {this.renderMenu(1)}
                             </a>
                             <a href='./Login'>
-                            <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'}></img></li>
+                            <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile'></img></li>
                             </a>
                         </ul>
                     </li>

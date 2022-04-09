@@ -1,5 +1,5 @@
 //cafe
-import React, { Component } from "react";
+import React from "react";
 import './Application.css';
 
 

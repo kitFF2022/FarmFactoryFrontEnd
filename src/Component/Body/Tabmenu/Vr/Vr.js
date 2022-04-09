@@ -1,10 +1,11 @@
-import React, { Component,useEffect,useState } from "react";
+import React from "react";
 import './Vr.css';
 // import styled from 'styled-components';
 
 if (window.innerWidth <= 1052) {
   
-} else {
+} 
+else {
   
 }
 
@@ -19,11 +20,6 @@ class Vr extends React.Component {
 
   
   render() {
-    const Vrstyle = {
-      color: "black",
-      backgroundColor: "blue",
-      fontFamily: "Arial"
-    }
     return (
       <div className="Vrtextbox">
         <img className="Vrimg" src='/img/VR_image_confirmed.png' alt="VR 사진">

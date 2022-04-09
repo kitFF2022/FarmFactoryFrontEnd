@@ -2,8 +2,6 @@ import React from "react";
 import './Login.css'
 import Header from "../Header/Header";
 import Tosignup from "./Tosignup";
-import { withRouter } from 'react-router-dom';
-
 
 class Login extends React.Component {
     goToMain = () => {
@@ -15,7 +13,7 @@ class Login extends React.Component {
             <div className = "LoginPageWrap">
                 <Header/>
                 <div className = "LoginWrap">
-                <img className="Loginlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'}></img>
+                <img className="Loginlogo"  src={process.env.PUBLIC_URL + '/img/logo.png' }alt="logo"></img>
                 {/* <h1 className = "Logintitle">로그인 페이지</h1> */}
                 <p className = "id"><input type="text" placeholder="전화번호, 사용자 이름 또는 이메일"/></p>
                 <p className = "pw"><input type="text" placeholder="비밀번호"/></p>

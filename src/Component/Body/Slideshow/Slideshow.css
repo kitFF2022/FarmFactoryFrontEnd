@@ -20,7 +20,10 @@
 }
 
 
-
+ul {
+    margin: 0;
+    
+}
 
 
 .Slideshowul{
@@ -38,7 +41,6 @@
 .Slideshowli2 {
     list-style: none;
     display: inline-block;
-    width: 0%;
     vertical-align: middle;
 }
 
@@ -94,7 +96,7 @@
         Top : 100px;
         list-style: none;
         display: inline-block;
-        width: 100%;
         vertical-align: middle;
     }
+    
 }

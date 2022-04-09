@@ -1,7 +1,6 @@
 import React from "react";
 import './Signup.css'
 import Header from "../Header/Header";
-import { withRouter } from 'react-router-dom';
 
 
 class Login extends React.Component {
