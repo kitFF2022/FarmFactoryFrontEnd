@@ -2,6 +2,8 @@ sudo apt-get update
 
 sudo apt install npm
 
+npm install -save react-scripts
+
 npm install
 
 https://github.com/nodesource/distributions/blob/master/README.md
