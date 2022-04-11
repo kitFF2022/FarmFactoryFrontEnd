@@ -11,12 +11,11 @@ const Download = () => {
             <span className='h1'>간편하게</span><br/>
             <span className='h1'>내손안에서</span><br/>
             <span className='h2'>Farm Factory</span><br/>
-            <span>
-                <b>
+            <span> 
             WEB, APP 그리고 VR을 통한 다양한 방법으로<br/>
             자신의 농장을 설계하고, 이를 통한 설계에 필요한 자원을 낮추세요!<br/>
             설계를 더욱더 손쉽게 프로젝트로!
-            </b></span>
+            </span>
            <Loginbutton/>
            <br/><br/><br/><br/><br/><br/>
             <br/><br/><br/><br/><br/><br/>

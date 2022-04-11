@@ -1,10 +1,23 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .Vrtextbox> .Vrimg {
     padding: 40px;
     float: left;
-    width: 45vh;
+    width: 65vh;
     min-width: 240px;
-    max-width: 60vh;
+    max-width: 70vh;
     /* max-width: 480px; */
 }
 
@@ -14,7 +27,7 @@
     font-size: 50px;
     color: #98D680;
     font-family: 'NEXON Lv1 Gothic OTF Light';
-     font-weight: normal;
+    font-weight: normal;
     font-style: normal;
     position: relative;
     Top : 10px;
@@ -30,7 +43,6 @@
     word-break: keep-all;
     color: #555555;
     font-family: 'GmarketSansLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     
@@ -48,13 +60,11 @@
         padding: 0px;
         width: 90%;
         min-width: 240px;
-        max-width: 584px;
+        max-width: 400px;
         
         
     }
-    .Vrimg {
-
-    }
+   
 
     .Vrtextbox >.Vrpaddingbox> { 
         position: relative;

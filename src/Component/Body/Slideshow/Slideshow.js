@@ -22,11 +22,11 @@ class Slideshow extends React.Component {
             url: process.env.PUBLIC_URL + '/img/img3.jpg',
             caption: 'Slide 3'
         }],
-        width: 500,
-        height:300,
+        width: window.innerWidth-500,
+        height:window.innerHeight-300,
       }
         if (window.innerWidth < 640){
-            return (this.state.width =300, this.state.height =210);
+            return (this.state.width =window.innerWidth-100, this.state.height = 230);
         }
         else {
             return (this.state.width =500, this.state.height =350);

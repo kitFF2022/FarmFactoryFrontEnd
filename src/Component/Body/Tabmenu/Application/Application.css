@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'KoPubDotumMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+}
 
 .Apptextbox > .Appimg {
     padding: 40px;
@@ -14,16 +28,9 @@
     word-break: keep-all;
     font-size: 50px;
     color: #A3DA8D;
-    position: relative;
-    Top : 10px;
-    left: 40px;
-}
-
-.Apptextbox > .h2 {
-    word-break: keep-all;
-    font-weight: 300;
-    font-size: 40px;
-    color: rgb(103, 221, 156);
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-weight: normal;
+    font-style: normal;
     position: relative;
     Top : 10px;
     left: 40px;
@@ -34,6 +41,10 @@
     Top : 10px;
     left: 40px;
     word-break: keep-all;
+    color: #555555;
+    font-family: 'GmarketSansLight';
+    font-weight: normal;
+    font-style: normal;
     
     /* padding: 0px 16px 0px 16px; */
 }

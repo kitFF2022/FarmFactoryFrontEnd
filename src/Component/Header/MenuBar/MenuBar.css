@@ -56,3 +56,10 @@
     vertical-align: middle;
     height: 30px;
 }
+#status{
+    position: fixed;
+    right: 0px;
+    background-color: aliceblue;
+    border-style: solid;
+    display: none;
+}

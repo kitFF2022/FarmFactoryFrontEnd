@@ -7,6 +7,17 @@ function MenuBarMenu(props) {
     );
 }
 
+ //보이기
+ function div_show() {
+    var con = document.getElementById("status");
+	if(con.style.display === 'none'){
+		con.style.display = 'block';
+	}else{
+		con.style.display = 'none';
+	}
+}
+  
+
 class MenuBar extends React.Component {
 
     constructor(props) {
@@ -22,6 +33,7 @@ class MenuBar extends React.Component {
             <MenuBarMenu name={this.state.menu[i]} />
         )
     }
+    
 
     render() {
         return (
@@ -46,9 +58,14 @@ class MenuBar extends React.Component {
                             <a href='./'>
                                 {this.renderMenu(1)}
                             </a>
-                            <a href='./Login'>
-                            <li><img className='MenuBarLiUser' src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile'></img></li>
+                            <a href={()=> false} onClick={()=> div_show()}>
+                            <li><img className='MenuBarLiUser' role="button" src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile'></img></li>
                             </a>
+                            <div id='status' >
+                                ㅇㅇㅇ님
+                                <hr/>
+                                <button>로그아웃</button>
+                            </div>
                         </ul>
                     </li>
                 </ul>
