@@ -1,4 +1,4 @@
-.SignupWrap {
+.ResisterWrap {
     width: 400px;
     height: 270px;
     margin: 170px auto auto auto;
@@ -16,7 +16,8 @@ input {
     background-color: rgb(250, 250, 250);
     transition: all 0.5s;
 }
-.Signbutton {
+.Resister
+button {
     background-color : #23ad96;
     /* border: none; */
     font-size: 17px;
@@ -26,7 +27,8 @@ input {
     padding: 5px;
     color : white;
 }
-.Signbutton:hover {
+.Resister
+button:hover {
     background-color : #52c2af;
     border-color: rgb(236, 236, 236);
     /* border: none; */

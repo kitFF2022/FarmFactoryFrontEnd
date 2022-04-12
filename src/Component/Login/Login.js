@@ -12,7 +12,7 @@ const onLoggin = function () {
     try{
         let res = axios({
             method:'POST',
-            url:'http://mmyu.iptime.org:8000/user/signup',
+            url:'http://mmyu.iptime.org:8000/user/signin',
             data:{
                 // name : Name.value,
                 // nickname : Nickname.value,
@@ -27,14 +27,14 @@ const onLoggin = function () {
         // throw new Error(err);
     }
 }
-axios('http://mmyu.iptime.org:8000/user/signin');
+// axios('http://mmyu.iptime.org:8000/user/signin');
 axios.post("http://mmyu.iptime.org:8000/user/signin", {
     Name: '시로가네 노엘'
     })
     .then(function (response) {
     // response
-    console.log(response.Name)
-    console.log(response.Nickname)
+    // console.log(response.Name)
+    // console.log(response.Nickname)
     console.log(response.Emailaddr)
     console.log(response.Password)
     }).catch(function (error) {
