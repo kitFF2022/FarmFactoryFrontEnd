@@ -3,12 +3,19 @@ import './Login.css'
 import Header from "../Header/Header";
 import Tosignup from "./Tosignup";
 import axios from "axios";
-
+function onLoggin () {
+    var Emailaddr = document.getElementById('email');
+    var Password = document.getElementById('pw');
+    // console.log("응ㅇㅇㅇㅇㅇ")
+    console.log(Emailaddr)
+    console.log(Password)
+}
 // const axios = require('axios');
 const onLoggin = function () {
     const email = document.getElementById('email');
     const Password = document.getElementById('pw');
-
+    // console.log(email)
+    // console.log(Password)
     try{
         let res = axios({
             method:'POST',
@@ -27,9 +34,11 @@ const onLoggin = function () {
         // throw new Error(err);
     }
 }
-// axios('http://mmyu.iptime.org:8000/user/signin');
+
+axios('http://mmyu.iptime.org:8000/user/signin');
 axios.post("http://mmyu.iptime.org:8000/user/signin", {
-    Name: '시로가네 노엘'
+    Emailaddr: "canan8181@gmail.com",
+    Password: "SuperPowerfulPW"
     })
     .then(function (response) {
     // response
@@ -41,6 +50,8 @@ axios.post("http://mmyu.iptime.org:8000/user/signin", {
     // 오류발생시 실행
     console.log("응애 오류")
     })
+
+    
 
 class Login extends React.Component {
     // goToMain = () => {
@@ -62,7 +73,8 @@ class Login extends React.Component {
                     <input type="text" id = "pw" value="SuperPowerfulPW"
                     // _onChange={(e) => {setPwd(e.target.value);}} 
                     placeholder="비밀번호"/></p>
-                <p><button className = "Loginbutton" type="button" onClick={onLoggin()}>로그인 하기</button></p> 
+                <button className = "Loginbutton" type="button" 
+                onClick={onLoggin}>로그인 하기</button> 
                 </div>
                 <Tosignup/>
             </div>
