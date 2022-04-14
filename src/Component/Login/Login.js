@@ -4,52 +4,52 @@ import Header from "../Header/Header";
 import Tosignup from "./Tosignup";
 import axios from "axios";
 function onLoggin () {
-    var Emailaddr = document.getElementById('email');
-    var Password = document.getElementById('pw');
+    var Emailaddr = document.getElementById('email').value;
+    var Password = document.getElementById('pw').value;
     // console.log("응ㅇㅇㅇㅇㅇ")
     console.log(Emailaddr)
     console.log(Password)
 }
 // const axios = require('axios');
-const onLoggin = function () {
-    const email = document.getElementById('email');
-    const Password = document.getElementById('pw');
-    // console.log(email)
-    // console.log(Password)
-    try{
-        let res = axios({
-            method:'POST',
-            url:'http://mmyu.iptime.org:8000/user/signin',
-            data:{
-                // name : Name.value,
-                // nickname : Nickname.value,
-                email : email.value,
-                password : Password.value,
-            },
-        });
-        console.log(res);
-        document.write(JSON.stringify(res));
-    } catch (err) {
-        console.log(err);
-        // throw new Error(err);
-    }
-}
+// const onLoggin = function () {
+//     const email = document.getElementById('email');
+//     const Password = document.getElementById('pw');
+//     // console.log(email)
+//     // console.log(Password)
+//     try{
+//         let res = axios({
+//             method:'POST',
+//             url:'http://mmyu.iptime.org:8000/user/signin',
+//             data:{
+//                 // name : Name.value,
+//                 // nickname : Nickname.value,
+//                 email : email.value,
+//                 password : Password.value,
+//             },
+//         });
+//         console.log(res);
+//         document.write(JSON.stringify(res));
+//     } catch (err) {
+//         console.log(err);
+//         // throw new Error(err);
+//     }
+// }
 
-axios('http://mmyu.iptime.org:8000/user/signin');
-axios.post("http://mmyu.iptime.org:8000/user/signin", {
-    Emailaddr: "canan8181@gmail.com",
-    Password: "SuperPowerfulPW"
-    })
-    .then(function (response) {
-    // response
-    // console.log(response.Name)
-    // console.log(response.Nickname)
-    console.log(response.Emailaddr)
-    console.log(response.Password)
-    }).catch(function (error) {
-    // 오류발생시 실행
-    console.log("응애 오류")
-    })
+// axios('http://mmyu.iptime.org:8000/user/signin');
+// axios.post("http://mmyu.iptime.org:8000/user/signin", {
+//     Emailaddr: "canan8181@gmail.com",
+//     Password: "SuperPowerfulPW"
+//     })
+//     .then(function (response) {
+//     // response
+//     // console.log(response.Name)
+//     // console.log(response.Nickname)
+//     console.log(response.Emailaddr)
+//     console.log(response.Password)
+//     }).catch(function (error) {
+//     // 오류발생시 실행
+//     console.log("응애 오류")
+//     })
 
     
 
