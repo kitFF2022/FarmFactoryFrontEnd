@@ -1,6 +1,6 @@
 import React from 'react'
 import './MenuBar.css'
-
+import { Link } from "react-router-dom";
 function MenuBarMenu(props) {
     return (
         <li><h4 className='MenuBarMenuItem'>{props.name}</h4></li>
@@ -41,9 +41,11 @@ class MenuBar extends React.Component {
                 
                 <ul>
                     <li className='MenuBarLiLogo'>
-                    <a href='./'>
+                    {/* <a href='./'> */}
+                    <Link to="/">
                         <img src={process.env.PUBLIC_URL + '/img/logo2.png'} alt="logo"></img>
-                    </a>
+                    </Link>
+                    {/* </a> */}
                     </li>
                     <li className='MenuBarLiLogoText'>
                         <div>

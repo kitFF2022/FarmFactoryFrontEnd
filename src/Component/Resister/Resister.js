@@ -3,16 +3,45 @@ import './Resister.css'
 import Header from "../Header/Header";
 // import Tosignup from "./Tosignup";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 function onLoggin () {
-    var Emailaddr = document.getElementById('email').value;
-    var Password = document.getElementById('pw').value;
-    // console.log("응ㅇㅇㅇㅇㅇ")
-    console.log(Emailaddr)
-    console.log(Emailaddr)
-    console.log(Emailaddr)
-    console.log(Password)
+    var get_resister_name = document.getElementById('resister_name').value;
+    var Nickname = document.getElementById('resister_id').value;
+    var get_resister_email = document.getElementById('resister_email').value;
+    var get_resister_pw = document.getElementById('resister_pw').value;
+    
+    console.log(get_resister_name)
+    console.log(Nickname)
+    console.log(get_resister_email)
+    console.log(get_resister_pw)
+
+    axios.post("http://mmyu.iptime.org:8000/user/signup", {
+        Name : get_resister_name,
+        Nickname : Nickname,
+        Emailaddr: get_resister_email,
+        Password: get_resister_pw
+    })
+    .then(function (response) {
+    // response
+        console.log("데이터 전송 성공함")
+    }).catch(function (error) {
+    // 오류발생시 실행
+        console.log(error);
+        // if(!error?.response){
+        //     console.log('No server response');
+        // }else if (error.response?.status ===400) {
+        //     console.log('Missing Username or Password');
+        // }
+        // else if (error.response?.status ===401) {
+        //     console.log('Unauthorized');
+        // }
+        // else {
+        //     console.log('Login Failed');
+        // }
+    });
+    return(<Link to="/Login"></Link>);
 }
 // const axios = require('axios');
 // const onLoggin = function () {
@@ -39,21 +68,7 @@ function onLoggin () {
 // }
 
 // // axios('http://mmyu.iptime.org:8000/user/signin');
-// axios.post("http://mmyu.iptime.org:8000/user/signin", {
-//     Emailaddr: "canan8181@gmail.com",
-//     Password: "SuperPowerfulPW"
-    
-//     })
-//     .then(function (response) {
-//     // response
-//     // console.log(response.Name)
-//     // console.log(response.Nickname)
-//     console.log(response.Emailaddr)
-//     console.log(response.Password)
-//     }).catch(function (error) {
-//     // 오류발생시 실행
-//     console.log("응애 오류")
-//     })
+
 
 class Resister extends React.Component {
     // goToMain = () => {
@@ -68,23 +83,24 @@ class Resister extends React.Component {
                 <img className="Resisterlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
                 {/* <h1 className = "Resistertitle">로그인 페이지</h1> */}
                 <p className = "id">
-                    <input type="text" id = "email" value=""
+                    <input type="text" id = "resister_name" value="이동익"
                     // _onChange={(e) => {setId(e.target.value);}} 
                     placeholder="사용자 이름"/></p>
                 <p className = "id">
-                    <input type="text" id = "email" value=""
+                    <input type="text" id = "resister_id" value="ldi2676"
                     // _onChange={(e) => {setId(e.target.value);}} 
                     placeholder="전화번호"/></p>
                 <p className = "id">
-                    <input type="text" id = "email" value=""
+                    <input type="text" id = "resister_email" value="jw2676@naver.com"
                     // _onChange={(e) => {setId(e.target.value);}} 
                     placeholder="이메일"/></p>
                 <p className = "pw">
-                    <input type="text" id = "pw" value=""
+                    <input type="text" id = "resister_pw" value="1234"
                     // _onChange={(e) => {setPwd(e.target.value);}} 
                     placeholder="비밀번호"/></p>
                 <p><button className = "Resisterbutton" type="button" onClick={onLoggin}>회원가입 하기</button></p> 
                 </div>
+                {/*  */}
             </div>
         );
     }

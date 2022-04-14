@@ -2,19 +2,38 @@ import React from "react";
 import './Login.css'
 import Header from "../Header/Header";
 import Tosignup from "./Tosignup";
+import { Link } from "react-router-dom";
 import axios from "axios";
 function onLoggin () {
-    var Emailaddr = document.getElementById('email').value;
-    var Password = document.getElementById('pw').value;
+    var Emailaddr = document.getElementById('login_email').value;
+    var Password = document.getElementById('login_pw').value;
     // console.log("응ㅇㅇㅇㅇㅇ")
     console.log(Emailaddr)
     console.log(Password)
+    axios({
+        method: 'post',
+        url: 'http://mmyu.iptime.org:8000/user/signin',
+        responseType: 'stream',
+        data: {
+          Emailaddr: Emailaddr,
+          Password: Password
+        }
+    })
+        .then(function (response) {
+            console.log(response);
+            // response.data.pipe(fs.createWriteStream(''))
+        })
+        .catch(function (error) {
+            // 오류발생시 실행
+                console.log(error);
+        });
+    return(<Link to="./"></Link>);
 }
 // const axios = require('axios');
 // const onLoggin = function () {
-//     const email = document.getElementById('email');
+//     const login_email = document.getElementById('login_email');
 //     const Password = document.getElementById('pw');
-//     // console.log(email)
+//     // console.log(login_email)
 //     // console.log(Password)
 //     try{
 //         let res = axios({
@@ -23,7 +42,7 @@ function onLoggin () {
 //             data:{
 //                 // name : Name.value,
 //                 // nickname : Nickname.value,
-//                 email : email.value,
+//                 login_email : login_email.value,
 //                 password : Password.value,
 //             },
 //         });
@@ -37,14 +56,14 @@ function onLoggin () {
 
 // axios('http://mmyu.iptime.org:8000/user/signin');
 // axios.post("http://mmyu.iptime.org:8000/user/signin", {
-//     Emailaddr: "canan8181@gmail.com",
+//     login_emailaddr: "canan8181@gmail.com",
 //     Password: "SuperPowerfulPW"
 //     })
 //     .then(function (response) {
 //     // response
 //     // console.log(response.Name)
 //     // console.log(response.Nickname)
-//     console.log(response.Emailaddr)
+//     console.log(response.login_emailaddr)
 //     console.log(response.Password)
 //     }).catch(function (error) {
 //     // 오류발생시 실행
@@ -66,11 +85,11 @@ class Login extends React.Component {
                 <img className="Loginlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
                 {/* <h1 className = "Logintitle">로그인 페이지</h1> */}
                 <p className = "id">
-                    <input type="text" id = "email" value="canan8181@gmail.com"
+                    <input type="text" id = "login_email" value="jw2676@naver.com"
                     // _onChange={(e) => {setId(e.target.value);}} 
                     placeholder="전화번호, 사용자 이름 또는 이메일"/></p>
                 <p className = "pw">
-                    <input type="text" id = "pw" value="SuperPowerfulPW"
+                    <input type="text" id = "login_pw" value="1234"
                     // _onChange={(e) => {setPwd(e.target.value);}} 
                     placeholder="비밀번호"/></p>
                 <button className = "Loginbutton" type="button" 
