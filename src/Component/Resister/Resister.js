@@ -26,6 +26,7 @@ function onLoggin () {
     .then(function (response) {
     // response
         console.log("데이터 전송 성공함")
+        window.location.href = "/";
     }).catch(function (error) {
     // 오류발생시 실행
         console.log(error);

@@ -4,6 +4,9 @@ import Header from "../Header/Header";
 import Tosignup from "./Tosignup";
 import { Link } from "react-router-dom";
 import axios from "axios";
+
+
+
 function onLoggin () {
     var Emailaddr = document.getElementById('login_email').value;
     var Password = document.getElementById('login_pw').value;
@@ -13,64 +16,33 @@ function onLoggin () {
     axios({
         method: 'post',
         url: 'http://mmyu.iptime.org:8000/user/signin',
-        responseType: 'stream',
+        //responseType: 'stream',
         data: {
           Emailaddr: Emailaddr,
           Password: Password
+        },
+        headers:{
+            // headers:authToken
         }
     })
+    
         .then(function (response) {
+            console.log("토큰");
             console.log(response);
-            // response.data.pipe(fs.createWriteStream(''))
+            // response.data.pipe(fs.createWriteStream('.jpg'))
+            window.location.href = "/";
         })
         .catch(function (error) {
             // 오류발생시 실행
                 console.log(error);
+                if(error.message ==='Network Error'){
+                    alert('No server response');
+                    
+                }
+                
         });
-    return(<Link to="./"></Link>);
-}
-// const axios = require('axios');
-// const onLoggin = function () {
-//     const login_email = document.getElementById('login_email');
-//     const Password = document.getElementById('pw');
-//     // console.log(login_email)
-//     // console.log(Password)
-//     try{
-//         let res = axios({
-//             method:'POST',
-//             url:'http://mmyu.iptime.org:8000/user/signin',
-//             data:{
-//                 // name : Name.value,
-//                 // nickname : Nickname.value,
-//                 login_email : login_email.value,
-//                 password : Password.value,
-//             },
-//         });
-//         console.log(res);
-//         document.write(JSON.stringify(res));
-//     } catch (err) {
-//         console.log(err);
-//         // throw new Error(err);
-//     }
-// }
-
-// axios('http://mmyu.iptime.org:8000/user/signin');
-// axios.post("http://mmyu.iptime.org:8000/user/signin", {
-//     login_emailaddr: "canan8181@gmail.com",
-//     Password: "SuperPowerfulPW"
-//     })
-//     .then(function (response) {
-//     // response
-//     // console.log(response.Name)
-//     // console.log(response.Nickname)
-//     console.log(response.login_emailaddr)
-//     console.log(response.Password)
-//     }).catch(function (error) {
-//     // 오류발생시 실행
-//     console.log("응애 오류")
-//     })
-
-    
+        
+}   
 
 class Login extends React.Component {
     // goToMain = () => {
@@ -92,8 +64,10 @@ class Login extends React.Component {
                     <input type="text" id = "login_pw" value="1234"
                     // _onChange={(e) => {setPwd(e.target.value);}} 
                     placeholder="비밀번호"/></p>
+                {/* <Link to="/"> */}
                 <button className = "Loginbutton" type="button" 
-                onClick={onLoggin}>로그인 하기</button> 
+                onClick={onLoggin}>로그인 하기</button>
+                {/* </Link> */}
                 </div>
                 <Tosignup/>
             </div>
