@@ -30,6 +30,10 @@ function onLoggin () {
     }).catch(function (error) {
     // 오류발생시 실행
         console.log(error);
+        if(error.message ==='Network Error'){
+            alert('No server response');
+            
+        }
         // if(!error?.response){
         //     console.log('No server response');
         // }else if (error.response?.status ===400) {
@@ -42,7 +46,7 @@ function onLoggin () {
         //     console.log('Login Failed');
         // }
     });
-    return(<Link to="/Login"></Link>);
+    
 }
 // const axios = require('axios');
 // const onLoggin = function () {

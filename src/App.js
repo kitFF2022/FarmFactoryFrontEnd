@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Resister" element={<Resister />} />
+        <Route path="/Resister" element={<Resister />} />
       </Routes>
     </div>
     
