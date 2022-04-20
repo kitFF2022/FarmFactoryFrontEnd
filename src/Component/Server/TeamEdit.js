@@ -1,9 +1,9 @@
 import React from "react";
-import './Team_edit.css'
+import './TeamEdit.css'
 import Header from "../Header/Header";
 // import Tosignup from "./Tosignup";
 // import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 
 
