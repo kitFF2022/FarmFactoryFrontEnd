@@ -66,7 +66,7 @@ class MenuBar extends React.Component {
                             <a href='./'>
                                 {this.renderMenu(0)}
                             </a>
-                            <a href='./'>
+                            <a href='/Profile_edit'>
                                 {this.renderMenu(1)}
                             </a>
                             <a href={()=> false} onClick={()=> div_show()}>

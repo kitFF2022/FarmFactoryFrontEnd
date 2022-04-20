@@ -57,9 +57,11 @@
     width: 40px;
 }
 #profile_div{
-    position: relative;
-    right: 0px;
+    position: fixed;
+    right: 5px;
+    width: 200px;
     background-color: grey;
     border-style: solid;
     display: none;
+    
 }
