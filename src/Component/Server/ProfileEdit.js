@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 // import axios from "axios";
 
+//서비스를 눌렀을 때 제일 먼저 나오는 창
 class Profile_edit extends React.Component {
     render() {
         return (

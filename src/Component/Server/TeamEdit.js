@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 // import { Link } from "react-router-dom";
 // import axios from "axios";
 
-
+//팀 데이터 변경 창
 
 // function onLoggin () {
 //     var Emailaddr = document.getElementById('login_email').value;
