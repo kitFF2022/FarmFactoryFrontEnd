@@ -1,37 +1,12 @@
 import React from "react";
 import './Login.css'
 import Header from "../Header/Header";
+// import isLogin from "../Header/MenuBar/MenuBar";
 import Tosignup from "./Tosignup";
 // import { Link } from "react-router-dom";
 import axios from "axios";
-// import res from "express/lib/response";
 
-// function Profile(props) {
-//     var fs = require('fs');
-//     var Pro_Name = document.getElementById("profile_name");
-//     var Pro_Team = document.getElementById("profile_team");
-//     console.log(Pro_Name);
-//     console.log(Pro_Team);
-//     axios({
-//         method: 'POST',
-//         url: 'http://mmyu.iptime.org:8000/user/profilePic',
-//         // responseType: 'stream'
-//       })
-//         .then(function (response) {
-//           response.data.pipe(fs.createWriteStream("string"))
-//           console.log(response);
-//         })
-//         .catch(function (error) {
-//             // 오류발생시 실행
-//                 console.log(error);
-//                 if(error.message ==='Network Error'){
-//                     alert('No server response');     
-//                 }    
-//         });
-//     return (
-//         <li><h4 className='MenuBarMenuItem'>{props.name}</h4></li>
-//     );
-// }
+
 
 function onLoggin () {
     
@@ -60,6 +35,7 @@ function onLoggin () {
             console.log(response.data.access_token);
             // response.data.pipe(fs.createWriteStream('.jpg'))
             // window.location.href = "/";
+        
         })
         .catch(function (error) {
             // 오류발생시 실행
