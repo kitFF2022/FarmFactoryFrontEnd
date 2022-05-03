@@ -17,7 +17,7 @@ function onLoggin () {
     console.log(get_resister_email)
     console.log(get_resister_pw)
 
-    axios.post("http://mmyu.iptime.org:8000/user/signup", {
+    axios.post("http://mmyu.direct.quickconnect.to:8880/user/signup", {
         Name : get_resister_name,
         Nickname : Nickname,
         Emailaddr: get_resister_email,

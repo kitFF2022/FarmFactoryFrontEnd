@@ -17,7 +17,7 @@ function onLoggin () {
     console.log(Password)
     axios({
         method: 'post',
-        url: 'http://mmyu.iptime.org:8000/user/signin',
+        url: 'http://mmyu.direct.quickconnect.to:8880/user/signin',
         //responseType: 'stream',
         data: {
           Emailaddr: Emailaddr,
