@@ -17,7 +17,7 @@ function onLoggin () {
     console.log(get_resister_email)
     console.log(get_resister_pw)
 
-    axios.post("http://mmyu.direct.quickconnect.to:8880/user/signup", {
+    axios.post("http://localhost:8000/user/signup", {
         Name : get_resister_name,
         Nickname : Nickname,
         Emailaddr: get_resister_email,
@@ -29,9 +29,13 @@ function onLoggin () {
         window.location.href = "/";
     }).catch(function (error) {
     // 오류발생시 실행
-        console.log(error);
+        alert(error.message);
         if(error.message ==='Network Error'){
             alert('No server response');
+            
+        }
+        if(error.message ==='Request failed with status code 404'){
+            alert('404 error');
             
         }
     });

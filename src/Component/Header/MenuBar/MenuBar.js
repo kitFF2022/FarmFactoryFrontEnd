@@ -25,15 +25,17 @@ function login_in_out() {
     var profile_photo = document.getElementById('profile_photo');
     var profile_name = document.getElementById('profile_name');
     var profile_team = document.getElementById('profile_team');
-    var isLogin = false;
+    // var isLogin = false;
 	if(button_log.innerText === '로그아웃'){
 		button_log.innerText = '로그인';
         profile_photo.src = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png';
         profile_team.innerText = "로그인을"
         profile_name.innerText = "해주세요"
+        sessionStorage.removeItem('user_id')
         window.location.reload()
     }else{
 		button_log.innerText = '로그아웃';
+        
         // window.location.href = "./Login";
         profile_photo.src = process.env.PUBLIC_URL + '/logo192.png';
         profile_team.innerText = "카카오"

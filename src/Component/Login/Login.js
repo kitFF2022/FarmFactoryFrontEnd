@@ -33,15 +33,20 @@ function onLoggin () {
             console.log("토큰");
             console.log(response);
             console.log(response.data.access_token);
-            // response.data.pipe(fs.createWriteStream('.jpg'))
+            //response.data.pipe(fs.createWriteStream('.jpg'))
+            sessionStorage.setItem('user_id',Emailaddr)
+            sessionStorage.setItem('user_data',response)
             // window.location.href = "/";
-        
         })
         .catch(function (error) {
             // 오류발생시 실행
                 console.log(error);
                 if(error.message ==='Network Error'){
                     alert('No server response');
+                    
+                }
+                if(error.message ==='Request failed with status code 404'){
+                    alert('404 error');
                     
                 }
                 
