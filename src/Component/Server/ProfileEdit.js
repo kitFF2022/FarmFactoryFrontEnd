@@ -13,8 +13,8 @@ class Profile_edit extends React.Component {
                 <Header/>
                 <div className = "Profile_editWrap">
                 <img className="Profile_editlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
-                <Link to={"/UserEdit"}><div className="menu1">유저 데이터 변경</div></Link>
-                <Link to={"/TeamEdit"}><div className="menu1">팀 데이터 변경</div></Link>
+                <Link to={"/UserMenu"}><div className="menu1">유저 데이터 변경</div></Link>
+                <Link to={"/TeamMenu"}><div className="menu1">팀 데이터 변경</div></Link>
                 </div>
             </div>
         );

@@ -23,9 +23,6 @@ function onLoggin () {
           Emailaddr: Emailaddr,
           Password: Password,
           access_token : access_token
-        },
-        headers:{
-            // Auth:access_token
         }
     })
     
@@ -35,8 +32,9 @@ function onLoggin () {
             console.log(response.data.access_token);
             //response.data.pipe(fs.createWriteStream('.jpg'))
             sessionStorage.setItem('user_id',Emailaddr)
-            sessionStorage.setItem('user_data',response)
-            // window.location.href = "/";
+            sessionStorage.setItem('user_id',Emailaddr)
+            sessionStorage.setItem('user_data',response.data.access_token)
+            window.location.href = "/";
         })
         .catch(function (error) {
             // 오류발생시 실행
@@ -47,6 +45,11 @@ function onLoggin () {
                 }
                 if(error.message ==='Request failed with status code 404'){
                     alert('404 error');
+                    
+                }
+                if(error.message ==='Request failed with status code 401'){
+                    alert('401 error,계정 존재하지 않음!');
+                    
                     
                 }
                 

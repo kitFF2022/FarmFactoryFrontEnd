@@ -1,12 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React,{useEffect,useState} from 'react';
+
 import Resister from './Component/Resister/Resister';
 import Login from './Component/Login/Login';
 import Home from './Component/Home';
 import ProfileEdit from './Component/Server/ProfileEdit';
-import UserEdit from './Component/Server/UserEdit';
-import TeamEdit from './Component/Server/TeamEdit';
+import UserMenu from './Component/Server/Menu/UserMenu';
+import TeamMenu from './Component/Server/Menu/TeamMenu';
+import UserEdit from './Component/Server/Menu/Edit/UserEdit';
+import TeamEdit from './Component/Server/Menu/Edit/TeamEdit';
+import UnityPage from './Component/Unity/UnityPage';
+import CheckLogin from './Component/Unity/CheckLogin';
+
 function App() {
   const [isLogin,setIsLogin] = useState(false)
 
@@ -24,15 +30,20 @@ function App() {
   
   return (
     <div>
-      {isLogin ?<Home/> : <Login/>}
+      {/* {isLogin ? <UnityPage/> : <Login/>} */}
       <Routes>
-        {/* <Route path="/" element={<Home/>} isLogin={isLogin}/>: */}
-        {/* <Route path="/Login" element={<Login/>}/> */}
+        <Route path="/" element={<Home/>} />
+        <Route path="/Login" element={<Login/>}/>
         <Route path="/Resister" element={<Resister/>}/>
         <Route path="/ProfileEdit" element={<ProfileEdit/>}/>
+        <Route path="/UserMenu" element={<UserMenu/>}/>
+        <Route path="/TeamMenu" element={<TeamMenu/>}/>
         <Route path="/UserEdit" element={<UserEdit/>}/>
         <Route path="/TeamEdit" element={<TeamEdit/>}/>
+        <Route path="/CheckLogin" element={<CheckLogin/>} />
+        <Route path="/UnityPage" element={<UnityPage/>}/>
       </Routes>
+      
     </div>
     
   );

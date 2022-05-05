@@ -1,11 +1,11 @@
 import React from "react";
-import './TeamEdit.css'
-import Header from "../Header/Header";
+import './UserEdit.css'
+import Header from "../../../Header/Header";
 // import Tosignup from "./Tosignup";
 // import { Link } from "react-router-dom";
 // import axios from "axios";
 
-//팀 데이터 변경 창
+//유저 데이터 변경 창
 
 // function onLoggin () {
 //     var Emailaddr = document.getElementById('login_email').value;
@@ -56,15 +56,22 @@ class Login extends React.Component {
                 <div className = "Team_editWrap">
                 <img className="Team_editlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
                 {/* <h1 className = "Logintitle">로그인 페이지</h1> */}
-                <p>현재 소속된 팀 : {}</p>
-                <p><button className = "Loginbutton" type="button" 
-                >팀 추가</button></p>
-                <p><button className = "Loginbutton" type="button" 
-                >팀 수정</button></p>
-                <p><button className = "Loginbutton" type="button" 
-                >팀 삭제</button></p>
-                <p><button className = "Loginbutton" type="button" 
-                >팀 탈퇴</button></p>
+                <p className = "id"><span> 이름 : {}</span>
+                   </p>
+                   <p className = "nickname"><span> 닉네임 : {}</span>
+                    <input type="text" id = "resister_id" value="ldi2676"
+                    placeholder="전화번호"/></p>
+                <p className = "id"><span>이메일 : </span>
+                    <input type="text" id = "login_email" value="jw2676@naver.com"
+                    // _onChange={(e) => {setId(e.target.value);}} 
+                    placeholder="전화번호, 사용자 이름 또는 이메일"/></p>
+                <p className = "pw"><span> 새 비밀번호: </span>
+                    <input type="text" id = "login_pw" value="1234"
+                    // _onChange={(e) => {setPwd(e.target.value);}} 
+                    placeholder="비밀번호"/></p>
+                {/* <Link to="/"> */}
+                <button className = "Loginbutton" type="button" 
+                >정보 수정</button>
                 {/* </Link> */}
                 </div>
                 {/* <Tosignup/> */}
