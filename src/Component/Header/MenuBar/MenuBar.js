@@ -23,7 +23,7 @@ function MenuBarMenu(props) {
 	}
 }
 function isLogin() {
-    const access_token = sessionStorage.getItem('user_data');
+    const access_token = sessionStorage.getItem('user_token');
     const api = 'http://mmyu.direct.quickconnect.to:8880/user/userData'
     var button_log = document.getElementById("log_in_out_button");
     var profile_photo = document.getElementById('profile_photo');

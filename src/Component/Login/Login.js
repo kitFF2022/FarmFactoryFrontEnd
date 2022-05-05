@@ -28,12 +28,21 @@ function onLoggin () {
     
         .then(function (response) {
             console.log("토큰");
-            console.log(response);
+            console.log(response.data);
+            console.log(response.data.name);
+            console.log(response.data.nickname);
+            console.log(response.data.ProfilePio);
+            console.log(response.data.Team);
             console.log(response.data.access_token);
             //response.data.pipe(fs.createWriteStream('.jpg'))
             sessionStorage.setItem('user_id',Emailaddr)
-            sessionStorage.setItem('user_id',Emailaddr)
-            sessionStorage.setItem('user_data',response.data.access_token)
+            sessionStorage.setItem('user_data',response.data)
+            sessionStorage.setItem('user_name',response.data.name)
+            sessionStorage.setItem('user_nick',response.data.nickname)
+            sessionStorage.setItem('user_pw',Password)
+            sessionStorage.setItem('user_pic',response.data.ProfilePio)
+            sessionStorage.setItem('user_team',response.data.Team)
+            sessionStorage.setItem('user_token',response.data.access_token)
             window.location.href = "/";
         })
         .catch(function (error) {
