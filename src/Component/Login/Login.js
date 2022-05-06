@@ -57,9 +57,10 @@ function onLoggin () {
                     
                 }
                 if(error.message ==='Request failed with status code 401'){
-                    alert('401 error,계정 존재하지 않음!');
-                    
-                    
+                    alert('401 error,계정 존재하지 않음!'); 
+                }
+                else{
+                    alert(error);
                 }
                 
         });
@@ -79,15 +80,14 @@ class Login extends React.Component {
                 <img className="Loginlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
                 {/* <h1 className = "Logintitle">로그인 페이지</h1> */}
                 <p className = "id">
-                    <input type="text" id = "login_email" value="jw2676@naver.com"
-                    // _onChange={(e) => {setId(e.target.value);}} 
+                    <input type="text" id = "login_email" 
                     placeholder="전화번호, 사용자 이름 또는 이메일"/></p>
                 <p className = "pw">
-                    <input type="text" id = "login_pw" value="1234"
-                    // _onChange={(e) => {setPwd(e.target.value);}} 
+                    <input type="text" id = "login_pw" 
+                    
                     placeholder="비밀번호"/></p>
                 {/* <Link to="/"> */}
-                <button className = "Loginbutton" type="button" 
+                <button className = "Loginbutton" type="" 
                 onClick={onLoggin}>로그인 하기</button>
                 {/* </Link> */}
                 </div>

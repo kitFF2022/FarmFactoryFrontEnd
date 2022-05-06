@@ -29,7 +29,7 @@ function onLoggin () {
         window.location.href = "/";
     }).catch(function (error) {
     // 오류발생시 실행
-        alert(error.message);
+        console.log(error.message);
         if(error.message ==='Network Error'){
             alert('No server response');
             
@@ -37,6 +37,9 @@ function onLoggin () {
         if(error.message ==='Request failed with status code 404'){
             alert('404 error');
             
+        }
+        else{
+            alert(error.message);
         }
     });
 }
@@ -51,16 +54,16 @@ class Resister extends React.Component {
                 <div className = "ResisterWrap">
                 <img className="Resisterlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
                 <p className = "id">
-                    <input type="text" id = "resister_name" value="이동익"
+                    <input type="text" id = "resister_name" 
                     placeholder="사용자 이름"/></p>
                 <p className = "nickname">
-                    <input type="text" id = "resister_id" value="ldi2676"
+                    <input type="text" id = "resister_id" 
                     placeholder="전화번호"/></p>
                 <p className = "email">
-                    <input type="text" id = "resister_email" value="jw2676@naver.com"
+                    <input type="text" id = "resister_email" 
                     placeholder="이메일"/></p>
                 <p className = "pw">
-                    <input type="text" id = "resister_pw" value="1234"
+                    <input type="text" id = "resister_pw" 
                     placeholder="비밀번호"/></p>
                 <p><button className = "Resisterbutton" type="button" onClick={onLoggin}>회원가입 하기</button></p> 
                 </div>
