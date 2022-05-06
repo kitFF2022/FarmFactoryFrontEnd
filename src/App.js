@@ -11,8 +11,8 @@ import TeamMenu from './Component/Server/Menu/TeamMenu';
 import UserEdit from './Component/Server/Menu/Edit/UserEdit';
 import TeamEdit from './Component/Server/Menu/Edit/TeamEdit';
 import UnityPage from './Component/Unity/UnityPage';
-import Unity_CheckLogin from './Component/Unity/Unity_CheckLogin';
-import Service_CheckLogin from './Component/Server/Service_CheckLogin';
+import Unitychecklogin from './Component/Unity/Unitychecklogin';
+import Servicechecklogin from './Component/Server/Servicechecklogin';
 
 function App() {
   const [isLogin,setIsLogin] = useState(false)
@@ -31,9 +31,7 @@ function App() {
   
   return (
     <div>
-     {/* {isLogin ? 
-     <UnityPage isLogin={isLogin}/>
-     :<Login/>} */}
+     
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/Login" element={<Login/>}/>
@@ -43,8 +41,8 @@ function App() {
         <Route path="/TeamMenu" element={<TeamMenu/>}/>
         <Route path="/UserEdit" element={<UserEdit/>}/>
         <Route path="/TeamEdit" element={<TeamEdit/>}/>
-        <Route path="/Unity_CheckLogin" element={<Unity_CheckLogin/>}/>
-        <Route path="/Service_CheckLogin" element={<Service_CheckLogin/>}/>
+        <Route path="/Unitychecklogin" element={<Unitychecklogin />}/>
+        <Route path="/Servicechecklogin" element={<Servicechecklogin/>}/>
         <Route path="/UnityPage" element={<UnityPage/>}/>
       </Routes>
       

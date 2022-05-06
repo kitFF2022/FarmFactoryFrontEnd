@@ -4,8 +4,7 @@ import './UnityPage.css'
 import UnityPage from "./UnityPage";
 import Login from "../Login/Login";
 import { useEffect, useState } from 'react';
-// import isLogin from "../Header/MenuBar/MenuBar";
-// import { Route, Routes } from 'react-router-dom';
+
 
 function CheckLogin() {
     const [isLogin,setIsLogin] = useState()
@@ -20,7 +19,6 @@ function CheckLogin() {
       // 로그인 상태 변경
         setIsLogin(true)
         console.log('isLogin ?? :: ', isLogin)
-
       }
     })
     return (
