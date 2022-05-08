@@ -58,7 +58,7 @@ class Resister extends React.Component {
                     placeholder="사용자 이름"/></p>
                 <p className = "nickname">
                     <input type="text" id = "resister_id" 
-                    placeholder="전화번호"/></p>
+                    placeholder="닉네임"/></p>
                 <p className = "email">
                     <input type="text" id = "resister_email" 
                     placeholder="이메일"/></p>

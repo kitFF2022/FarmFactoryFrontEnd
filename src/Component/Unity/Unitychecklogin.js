@@ -24,7 +24,6 @@ function CheckLogin() {
     return (
             
       <div className = "CheckLoginWrap">
-        체크중...
         {isLogin ? 
         <UnityPage isLogin={isLogin}/>
          :<Login/>}

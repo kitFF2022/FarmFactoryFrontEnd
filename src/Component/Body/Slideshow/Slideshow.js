@@ -3,7 +3,10 @@ import SimpleImageSlider from "react-simple-image-slider";
 import './Slideshow.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
 
-
+// window.onresize = function() {
+//     this.state.width = window.innerWidth
+//     this.state.height = window.innerHeight
+// };
 
 class Slideshow extends React.Component {
     constructor(props) {

@@ -2,11 +2,13 @@ import React from 'react'
 import './Download.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
 
+
+
 const Download = () => {
     return (
         <div className="Download">
             <br /><br /><br /><br /><br />
-            <img src='/img/img1.jpg' alt="VR 사진">
+            <img src='/img/img1.jpg' id='sec3' alt="VR 사진">
             </img>
             <span className='h1'>간편하게</span><br/>
             <span className='h1'>내손안에서</span><br/>

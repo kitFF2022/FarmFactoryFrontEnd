@@ -2,27 +2,33 @@ import React from "react";
 import './Vr.css';
 // import styled from 'styled-components';
 
+window.onresize = function() {
+  document.getElementById('Vrimg').width = window.innerWidth/2;
+  document.getElementById('Vrimg').height = window.innerWidth/3;
+  // document.getElementById('Appimg').width = window.innerWidth/2;
+  // document.getElementById('Appimg').height = window.innerWidth/3;
+};
 if (window.innerWidth <= 1052) {
   
-} 
+}
 else {
   
-}
+};
 
 class Vr extends React.Component {
-  constructor(props) {
-    super();
+  // constructor(props) {
+  //   super();
 
-    this.state = {
-      menu: 0,
-    };
-  }
+  //   this.state = {
+  //     menu: 0,
+  //   };
+  // }
 
   
   render() {
     return (
       <div className="Vrtextbox">
-        <img className="Vrimg" src='/img/VR_image_confirmed.png' alt="VR 사진">
+        <img className="Vrimg" id = "Vrimg" src='/img/VR_image_confirmed.png' alt="VR 사진" >
         </img>
         <div className="Vrpaddingbox"><br/>
           <span className='h1'>3D로<br/>입체감 있게 </span><br/>

@@ -2,20 +2,26 @@
 import React from "react";
 import './Application.css';
 
+window.onresize = function() {
+  // document.getElementById('Vrimg').width = window.innerWidth/2;
+  // document.getElementById('Vrimg').height = window.innerWidth/3;
+  document.getElementById('Appimg').width = window.innerWidth/2;
+  document.getElementById('Appimg').height = window.innerWidth/3;
+};
 
 class Application extends React.Component {
-  constructor(props) {
-    super();
+  // constructor(props) {
+  //   super();
 
-    this.state = {
-      menu: 0,
-    };
-  }
+  //   this.state = {
+  //     menu: 0,
+  //   };
+  // }
 
   render() {
     return (
       <div className="Apptextbox">
-        <img className="Appimg" src='/img/img2.jpg' alt="APP 사진">
+        <img className="Appimg" id="Appimg" src='/img/img2.jpg' alt="APP 사진">
         </img>
         <br/>
         <span className='h1'>App을 통한<br/>농장 설계</span><br/>

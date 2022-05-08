@@ -3,7 +3,6 @@ import './MenuBar.css'
 import { Link } from "react-router-dom";
 import axios from "axios";
 // import { response } from 'express';
-
 function MenuBarMenu(props) {
     return (
         <li><h4 className='MenuBarMenuItem'>{props.name}</h4></li>
@@ -32,7 +31,7 @@ function isLogin() {
     // var Authorization
     if(sessionStorage.getItem('user_id') == null){
 		button_log.innerText = '로그인';
-        profile_photo.src = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png';
+        profile_photo = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png';
         profile_team.innerText = "로그인을"
         profile_name.innerText = "해주세요"
     }
@@ -48,9 +47,24 @@ function isLogin() {
                 profile_photo.src = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'
             }
             else{
-                profile_photo.src = process.env.PUBLIC_URL + res.data.message.ProfilePic;
+                axios.get("http://mmyu.direct.quickconnect.to:8880/user/profilePic", {
+                    responseType: "arraybuffer",
+                    headers: {
+                        Authorization: `Bearer ${access_token}`
+                    }
+                    // responseType: 'arraybuffer'
+                })
+                .then((response) => {
+                    console.log(response)
+                    profile_photo.src="data:image/png;base64," +btoa(new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), ""));
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
+
+                
             }
-            profile_team.innerText = res.data.message.Team;
+            // profile_team.innerText = res.data.message.Team;
             profile_name.innerText = res.data.message.Name;
         })
         .catch((error) => {

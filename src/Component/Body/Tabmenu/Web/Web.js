@@ -1,18 +1,26 @@
 import React from "react";
 import './Web.css';
-class Web extends React.Component {
-  constructor(props) {
-    super();
 
-    this.state = {
-      menu: 0,
-    };
-  }
+window.onresize = function() {
+  // document.getElementById('Vrimg').width = window.innerWidth/2;
+  // document.getElementById('Vrimg').height = window.innerWidth/3;
+  document.getElementById('Webimg').width = window.innerWidth/2;
+  document.getElementById('Webimg').height = window.innerWidth/3;
+};
+
+class Web extends React.Component {
+  // constructor(props) {
+  //   super();
+
+  //   this.state = {
+  //     menu: 0,
+  //   };
+  // }
 
   render() {
     return (
       <div className="Webtextbox">
-        <img className="Webimg" src={process.env.PUBLIC_URL + '/img/WEB_image_confirmed.png'} alt="Web 사진">
+        <img className="Webimg" id="Webimg" src={process.env.PUBLIC_URL + '/img/WEB_image_confirmed.png'} alt="Web 사진">
         
         </img>
         <br/>

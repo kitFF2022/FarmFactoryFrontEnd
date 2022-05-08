@@ -45,28 +45,28 @@
     text-decoration : none;
 }
 
-.Download img {
+/* .Download img {
     padding: 16px;
     float: left;
     width: 45%;
     min-width: 240px;
     max-width: 60%;
-    /* max-width: 480px; */
-}
+    max-width: 480px;
+} */
 
 @media screen and (max-width : 1052px) {
     .Download {
         text-align: left;
         padding: 0px 60px 0px 60px;
     }
-    .Download img {
+    /* .Download img {
         float :none;
         padding: 0px;
         width: 90%;
         min-width: 240px;
         max-width: 100%;
-        /* max-width: 480px; */
-    }
+        max-width: 480px;
+    } */
     .Download>.h1 {
         font-weight: 400;
         position: relative;
