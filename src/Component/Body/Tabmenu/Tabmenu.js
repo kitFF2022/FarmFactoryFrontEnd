@@ -5,14 +5,7 @@ import Application from './Application/Application';
 import Web from './Web/Web';
 import Loginbutton from '../Loginbutton/Loginbutton';
 
-window.onresize = function() {
-  // document.getElementById('Vrimg').width = window.innerWidth/2;
-  // document.getElementById('Vrimg').height = window.innerWidth/3;
-  // document.getElementById('Appimg').width = window.innerWidth/2;
-  // document.getElementById('Appimg').height = window.innerWidth/3;
-  // document.getElementById('Webimg').width = window.innerWidth/2;
-  // document.getElementById('Webimg').height = window.innerWidth/3;
-};
+
 
 const menuList = {
   0: <Vr />,

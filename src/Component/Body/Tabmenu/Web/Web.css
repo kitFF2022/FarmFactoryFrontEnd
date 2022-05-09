@@ -1,12 +1,12 @@
 
-/* .Webtextbox >.Webimg {
+.Webtextbox >.Webimg {
     padding: 40px;
     float: left;
     width: 45%;
     min-width: 360px;
     max-width: 35%;
     max-width: 480px;
-} */
+}
 /* .Webtextbox > div{
     vertical-align: middle;
     padding: 0px 100px 0px 100px;

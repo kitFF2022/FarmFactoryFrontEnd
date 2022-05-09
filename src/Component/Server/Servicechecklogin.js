@@ -4,8 +4,6 @@ import './ProfileEdit.css'
 import Login from "../Login/Login";
 import { useEffect, useState } from 'react';
 import ProfileEdit from "./ProfileEdit";
-// import isLogin from "../Header/MenuBar/MenuBar";
-// import { Route, Routes } from 'react-router-dom';
 
 //로그인 여부 확인
 function CheckLogin() {
@@ -27,7 +25,6 @@ function CheckLogin() {
     return (
             
       <div className = "CheckLoginWrap">
-        체크중...
         {isLogin ? 
         <ProfileEdit isLogin={isLogin}/>
          :<Login/>}

@@ -45,17 +45,12 @@ import Header from "../../../Header/Header";
 // }   
 
 class Login extends React.Component {
-    // goToMain = () => {
-    // this.props.history.push('./');  //props 객체의 history (this.props.history) 에 접근해서
-                                   //history의 push 메서드의 인자로 Routes.js 에서 설정한 경로('./main')를 넘겨주면, 해당 라우트로 이동
-//   }
     render() {
         return (
             <div className = "Team_editPageWrap">
                 <Header/>
                 <div className = "Team_editWrap">
                 <img className="Team_editlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
-                {/* <h1 className = "Logintitle">로그인 페이지</h1> */}
                 <p>현재 소속된 팀 : {}</p>
                 <p><button className = "Loginbutton" type="button" 
                 >팀 추가</button></p>
@@ -65,9 +60,7 @@ class Login extends React.Component {
                 >팀 삭제</button></p>
                 <p><button className = "Loginbutton" type="button" 
                 >팀 탈퇴</button></p>
-                {/* </Link> */}
                 </div>
-                {/* <Tosignup/> */}
             </div>
         );
     }

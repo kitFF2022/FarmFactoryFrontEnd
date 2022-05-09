@@ -1,22 +1,9 @@
 import React from "react";
 import './Web.css';
 
-window.onresize = function() {
-  // document.getElementById('Vrimg').width = window.innerWidth/2;
-  // document.getElementById('Vrimg').height = window.innerWidth/3;
-  document.getElementById('Webimg').width = window.innerWidth/2;
-  document.getElementById('Webimg').height = window.innerWidth/3;
-};
+
 
 class Web extends React.Component {
-  // constructor(props) {
-  //   super();
-
-  //   this.state = {
-  //     menu: 0,
-  //   };
-  // }
-
   render() {
     return (
       <div className="Webtextbox">
@@ -32,7 +19,10 @@ class Web extends React.Component {
         </b>
         </span>
         <br />
-        
+        {/* {window.onresize = function () {
+          document.getElementById('Webimg').width = window.innerWidth/3;
+          document.getElementById('Webimg').height = window.innerWidth/2;
+        }} */}
       </div>
     )
   }
