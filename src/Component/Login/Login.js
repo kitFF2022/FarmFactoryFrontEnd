@@ -4,10 +4,7 @@ import Header from "../Header/Header";
 import Tosignup from "./Tosignup";
 import axios from "axios";
 
-
-
 function onLoggin () {
-    
     var Emailaddr = document.getElementById('login_email').value;
     var Password = document.getElementById('login_pw').value;
     var access_token

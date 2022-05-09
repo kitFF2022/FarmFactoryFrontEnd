@@ -8,9 +8,8 @@ import ProfileEdit from "./ProfileEdit";
 //로그인 여부 확인
 function CheckLogin() {
     const [isLogin,setIsLogin] = useState()
-  
     useEffect(() => {
-      if(sessionStorage.getItem('user_id') == null || isLogin===false){
+      if(sessionStorage.getItem('user_id') === null){
       // sessionStorage 에 user_id 라는 key 값으로 저장된 값이 없다면
         console.log('isLogin ?? :: ', isLogin)
       } 

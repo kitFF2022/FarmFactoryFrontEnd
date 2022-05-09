@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import Resister from './Component/Resister/Resister';
 import Login from './Component/Login/Login';
 import Home from './Component/Home';
@@ -14,16 +14,6 @@ import Unitychecklogin from './Component/Unity/Unitychecklogin';
 import Servicechecklogin from './Component/Server/Servicechecklogin';
 
 function App() {
-  const [isLogin,setIsLogin] = useState(false)
-
-  useEffect(() => {
-    if(sessionStorage.getItem('user_id') === null){
-      console.log('isLogin ?? :: ', isLogin)
-    } else {
-      setIsLogin(true)
-      console.log('isLogin ?? :: ', isLogin)
-    }
-  })
   
   return (
     <div>

@@ -2,16 +2,18 @@ import React from "react";
 import './TeamEdit.css'
 import Header from "../../Header/Header";
 import axios from "axios";
+
+const api = 'http://mmyu.direct.quickconnect.to:8880'
 //유저 정보 수정
 function User_Data_Edit(){
     window.location.href = "/UserEdit";
 }
-//계정 삭제
-function Sign_Delete() {
-    if (window.confirm('정말로 계정을 삭제하시겠습니까?') ===true){
-        const api = 'http://mmyu.direct.quickconnect.to:8880/TEST/DB/DROPTABLE'
-        console.log('계정이 삭제 되었습니다.');
-        axios.get(api, {
+//전체 계정 삭제
+function Sign_all_Delete() {
+    if (window.confirm('정말로 모든 계정을 삭제하시겠습니까?') ===true){
+        
+        console.log('전체 계정이 삭제 되었습니다.');
+        axios.get(api+"/TEST/DB/DROPTABLE", {
         })
         .then(() => {
             alert('계정이 삭제 되었습니다.');
@@ -35,7 +37,7 @@ class Login extends React.Component {
                 <p><button className = "Loginbutton" type="button" 
                 onClick={User_Data_Edit}>정보 수정</button></p>
                 <p><button className = "Loginbutton" type="button" 
-                onClick={Sign_Delete}>계정 삭제</button></p>
+                onClick={Sign_all_Delete}>계정 삭제</button></p>
                 </div>
             </div>
         );

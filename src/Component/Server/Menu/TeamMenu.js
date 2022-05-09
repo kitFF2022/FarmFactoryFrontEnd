@@ -3,12 +3,14 @@ import './TeamEdit.css'
 import Header from "../../Header/Header";
 import axios from "axios";
 
+const access_token = sessionStorage.getItem('user_data');
+const api = 'http://mmyu.direct.quickconnect.to:8880'
+
 //팀 데이터 변경 창
 function on_load_team () {
     var on_load_team = document.getElementById('on_load_team');
-    const access_token = sessionStorage.getItem('user_data');
-    const api = 'http://mmyu.direct.quickconnect.to:8880/user/userData'
-    axios.get(api, {
+    
+    axios.get(api+"/user/userData", {
         headers: {
             Authorization: `Bearer ${access_token}`
         }
@@ -31,7 +33,7 @@ class Login extends React.Component {
                 <Header/>
                 <div className = "Team_editWrap">
                 <img className="Team_editlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
-                <p>현재 소속된 팀</p><p id='on_load_team'> 없음{on_load_team()}</p>
+                <p>현재 소속된 팀</p><p id='on_load_team'> 없음{/*on_load_team()*/}</p>
                 <p><button className = "Loginbutton" type="button" 
                 >팀 추가</button></p>
                 <p><button className = "Loginbutton" type="button" 

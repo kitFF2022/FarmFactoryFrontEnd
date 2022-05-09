@@ -4,7 +4,8 @@ import Header from "../../../Header/Header";
 import axios from "axios";
 
 //프로필 업로드
-var access_token = sessionStorage.getItem('user_token');
+const api = "http://mmyu.direct.quickconnect.to:8880"
+const access_token = sessionStorage.getItem('user_token');
 const onChangeImg = (e) => {
     e.preventDefault();
     const input = document.getElementById('edit_pic')
@@ -14,7 +15,7 @@ const onChangeImg = (e) => {
         formData.append('file',input.files[0])
         axios({
             method: 'post',
-            url: 'http://mmyu.direct.quickconnect.to:8880/user/profilePic',
+            url: api+'/user/profilePic',
             data: formData,
             headers:{
                 "Content-Type" : "multipart/form-data",
@@ -30,14 +31,12 @@ const onChangeImg = (e) => {
 
 //유저 데이터 받아옴
 function Edit_User_Data(){
-    const access_token = sessionStorage.getItem('user_token');
-    const api = 'http://mmyu.direct.quickconnect.to:8880/user/update'
     var get_resister_name = document.getElementById('profile_set_name').value;
     var Nickname = document.getElementById('profile_set_nick').value;
     var get_resister_pw = document.getElementById('profile_set_pw').value;
     axios({
         method: 'put',
-        url:api,
+        url:api+"/user/update",
         data:{
             Name : get_resister_name,
             Nickname : Nickname,
@@ -67,19 +66,17 @@ function Edit_User_Data(){
 }
 
 function get_data () {
-    var access_token = sessionStorage.getItem('user_token');
-    const api = 'http://mmyu.direct.quickconnect.to:8880/user/userData'
     var get_profile_Email = document.getElementById('profile_set_email');
-    axios.get(api, {
+    axios.get("http://mmyu.direct.quickconnect.to:8880/user/userData", {
         headers: {
             Authorization: `Bearer ${access_token}`
         }
     })
     .then((res) => {
-        console.log(res)
-        console.log(res.data.message.Name)
-        console.log(res.data.message.Nickname)
-        console.log(res.data.message.Emailaddr)
+        // console.log(res)
+        // console.log(res.data.message.Name)
+        // console.log(res.data.message.Nickname)
+        // console.log(res.data.message.Emailaddr)
         document.getElementById('profile_set_name').value = res.data.message.Name;
         document.getElementById('profile_set_nick').value = res.data.message.Nickname;
         get_profile_Email.innerText = res.data.message.Emailaddr;
@@ -88,14 +85,14 @@ function get_data () {
         console.error(error)
     }); 
     var profile_pic = document.getElementById('profile_pic');
-    axios.get("http://mmyu.direct.quickconnect.to:8880/user/profilePic", {
+    axios.get(api+"/user/profilePic", {
         responseType: "arraybuffer",
         headers: {
             Authorization: `Bearer ${access_token}`
         }
     })
     .then((response) => {
-        console.log(response)
+        // console.log(response)
         profile_pic.src="data:image/png;base64," +btoa(new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), ""));
     })
     .catch((error) => {
@@ -141,11 +138,14 @@ class UserEdit extends React.Component {
                     placeholder="비밀번호"/>
                 </p>
                 <button className = "Loginbutton" type="button" 
+                    onClick={get_data }>정보 조회
+                </button>
+                <button className = "Loginbutton" type="button" 
                     onClick={Edit_User_Data}>정보 수정
                 </button>
                 </div>
                 {window.onload=console.log("응애")}
-                {window.onload=get_data()}
+                {/* {window.onload=get_data()} */}
             </div>
         )
     }
