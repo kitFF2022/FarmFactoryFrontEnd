@@ -3,6 +3,8 @@ import './MenuBar.css'
 // import { Link } from "react-router-dom";
 import axios from "axios";
 // import { response } from 'express';
+
+const api = 'http://mmyu.direct.quickconnect.to:8880'
 function MenuBarMenu(props) {
     return (
         <li><h4 className='MenuBarMenuItem'>{props.name}</h4></li>
@@ -22,23 +24,20 @@ function div_show() {
     }
 }
 function isLogin() {
-    const access_token = sessionStorage.getItem('user_token');
-    const api = 'http://mmyu.direct.quickconnect.to:8880/user/userData'
+    var access_token = sessionStorage.getItem('user_token');
     var button_log = document.getElementById("log_in_out_button");
-    var profile_photo1 = document.getElementById('profile_photo1');
-    var profile_photo2 = document.getElementById('profile_photo2');
+    var profile_photo = document.getElementById('profile_photo');
     var profile_name = document.getElementById('profile_name');
     var profile_team = document.getElementById('profile_team');
     // var Authorization
     if (sessionStorage.getItem('user_id') == null) {
         button_log.innerText = '로그인';
-        profile_photo1 = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png';
-        profile_photo2 = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png';
+        profile_photo = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png';
         profile_team.innerText = "로그인을"
         profile_name.innerText = "해주세요"
     }
     else {
-        axios.get(api, {
+        axios.get(api + '/user/userData', {
             headers: {
                 Authorization: `Bearer ${access_token}`
             }
@@ -46,8 +45,7 @@ function isLogin() {
             .then((res) => {
                 console.log(res.data.message)
                 if (res.data.message.ProfilePic === "False") {
-                    profile_photo1.src = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'
-                    profile_photo2.src = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'
+                    profile_photo.src = process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'
                 }
                 else {
                     axios.get("http://mmyu.direct.quickconnect.to:8880/user/profilePic", {
@@ -59,8 +57,7 @@ function isLogin() {
                     })
                         .then((response) => {
                             console.log(response)
-                            profile_photo1.src = "data:image/png;base64," + btoa(new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), ""));
-                            profile_photo2.src = "data:image/png;base64," + btoa(new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), ""));
+                            profile_photo.src = "data:image/png;base64," + btoa(new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), ""));
                         })
                         .catch((error) => {
                             console.error(error)
@@ -140,10 +137,10 @@ class MenuBar extends React.Component {
                                 {this.renderMenu(1)}
                             </a>
                             <a onClick={div_show}>
-                                <li><img className='MenuBarLiUser' id='profile_photo1' role="button" src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile_div'></img></li>
+                                <li><img className='MenuBarLiUser' role="button" src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile_div'></img></li>
                             </a>
                             <div id='profile_div' >
-                                <img id='profile_photo2' width="100px" height="100px" role="button" src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile_photo'></img><br />
+                                <img id='profile_photo' width="100px" height="100px" role="button" src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile_photo'></img><br />
                                 팀:<span id='profile_team'>로그인을</span><br />
                                 이름:<span id='profile_name'>해주세요</span>
                                 <hr />

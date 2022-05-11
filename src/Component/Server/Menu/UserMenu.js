@@ -10,23 +10,40 @@ function User_Data_Edit(){
 }
 //전체 계정 삭제
 function Sign_all_Delete() {
-    if (window.confirm('정말로 모든 계정을 삭제하시겠습니까?') ===true){
-        
-        console.log('전체 계정이 삭제 되었습니다.');
-        axios.get(api+"/TEST/DB/DROPTABLE", {
+    const access_token = sessionStorage.getItem('user_token');
+    var Email = sessionStorage.getItem('user_id');
+    var PW = sessionStorage.getItem('user_pw');
+    if (window.confirm('정말로 현재 계정을 삭제하시겠습니까?') ===true){
+
+        // console.log('계정이 삭제 되었습니다.');
+        axios.delete(api+"/user/userData", {
+            headers: {
+                Authorization: `Bearer ${access_token}`
+            },
+            data:{
+                Emailaddr : Email,
+                Password: PW
+            }
         })
-        .then(() => {
+        .then((response) => {
+            console.log(response.data.message)
             alert('계정이 삭제 되었습니다.');
             console.log('계정 삭제');
-            window.location.href = "/";
             sessionStorage.removeItem('user_id');
+            sessionStorage.removeItem('user_token');
+            window.location.href = "/";
+            
         })
         .catch((error) => {
             console.error(error)
-        });
-    }      
-}  
+            //Request failed with status code 422
+            if(error.message ==='Request failed with status code 422'){
+                alert('422 error : 문법오류');
 
+            }
+        });
+    }
+}
 class Login extends React.Component {
     render() {
         return (
@@ -43,5 +60,4 @@ class Login extends React.Component {
         );
     }
 }
-
 export default Login;

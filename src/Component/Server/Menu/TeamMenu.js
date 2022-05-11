@@ -33,7 +33,7 @@ class Login extends React.Component {
                 <Header/>
                 <div className = "Team_editWrap">
                 <img className="Team_editlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
-                <p>현재 소속된 팀</p><p id='on_load_team'> 없음{/*on_load_team()*/}</p>
+                <p>현재 소속된 팀</p><p id='on_load_team'> 없음{on_load_team()}</p>
                 <p><button className = "Loginbutton" type="button" 
                 >팀 추가</button></p>
                 <p><button className = "Loginbutton" type="button" 
