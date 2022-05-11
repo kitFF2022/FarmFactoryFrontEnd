@@ -108,7 +108,6 @@ class Body extends React.Component {
     render() {
         return (
             <div className="Bodycontainer">
-                윈도우 사이즈 = x:<span id="xsize">{window.innerWidth}</span>, y:<span id="ysize">{window.innerHeight}</span>
                 <Slideshow />
                 <Tabmenu />
                 <Download />

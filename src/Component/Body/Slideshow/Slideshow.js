@@ -14,7 +14,7 @@ class Slideshow extends React.Component {
       this.state = {
         menu: 0,
         images:[{  
-            url: process.env.PUBLIC_URL + '/img/img1.jpg',
+            url: process.env.PUBLIC_URL + '/img/vecteezy_organic-vegetables-at-the-farm_2301681.jpg',
             caption: 'Slide 1'
         },
         {
