@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 // import Tosignup from "./Tosignup";
 import axios from "axios";
 // import { Link } from "react-router-dom";
-
+const api = "http://mmyu.direct.quickconnect.to:8880"
 
 function onLoggin () {
     var get_resister_name = document.getElementById('resister_name').value;
@@ -17,7 +17,7 @@ function onLoggin () {
     console.log(get_resister_email)
     console.log(get_resister_pw)
 
-    axios.post("http://mmyu.direct.quickconnect.to:8880/user/signup", {
+    axios.post(api+"/user/signup", {
         Name : get_resister_name,
         Nickname : Nickname,
         Emailaddr: get_resister_email,

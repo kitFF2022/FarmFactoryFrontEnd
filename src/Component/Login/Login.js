@@ -8,8 +8,6 @@ function onLoggin () {
     var Emailaddr = document.getElementById('login_email').value;
     var Password = document.getElementById('login_pw').value;
     var access_token
-    console.log(Emailaddr)
-    console.log(Password)
     axios({
         method: 'post',
         url: 'http://mmyu.direct.quickconnect.to:8880/user/signin',
@@ -23,20 +21,16 @@ function onLoggin () {
         .then(function (response) {
             console.log("토큰");
             console.log(response.data);
-            console.log(response.data.name);
-            console.log(response.data.nickname);
-            console.log(response.data.ProfilePio);
-            console.log(response.data.Team);
             console.log(response.data.access_token);
             sessionStorage.setItem('user_id',Emailaddr)
-            sessionStorage.setItem('user_data',response.data)
-            sessionStorage.setItem('user_name',response.data.name)
-            sessionStorage.setItem('user_nick',response.data.nickname)
+            // sessionStorage.setItem('user_data',response.data)
+            // sessionStorage.setItem('user_name',response.data.name)
+            // sessionStorage.setItem('user_nick',response.data.nickname)
             sessionStorage.setItem('user_pw',Password)
-            sessionStorage.setItem('user_pic',response.data.ProfilePio)
-            sessionStorage.setItem('user_team',response.data.Team)
+            // sessionStorage.setItem('user_pic',response.data.Profile)
+            // sessionStorage.setItem('user_team',response.data.Team)
             sessionStorage.setItem('user_token',response.data.access_token)
-            window.location.href = "/";
+            // window.location.href = "/";
         })
         .catch(function (error) {
             // 오류발생시 실행
@@ -69,7 +63,7 @@ class Login extends React.Component {
                 <img className="Loginlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
                 <p className = "id">
                     <input type="text" id = "login_email" 
-                    placeholder="전화번호, 사용자 이름 또는 이메일"/></p>
+                    placeholder="이메일 입력"/></p>
                 <p className = "pw">
                     <input type="text" id = "login_pw" 
                     

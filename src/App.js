@@ -8,7 +8,7 @@ import ProfileEdit from './Component/Server/ProfileEdit';
 import UserMenu from './Component/Server/Menu/UserMenu';
 import TeamMenu from './Component/Server/Menu/TeamMenu';
 import UserEdit from './Component/Server/Menu/Edit/UserEdit';
-import TeamEdit from './Component/Server/Menu/Edit/TeamEdit';
+import TeamAdd from './Component/Server/Menu/Edit/TeamAdd';
 import UnityPage from './Component/Unity/UnityPage';
 import Unitychecklogin from './Component/Unity/Unitychecklogin';
 import Servicechecklogin from './Component/Server/Servicechecklogin';
@@ -25,7 +25,7 @@ function App() {
         <Route path="/UserMenu" element={<UserMenu/>}/>
         <Route path="/TeamMenu" element={<TeamMenu/>}/>
         <Route path="/UserEdit" element={<UserEdit/>}/>
-        <Route path="/TeamEdit" element={<TeamEdit/>}/>
+        <Route path="/TeamAdd" element={<TeamAdd/>}/>
         <Route path="/Unitychecklogin" element={<Unitychecklogin />}/>
         <Route path="/Servicechecklogin" element={<Servicechecklogin/>}/>
         <Route path="/UnityPage" element={<UnityPage/>}/>

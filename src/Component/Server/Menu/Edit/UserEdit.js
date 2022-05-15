@@ -11,7 +11,6 @@ const onChangeImg = (e) => {
     const input = document.getElementById('edit_pic')
     if(e.target.files){
         const formData = new FormData()
-        console.log("넘어감")
         formData.append('file',input.files[0])
         axios({
             method: 'post',
@@ -73,10 +72,6 @@ function get_data () {
         }
     })
     .then((res) => {
-        // console.log(res)
-        // console.log(res.data.message.Name)
-        // console.log(res.data.message.Nickname)
-        // console.log(res.data.message.Emailaddr)
         document.getElementById('profile_set_name').value = res.data.message.Name;
         document.getElementById('profile_set_nick').value = res.data.message.Nickname;
         get_profile_Email.innerText = res.data.message.Emailaddr;
@@ -119,26 +114,29 @@ class UserEdit extends React.Component {
                     />
                 </form>
                 <br/>
-                <p className = "email">
-                    <span>이메일 : </span>
-                    <span id = "profile_set_email">없음</span>
-                </p>
-                <p className = "id">
-                    <span> 이름 : </span>
+                <table>
+                <tr className = "email">
+                    <td>이메일 : </td>
+                    <td id = "profile_set_email">없음</td>
+                </tr>
+                <tr className = "id">
+                    <td> 이름 : </td>
                     <input type="text" id="profile_set_name"
                     placeholder="이름"/>
-                </p>
-                <p className = "nickname">
-                    <span> 닉네임 : </span>
+                </tr>
+                <tr className = "nickname">
+                    <td> 닉네임 : </td>
                     <input type="text" id = "profile_set_nick" 
                     placeholder="닉네임"/>
-                </p>
-                <p className = "pw"><span> 새 비밀번호:</span>
+                </tr>
+                <tr className = "pw">
+                    <td> 새 비밀번호:</td>
                     <input type="text" id = "profile_set_pw"
                     placeholder="비밀번호"/>
-                </p>
+                </tr>
+                </table>
                 <button className = "Loginbutton" type="button" 
-                    onClick={get_data }>정보 조회
+                    onClick={get_data}>정보 조회
                 </button>
                 <button className = "Loginbutton" type="button" 
                     onClick={Edit_User_Data}>정보 수정
