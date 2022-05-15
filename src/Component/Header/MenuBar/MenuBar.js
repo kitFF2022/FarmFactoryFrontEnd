@@ -65,8 +65,8 @@ function isLogin() {
 
 
                 }
-                profile_team.innerText = res.data.message.Team;
-                profile_name.innerText = res.data.message.Name;
+                profile_team.innerText = "팀:"+res.data.message.Team;
+                profile_name.innerText = "이름:"+res.data.message.Name;
             })
             .catch((error) => {
                 console.error(error)
@@ -136,13 +136,13 @@ class MenuBar extends React.Component {
                             <a href='/Servicechecklogin'>
                                 {this.renderMenu(1)}
                             </a>
-                            <a onClick={div_show}>
+                            <span onClick={div_show}>
                                 <li><img className='MenuBarLiUser' role="button" src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile_div'></img></li>
-                            </a>
+                            </span>
                             <div id='profile_div' >
                                 <img id='profile_photo' width="100px" height="100px" role="button" src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile_photo'></img><br />
-                                팀:<span id='profile_team'>로그인을</span><br />
-                                이름:<span id='profile_name'>해주세요</span>
+                                <span id='profile_team'>로그인을</span><br />
+                                <span id='profile_name'>해주세요</span>
                                 <hr />
                                 <button id='log_in_out_button' onClick={() => login_in()}>로그인</button>
                             </div>

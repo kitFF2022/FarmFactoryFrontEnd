@@ -56,12 +56,6 @@ class TeamAdd extends React.Component {
                     <input type="text" id = "create_team"
                     placeholder="팀명 작성"/>
                 </p>
-                {/* <p><button className = "Loginbutton" type="button" 
-                >팀 추가</button></p>
-                <p><button className = "Loginbutton" type="button" 
-                >팀 수정</button></p>
-                <p><button className = "Loginbutton" type="button" 
-                >팀 삭제</button></p> */}
                 <p><button className = "Loginbutton" type="button" 
                 onClick={Add_Team}>버튼</button></p>
                 </div>

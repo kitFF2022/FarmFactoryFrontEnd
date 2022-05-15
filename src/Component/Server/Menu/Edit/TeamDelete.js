@@ -6,13 +6,13 @@ import axios from "axios";
 const api = "http://mmyu.direct.quickconnect.to:8880"
 const access_token = sessionStorage.getItem('user_token');
 //팀 데이터 삭제 창
-function Add_Team () {
+function Delete_Team () {
     var get_team_resister_name = document.getElementById('create_team').value;
     
     console.log(get_team_resister_name)
 
     axios({
-        method: 'post',
+        method: 'delete',
         url:api+"/team",
         data:{
             Name : get_team_resister_name
@@ -52,18 +52,13 @@ class TeamAdd extends React.Component {
                 <div className = "Team_editWrap">
                 <img className="Team_editlogo"  src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
                 <p>새로운 팀 추가</p>
-                <p className = "pw"><span> 새 팀명 : </span>
+                <p className = "pw"><span> 삭제할 팀 : </span>
                     <input type="text" id = "create_team"
                     placeholder="팀명 작성"/>
                 </p>
-                {/* <p><button className = "Loginbutton" type="button" 
-                >팀 추가</button></p>
                 <p><button className = "Loginbutton" type="button" 
-                >팀 수정</button></p>
-                <p><button className = "Loginbutton" type="button" 
-                >팀 삭제</button></p> */}
-                <p><button className = "Loginbutton" type="button" 
-                onClick={Add_Team}>버튼</button></p>
+                onClick={Delete_Team}
+                >버튼</button></p>
                 </div>
             </div>
         );

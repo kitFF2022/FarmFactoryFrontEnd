@@ -30,7 +30,7 @@ function onLoggin () {
             // sessionStorage.setItem('user_pic',response.data.Profile)
             // sessionStorage.setItem('user_team',response.data.Team)
             sessionStorage.setItem('user_token',response.data.access_token)
-            // window.location.href = "/";
+            window.location.href = "/";
         })
         .catch(function (error) {
             // 오류발생시 실행
