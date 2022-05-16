@@ -13,6 +13,7 @@ import TeamDelete from './Component/Server/Menu/Edit/TeamDelete';
 import TeamDrop from './Component/Server/Menu/Edit/TeamDrop';
 import TeamEdit from './Component/Server/Menu/Edit/TeamEdit';
 import UnityPage from './Component/Unity/UnityPage';
+// import Unity from '../public/Build/UnityLoader';
 import Unitychecklogin from './Component/Unity/Unitychecklogin';
 import Servicechecklogin from './Component/Server/Servicechecklogin';
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/Unitychecklogin" element={<Unitychecklogin />}/>
         <Route path="/Servicechecklogin" element={<Servicechecklogin/>}/>
         <Route path="/UnityPage" element={<UnityPage/>}/>
+        {/* <Route path="/Unity" element={<Unity/>}/> */}
       </Routes>
       
     </div>
