@@ -8,6 +8,11 @@ let unityContent = new UnityContent(
     "/Build/WebGLTest.json",
     "/Build/UnityLoader.js"
 );
+
+function page_move() {
+    window.location.href = "/TestUnityPage";
+}
+
 // unityContent.send("오브젝트","함수")
 class UnityPage extends React.Component {
     render() {
@@ -19,12 +24,13 @@ class UnityPage extends React.Component {
                 <div className="UnityWrap">
                     <Unity unityContent={unityContent}
                     style={{
-                        height: "100%",
-                        width: "90%",
+                        height: 960,
+                        width: 600,
                         border: "2px solid black",
                         background: "grey",
                     }}/>
                 </div>
+                <button onClick={() => page_move()}>testPage 이동</button>
             </div>
         );
     }
