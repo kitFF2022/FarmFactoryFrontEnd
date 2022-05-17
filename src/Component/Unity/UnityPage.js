@@ -24,8 +24,8 @@ class UnityPage extends React.Component {
                 <div className="UnityWrap">
                     <Unity unityContent={unityContent}
                     style={{
-                        height: 960,
-                        width: 600,
+                        height: "100%",
+                        width: "90%",
                         border: "2px solid black",
                         background: "grey",
                     }}/>
