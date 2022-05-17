@@ -5,7 +5,7 @@ import React from 'react'
 import Unity, { UnityContent } from "react-unity-webgl";
 
 let unityContent = new UnityContent(
-    "/Build/WebGLTestBuild.json",
+    "/Build/WebGLTest.json",
     "/Build/UnityLoader.js"
 );
 // unityContent.send("오브젝트","함수")
