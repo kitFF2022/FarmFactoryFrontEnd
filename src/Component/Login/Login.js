@@ -65,7 +65,7 @@ class Login extends React.Component {
                     <input type="text" id = "login_email" 
                     placeholder="이메일 입력"/></p>
                 <p className = "pw">
-                    <input type="text" id = "login_pw" 
+                    <input type='password' id = "login_pw" 
                     
                     placeholder="비밀번호"/></p>
                 <button className = "Loginbutton" type="" 
