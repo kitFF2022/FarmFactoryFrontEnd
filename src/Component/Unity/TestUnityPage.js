@@ -19,8 +19,8 @@ class TestUnityPage extends React.Component {
                 <div className="TestUnityWrap">
                     <Unity unityContent={unityContent}
                     style={{
-                        height: 960,
-                        width: 600,
+                        width: "90%",
+                        height: "70%",
                         border: "2px solid black",
                         background: "grey",
                     }}/>
