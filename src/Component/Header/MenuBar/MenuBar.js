@@ -83,6 +83,7 @@ function login_in() {
     var button_log = document.getElementById("log_in_out_button");
     if (button_log.innerText === '로그아웃') {
         sessionStorage.removeItem('user_id')
+        window.location.href = "/"
         window.location.reload()
     }
     else {

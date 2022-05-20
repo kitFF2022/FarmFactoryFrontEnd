@@ -66,7 +66,8 @@ function Edit_User_Data(){
 
 function get_data () {
     var get_profile_Email = document.getElementById('profile_set_email');
-    axios.get("http://mmyu.direct.quickconnect.to:8880/user/userData", {
+    console.log("응애애")
+    axios.get(api+"/user/userData", {
         headers: {
             Authorization: `Bearer ${access_token}`
         }
@@ -115,25 +116,26 @@ class UserEdit extends React.Component {
                 </form>
                 <br/>
                 <table>
-                <tr className = "email">
+                    <tbody>
+                <tr className = "email"></tr>
                     <td>이메일 : </td>
                     <td id = "profile_set_email">없음</td>
-                </tr>
-                <tr className = "id">
+                
+                <tr className = "id"></tr>
                     <td> 이름 : </td>
-                    <input type="text" id="profile_set_name"
-                    placeholder="이름"/>
-                </tr>
-                <tr className = "nickname">
+                    <td><input type="text" id="profile_set_name"
+                    placeholder="이름"/></td>
+                
+                <tr className = "nickname"></tr>
                     <td> 닉네임 : </td>
-                    <input type="text" id = "profile_set_nick" 
-                    placeholder="닉네임"/>
-                </tr>
-                <tr className = "pw">
+                    <td><input type="text" id = "profile_set_nick" 
+                    placeholder="닉네임"/></td>
+                
+                <tr className = "pw"></tr>
                     <td> 새 비밀번호:</td>
-                    <input type="text" id = "profile_set_pw"
-                    placeholder="비밀번호"/>
-                </tr>
+                    <td><input type="text" id = "profile_set_pw"
+                    placeholder="비밀번호"/></td>
+                </tbody>
                 </table>
                 <button className = "Loginbutton" type="button" 
                     onClick={get_data}>정보 조회
@@ -143,7 +145,7 @@ class UserEdit extends React.Component {
                 </button>
                 </div>
                 {window.onload=console.log("응애")}
-                {/* {window.onload=get_data()} */}
+                {get_data()}
             </div>
         )
     }
