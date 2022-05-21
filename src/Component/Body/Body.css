@@ -20,19 +20,14 @@ https://www.cssscript.com/background-image-slider/
 .Hover>span:hover:after {
     transform: scaleX(1);
 }
-
-.Download {
-    text-align: center;
-}
-.Download>h1 {
-    font-size: 50px;
-    color: green;
-}
-.Download>span {
-    font-size: 25px;
-    color: green;
-}
-.Download>span>a {
-    color: rgb(0, 197, 89);
-    text-decoration : none;
+@media screen and (max-width : 917px) {
+    .Bodycontainer {
+    position: relative;
+    max-width: 1230px;
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    letter-spacing: -.2px;
+    }
+    
 }

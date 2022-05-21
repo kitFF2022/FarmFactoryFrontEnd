@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import './Tabmenu.css';
 import Vr from './Vr/Vr';
 import Application from './Application/Application';
 import Web from './Web/Web';
+import Loginbutton from '../Loginbutton/Loginbutton';
+
+
 
 const menuList = {
   0: <Vr />,
@@ -26,18 +29,19 @@ class App extends React.Component {
   render() {
     return (
       <div className="Tabmenuwrap">
+      <br/>
         <div className="menuBar">
-          <ul className="tabs">
+          <ul className="tabs">  
             <li className={`${this.state.menu === 0 ? 'active' : ''}`} onClick={() => this.changeMenu(0)}>VR</li>
-            <li> | </li>
-            <li className={`${this.state.menu === 1 ? 'active' : ''}`} onClick={() => this.changeMenu(1)}>App</li>
-            <li> | </li>
-            <li className={`${this.state.menu === 2 ? 'active' : ''}`} onClick={() => this.changeMenu(2)}>Web</li>
+            <li className={`${this.state.menu === 1 ? 'active' : ''}`} onClick={() => this.changeMenu(1)}>APP</li>
+            <li className={`${this.state.menu === 2 ? 'active' : ''}`} onClick={() => this.changeMenu(2)}>WEB</li>
           </ul>
         </div>
         <div className="contentArea">
           {menuList[this.state.menu]}
         </div>
+        <Loginbutton/>
+        
       </div>
     )
   }

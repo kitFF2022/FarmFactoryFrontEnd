@@ -1,16 +1,126 @@
-.textbox {
-    padding: 0px 16px 0px 16px;
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-.textbox img {
-    padding: 16px;
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Vrtextbox> .Vrimg {
+    padding: 40px;
     float: left;
-    width: 60%;
-    min-width: 320px;
-    max-width: 640px;
-    /* max-width: 480px; */
+    width: 65vh; 
+    min-width: 240px;
+    max-width: 70vh;
+    max-width: 480px;
 }
-.textbox > .start_button{
-    text-align: center;
-    vertical-align: middle;
-    left: 60%;
+
+.Vrtextbox > .Vrpaddingbox > .h1{
+    font-weight: 400;
+    /* word-break: keep-all; */
+    font-size: 50px;
+    color: #98D680;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-weight: normal;
+    font-style: normal;
+    position: relative;
+    Top : 10px;
+    left: 40px; 
+    
+
+}
+
+.Vrtextbox >.Vrpaddingbox> .Vrtext{
+    position: relative;
+    Top : 10px;
+    left: 40px;
+    word-break: keep-all;
+    color: #555555;
+    font-family: 'GmarketSansLight';
+    font-weight: normal;
+    font-style: normal;
+    
+    /* padding: 0px 16px 0px 16px; */
+}
+
+@media screen and (max-width : 710px) {
+    .Vrtextbox {
+        text-align: left;
+    }
+    .Vrtextbox> .Vrimg { 
+        float :none;
+        padding: 0px;
+        width: 90%;
+        min-width: 240px;
+        max-width: 400px; 
+    }
+   
+    .Vrtextbox >.Vrpaddingbox> { 
+        position: relative;
+        Top : 10px;
+        left: 100px; 
+        margin :10px;
+        text-align: left;
+    }
+    .Vrtextbox > .Vrpaddingbox > .h1{
+        
+        font-weight: 400;
+        word-break: keep-all;
+        font-size: 50px;
+        color: #A3DA8D;
+        position: relative;
+        Top : 10px;
+        left: 20px;
+    }
+    .Vrtextbox >.Vrpaddingbox> .Vrtext{
+        position: relative;
+        Top : 10px;
+        left: 20px;
+        word-break: keep-all;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .Vrtextbox {
+        text-align: left;
+    }
+    .Vrtextbox> .Vrimg {
+        
+        float :none;
+        padding: 0px;
+        width: 90%;
+        min-width: 240px;
+        max-width: 400px;
+    }
+    .Vrtextbox >.Vrpaddingbox> { 
+        position: relative;
+        Top : 10px;
+        left: 100px; 
+        margin :10px;
+        text-align: left;
+    }
+    .Vrtextbox > .Vrpaddingbox > .h1{
+        
+        font-weight: 400;
+        word-break: keep-all;
+        font-size: 40px;
+        color: #A3DA8D;
+        position: relative;
+        Top : 10px;
+        left: 10px;
+    }
+    .Vrtextbox >.Vrpaddingbox> .Vrtext{
+        position: relative;
+        Top : 10px;
+        left: 10px;
+        word-break: keep-all;
+        
+        
+    }
 }

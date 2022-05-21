@@ -8,8 +8,6 @@ class Footer extends React.Component {
                 <span className="Footer_title">Farm Factory</span> 
                 <span> &copy; copyright</span>
             </div>
-            
-            
         );
     }
 }

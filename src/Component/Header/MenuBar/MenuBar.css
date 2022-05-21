@@ -1,3 +1,15 @@
+.MenuBar {
+    background-color: #5AA56C;
+    height: 50px;
+    text-align: left;
+}
+
+.MenuBar ul {
+    padding: 0px;
+    /* vertical-align :middle; */
+}
+
+
 .MenuBar ul li {
     list-style: none;
     display: inline-block;
@@ -5,12 +17,12 @@
     vertical-align: middle;
 }
 
-.MenuBarLiLogo img{
+.MenuBarLiLogo img {
     float: left;
     height: 50px;
 }
 
-.MenuBarLiLogoText div{
+.MenuBarLiLogoText div {
     vertical-align: middle;
     color: green;
     font-weight: bold;
@@ -19,6 +31,22 @@
 
 .MenuBarLiMenu {
     float: right;
+
+}
+
+.MenuBarLiMenu>ul>a {
+
+    color: white;
+}
+
+.MenuBarLiMenu>ul>a:hover,
+.MenuBarLiMenu>ul>a:visited:hover {
+
+    color: rgb(228, 228, 228);
+}
+
+.MenuBarLiMenu>ul>a:visited {
+    color: white;
 }
 
 .MenuBarMenuItem {
@@ -27,5 +55,54 @@
 
 .MenuBarLiUser {
     vertical-align: middle;
-    height: 30px;
+    width: 40px;
+}
+
+#profile_div {
+    position: fixed;
+    right: 5px;
+    width: 200px;
+    background-color: grey;
+    border-style: solid;
+    display: none;
+    text-align: center;
+
+}
+
+@media screen and (max-width : 500px) {
+    .MenuBarLiLogo {
+        float: left;
+        vertical-align: middle;
+        height: 30px;
+    }
+
+    .MenuBarLiLogo img {
+        float: left;
+        padding-top: 10px;
+        /* vertical-align :middle; */
+        height: 30px;
+    }
+
+    .MenuBarLiMenu {
+        float: none;
+        padding-top: 7px;
+        float: right;
+        text-align: justify;
+    }
+
+    .MenuBarLiMenu ul {
+        padding: 0px;
+        
+    }
+
+    .MenuBarLiUser {
+        width: 30px;
+    }
+
+    .MenuBarMenuItem {
+        margin: 0;
+        font-size: 10px;
+        padding: 0px;
+    }
+
 }

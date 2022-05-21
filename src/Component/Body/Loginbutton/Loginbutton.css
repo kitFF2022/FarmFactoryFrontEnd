@@ -1,0 +1,57 @@
+.designbutton {
+    text-align: left;
+    padding: 20px;
+    left: 40px;
+    right: 20px;
+    top: 30px;
+    
+}
+
+.designbutton a {
+    position: relative;
+    
+    word-break: keep-all;
+    border-radius: 15px;
+    padding: 1px 80px 1px 80px;
+    font-size: 35px;
+    /* min-width: 60px; */
+    background-color: #23ad96;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width : 710px) {
+    .designbutton {
+        text-align: left;
+        padding: 20px;
+        position: relative;
+        Top: 0px;
+        left: 0px;
+    }
+
+    .designbutton a {
+
+        position: relative;
+        left: 0px;
+        right: 00px;
+        top: 0px;
+        word-break: keep-all;
+        border-radius: 15px;
+        padding: 1px 10px 1px 10px;
+        font-size: 35px;
+        
+        background-color: #23ad96;
+        color: white;
+        text-decoration: none;
+
+        font-family: 'ELAND_Choice_L';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_L.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+@media screen and (max-width : 500px) {
+    .designbutton {
+        text-align: center;
+    }
+}

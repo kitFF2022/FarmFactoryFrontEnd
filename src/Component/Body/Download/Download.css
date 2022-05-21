@@ -1,0 +1,151 @@
+.Download {
+    text-align: left;
+    padding: 0px 60px 0px 60px;
+}
+.Download>.h1 {
+    position: relative;
+    Top : 10px;
+    left: 40px;
+    word-break: keep-all;
+    font-size: 50px;
+    color: #98D680;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-weight: normal;
+   font-style: normal;
+    
+}
+.Download>.h2 {
+    position: relative;
+    Top : 10px;
+    left: 40px;
+    font-size: 40px;
+    color: #4EC993;
+    letter-spacing: 4px;
+    font-family: 'KoPubDotumMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+    
+}
+.Download>span {
+    position: relative;
+    Top : 10px;
+    left: 40px;
+    word-break: keep-all;
+    font-size:18px;
+    color: #555555;
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.Download>span>a {
+    color: rgb(0, 197, 89);
+    text-decoration : none;
+}
+
+.Download img {
+    padding: 16px;
+    float: left;
+    width: 45%;
+    min-width: 240px;
+    max-width: 60%;
+    max-width: 480px;
+}
+
+@media screen and (max-width : 710px) {
+    .Download {
+        text-align: left;
+        padding: 0px 0px 0px 0px;
+    }
+    .Download img {
+        float :none;
+        padding: 0px 30px 0px 0px;
+        width: 90%;
+        min-width: 240px;
+        max-width: 100%;
+        max-width: 480px;
+    }
+    .Download>.h1 {
+        font-weight: 400;
+        position: relative;
+        Top : 10px;
+        left: 20px;
+        word-break: keep-all;
+        font-size: 50px;
+        color: #A3DA8D;
+        
+    }
+    .Download>.h2 {
+        position: relative;
+        Top : 10px;
+        left: 20px;
+        font-size: 40px;
+        color: #57CC99;
+        
+    }
+    .Download>span {
+        position: relative;
+        word-break: keep-all;
+        
+        font-size:18px;
+        color: black;
+        position: relative;
+        Top : 10px;
+        left: 20px;
+        
+    }
+    .Download>span>a {
+        color: rgb(0, 197, 89);
+        text-decoration : none;
+        
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .Download {
+        text-align: left;
+        padding: 0px 0px 0px 0px;
+    }
+    .Download img {
+        float :none;
+        padding: 0px;
+        width: 90%;
+        min-width: 240px;
+        max-width: 100%;
+        max-width: 480px;
+    }
+    .Download>.h1 {
+        font-weight: 400;
+        position: relative;
+        Top : 10px;
+        left: 10px;
+        word-break: keep-all;
+        font-size: 40px;
+        color: #A3DA8D;
+        
+    }
+    .Download>.h2 {
+        position: relative;
+        Top : 10px;
+        left: 20px;
+        font-size: 30px;
+        color: #57CC99;
+        
+    }
+    .Download>span {
+        position: relative;
+        word-break: keep-all;
+        
+        font-size:16px;
+        color: black;
+        position: relative;
+        Top : 10px;
+        left: 10px;
+        
+    }
+    .Download>span>a {
+        color: rgb(0, 197, 89);
+        text-decoration : none;
+    }
+}

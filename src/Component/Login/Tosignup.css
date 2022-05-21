@@ -1,0 +1,31 @@
+.TosignupWrap {
+    width: 400px;
+    margin: 10px auto auto auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 8px 1px rgb(190, 190, 190);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.Tosignuplogo {
+    padding: 40px 0px 0px 0px;
+    width: 300px;
+}
+
+@media screen and (max-width : 500px) {
+    .TosignupWrap {
+        width: 100%;
+        margin: 10px auto auto auto;
+        text-align: center;
+        background-color: white;
+        box-shadow: 0px 0px 8px 1px rgb(190, 190, 190);
+        padding: 10px 0px 10px 0px;
+        border-radius: 5px;
+    }
+
+    .Tosignuplogo {
+        padding: 40px 0px 0px 0px;
+        width: 75%;
+    }
+}
