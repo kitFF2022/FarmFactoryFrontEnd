@@ -21,7 +21,6 @@ function onLoggin () {
         .then(function (response) {
             console.log("토큰");
             console.log(response.data);
-            // console.log(response.data.access_token);
             sessionStorage.setItem('user_id',Emailaddr)
             sessionStorage.setItem('user_pw',Password)
             sessionStorage.setItem('user_token',response.data.access_token)
