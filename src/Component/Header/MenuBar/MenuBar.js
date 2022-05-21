@@ -79,22 +79,20 @@ function isLogin() {
 
     }
 }
+
 function login_in() {
     var button_log = document.getElementById("log_in_out_button");
     if (button_log.innerText === '로그아웃') {
         sessionStorage.removeItem('user_id')
         window.location.href = "/"
-        window.location.reload()
+        // window.location.reload()
     }
     else {
         window.location.href = "/Login";
     }
 }
 
-
 class MenuBar extends React.Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -144,7 +142,7 @@ class MenuBar extends React.Component {
                                 <img id='profile_photo' width="100px" height="100px" role="button" src={process.env.PUBLIC_URL + '/img/Farm_Factory_profile.png'} alt='profile_photo'></img><br />
                                 <span id='profile_team'>로그인을</span><br />
                                 <span id='profile_name'>해주세요</span>
-                                <hr />
+                                <hr/>
                                 <button id='log_in_out_button' onClick={() => login_in()}>로그인</button>
                             </div>
                         </ul>

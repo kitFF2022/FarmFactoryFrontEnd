@@ -28,7 +28,7 @@ class Slideshow extends React.Component {
         width: window.innerWidth-500,
         height:window.innerHeight-300,
       }
-        if (window.innerWidth < 640){
+        if (window.innerWidth < 650){
             return (this.state.width =window.innerWidth-100, this.state.height = 230);
         }
         else {
