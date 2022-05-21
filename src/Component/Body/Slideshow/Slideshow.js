@@ -3,9 +3,15 @@ import SimpleImageSlider from "react-simple-image-slider";
 import './Slideshow.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
 
-window.onresize = function () { 
-    document.location.reload(); 
-}
+window.addEventListener('resize', function () {
+    window.addEventListener('resize', function () {
+        if (window.matchMedia('(orientation: portrait)').matches) {
+            document.location.reload();
+        } else {
+            document.location.reload();
+        }
+    });
+});
 class Slideshow extends React.Component {
     constructor(props) {
         super();
