@@ -33,13 +33,11 @@ function Edit_User_Data() {
     var get_resister_name = document.getElementById('profile_set_name').value;
     var Nickname = document.getElementById('profile_set_nick').value;
     var get_resister_pw
-    if (document.getElementById('profile_set_pw').value === '') 
-    { 
+    if (document.getElementById('profile_set_pw').value === '') {
         get_resister_pw = sessionStorage.getItem('user_pw');
     }
-    else 
-    { 
-        get_resister_pw = document.getElementById('profile_set_pw').value; 
+    else {
+        get_resister_pw = document.getElementById('profile_set_pw').value;
     }
 
     axios({
@@ -131,23 +129,23 @@ class UserEdit extends React.Component {
                     <table>
                         <tbody>
                             <tr className="email">
-                                <td>이메일 : </td>
+                                <td><p>이메일 : </p></td>
                                 <td id="profile_set_email">없음</td>
                             </tr>
                             <tr className="id">
-                                <td> 이름 : </td>
+                                <td><p>이름 : </p></td>
                                 <td><input type="text" id="profile_set_name"
                                     placeholder="이름" /></td>
                             </tr>
                             <tr className="nickname">
-                                <td> 닉네임 : </td>
+                                <td><p>닉네임 : </p></td>
                                 <td><input type="text" id="profile_set_nick"
                                     placeholder="닉네임" /></td>
                             </tr>
                             <tr className="pw">
-                                <td> 새 비밀번호:</td>
+                                <td><p>새 비밀번호 : </p></td>
                                 <td><input type="text" id="profile_set_pw"
-                                    placeholder="새 비밀번호룰 입력해주세요" /></td>
+                                    placeholder="새 비밀번호를 입력해주세요" /></td>
                             </tr>
                         </tbody>
                     </table>

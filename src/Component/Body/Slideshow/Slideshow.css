@@ -68,8 +68,8 @@ ul {
 /* 태블릿 */
 @media screen and (max-width : 710px) {
     .Slideshowul {
-        width: 100%;
-        height: 1000px;
+        /* width: 100%;
+        height: 1000px; */
     }
 
     .Slideshowli1 {

@@ -9,7 +9,7 @@
     padding: 10px;
 }
 
-.UnityPagelogo {
+/* .UnityPagelogo {
     padding: 40px 0px 0px 0px;
     width: 300px;
 }
@@ -25,7 +25,6 @@ input {
 
 .Loginbutton {
     background-color: #23ad96;
-    /* border: none; */
     font-size: 17px;
     width: 290px;
     border-radius: 8px;
@@ -37,5 +36,4 @@ input {
 .Loginbutton:hover {
     background-color: #52c2af;
     border-color: rgb(236, 236, 236);
-    /* border: none; */
-}
+} */
