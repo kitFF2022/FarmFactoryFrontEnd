@@ -3,6 +3,7 @@ import SimpleImageSlider from "react-simple-image-slider";
 import './Slideshow.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
 
+
 class Slideshow extends React.Component {
     constructor(props) {
         super();
@@ -21,7 +22,7 @@ class Slideshow extends React.Component {
                 caption: 'Slide 3'
             }],
         }
-        if (window.innerWidth < 500) {
+        if (window.innerWidth < 501) {
             return (this.state.width = window.innerWidth - 35, this.state.height = (window.innerWidth - 35) * 0.7);
         }
         else {
@@ -45,21 +46,18 @@ class Slideshow extends React.Component {
                         </ul>
                     </li>
                     <li className='Slideshowli2'>
-                        <div class="SlideFrame">
-                            <SimpleImageSlider
-                                width={this.state.width}
-                                height={this.state.height}
-                                images={this.state.images}
-                                showBullets={true}
-                                showNavs={true}
-                                autoPlay={true}
-                                useGPURender={true}
-                            />
-                        </div>
+                        <SimpleImageSlider
+                            width={this.state.width}
+                            height={this.state.height}
+                            images={this.state.images}
+                            showBullets={true}
+                            showNavs={true}
+                            autoPlay={true}
+                            useGPURender={true}
+                        />
                     </li>
                 </ul>
-                {window.onresize = function () { document.location.reload(); }}
             </div>
         )
     }
-} export default Slideshow
+} export default Slideshow;
