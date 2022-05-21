@@ -1,19 +1,19 @@
-
-.Webtextbox >.Webimg {
+.Webtextbox>.Webimg {
     padding: 40px;
     float: left;
     width: 45%;
-    min-width: 360px;
+    min-width: 240px;
     max-width: 35%;
     max-width: 480px;
 }
+
 /* .Webtextbox > div{
     vertical-align: middle;
     padding: 0px 100px 0px 100px;
     word-break: keep-all;
 } */
 
-.Webtextbox > .h1{
+.Webtextbox>.h1 {
     font-weight: 400;
     /* word-break: keep-all; */
     font-size: 50px;
@@ -22,19 +22,62 @@
     font-weight: normal;
     font-style: normal;
     position: relative;
-    Top : 10px;
+    Top: 10px;
     left: 40px;
 }
 
-.Webtextbox > .Webtext{
+.Webtextbox>.Webtext {
     position: relative;
-    Top : 10px;
+    Top: 10px;
     left: 40px;
     color: #555555;
     font-family: 'GmarketSansLight';
     font-weight: normal;
     font-style: normal;
-    
+
     word-break: keep-all;
     /* padding: 0px 16px 0px 16px; */
+}
+
+@media screen and (max-width : 500px) {
+    .Webtextbox>.Webimg {
+        padding: 0px;
+        float: left;
+        width: 90%;
+        /* min-width: 360px; */
+        max-width: 35%;
+        max-width: 480px;
+    }
+
+    /* .Webtextbox > div{
+        vertical-align: middle;
+        padding: 0px 100px 0px 100px;
+        word-break: keep-all;
+    } */
+
+    .Webtextbox>.h1 {
+        font-weight: 400;
+        /* word-break: keep-all; */
+        font-size: 40px;
+        color: #A3DA8D;
+        font-family: 'NEXON Lv1 Gothic OTF Light';
+        font-weight: normal;
+        font-style: normal;
+        position: relative;
+        Top: 10px;
+        left: 0px;
+    }
+
+    .Webtextbox>.Webtext {
+        position: relative;
+        Top: 10px;
+        left: 0px;
+        color: #555555;
+        font-family: 'GmarketSansLight';
+        font-weight: normal;
+        font-style: normal;
+
+        word-break: keep-all;
+        /* padding: 0px 16px 0px 16px; */
+    }
 }

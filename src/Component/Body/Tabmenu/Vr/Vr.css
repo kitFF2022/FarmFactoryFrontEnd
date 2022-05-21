@@ -49,23 +49,18 @@
     /* padding: 0px 16px 0px 16px; */
 }
 
-@media screen and (max-width : 1052px) {
+@media screen and (max-width : 710px) {
     .Vrtextbox {
-        
         text-align: left;
     }
-    .Vrtextbox> .Vrimg {
-        
+    .Vrtextbox> .Vrimg { 
         float :none;
         padding: 0px;
         width: 90%;
         min-width: 240px;
-        max-width: 400px;
-        
-        
+        max-width: 400px; 
     }
    
-
     .Vrtextbox >.Vrpaddingbox> { 
         position: relative;
         Top : 10px;
@@ -73,7 +68,6 @@
         margin :10px;
         text-align: left;
     }
-    
     .Vrtextbox > .Vrpaddingbox > .h1{
         
         font-weight: 400;
@@ -88,6 +82,43 @@
         position: relative;
         Top : 10px;
         left: 20px;
+        word-break: keep-all;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .Vrtextbox {
+        text-align: left;
+    }
+    .Vrtextbox> .Vrimg {
+        
+        float :none;
+        padding: 0px;
+        width: 90%;
+        min-width: 240px;
+        max-width: 400px;
+    }
+    .Vrtextbox >.Vrpaddingbox> { 
+        position: relative;
+        Top : 10px;
+        left: 100px; 
+        margin :10px;
+        text-align: left;
+    }
+    .Vrtextbox > .Vrpaddingbox > .h1{
+        
+        font-weight: 400;
+        word-break: keep-all;
+        font-size: 40px;
+        color: #A3DA8D;
+        position: relative;
+        Top : 10px;
+        left: 10px;
+    }
+    .Vrtextbox >.Vrpaddingbox> .Vrtext{
+        position: relative;
+        Top : 10px;
+        left: 10px;
         word-break: keep-all;
         
         

@@ -31,8 +31,7 @@ class App extends React.Component {
       <div className="Tabmenuwrap">
       <br/>
         <div className="menuBar">
-          <ul className="tabs">
-            
+          <ul className="tabs">  
             <li className={`${this.state.menu === 0 ? 'active' : ''}`} onClick={() => this.changeMenu(0)}>VR</li>
             <li className={`${this.state.menu === 1 ? 'active' : ''}`} onClick={() => this.changeMenu(1)}>APP</li>
             <li className={`${this.state.menu === 2 ? 'active' : ''}`} onClick={() => this.changeMenu(2)}>WEB</li>

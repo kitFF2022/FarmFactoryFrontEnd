@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'KoPubDotumMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff'); 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
 }
 
 @font-face {
@@ -13,7 +13,7 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
 }
 
-.Apptextbox > .Appimg {
+.Apptextbox>.Appimg {
     padding: 40px;
     float: left;
     width: 45%;
@@ -23,7 +23,7 @@
     max-width: 480px;
 }
 
-.Apptextbox > .h1{
+.Apptextbox>.h1 {
     font-weight: 400;
     word-break: keep-all;
     font-size: 50px;
@@ -32,19 +32,57 @@
     font-weight: normal;
     font-style: normal;
     position: relative;
-    Top : 10px;
+    Top: 10px;
     left: 40px;
 }
 
-.Apptextbox > .Apptext{
+.Apptextbox>.Apptext {
     position: relative;
-    Top : 10px;
+    Top: 10px;
     left: 40px;
     word-break: keep-all;
     color: #555555;
     font-family: 'GmarketSansLight';
     font-weight: normal;
     font-style: normal;
-    
+
     /* padding: 0px 16px 0px 16px; */
+}
+
+@media screen and (max-width : 500px) {
+    .Apptextbox>.Appimg {
+        padding: 0px;
+        float: left;
+        width: 45%;
+        min-width: 240px;
+        max-width: 60%;
+        max-height: 500px;
+        max-width: 480px;
+    }
+    
+    .Apptextbox>.h1 {
+        font-weight: 400;
+        word-break: keep-all;
+        font-size: 40px;
+        color: #A3DA8D;
+        font-family: 'NEXON Lv1 Gothic OTF Light';
+        font-weight: normal;
+        font-style: normal;
+        position: relative;
+        Top: 10px;
+        left: 0px;
+    }
+    
+    .Apptextbox>.Apptext {
+        position: relative;
+        Top: 10px;
+        left: 0px;
+        word-break: keep-all;
+        color: #555555;
+        font-family: 'GmarketSansLight';
+        font-weight: normal;
+        font-style: normal;
+    
+        /* padding: 0px 16px 0px 16px; */
+    }
 }

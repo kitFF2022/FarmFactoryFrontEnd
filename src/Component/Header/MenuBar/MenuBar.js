@@ -7,7 +7,7 @@ import axios from "axios";
 const api = 'http://mmyu.direct.quickconnect.to:8880'
 function MenuBarMenu(props) {
     return (
-        <li><h4 className='MenuBarMenuItem'>{props.name}</h4></li>
+        <li><b><span className='MenuBarMenuItem'>{props.name}</span></b></li>
     );
 }
 
@@ -121,11 +121,6 @@ class MenuBar extends React.Component {
                         <a href='/'>
                             <img src={process.env.PUBLIC_URL + '/img/logo2.png'} alt="logo"></img>
                         </a>
-                    </li>
-                    <li className='MenuBarLiLogoText'>
-                        <div>
-                            {/* Farm Factory */}
-                        </div>
                     </li>
                     <li className='MenuBarLiMenu'>
                         <ul>
