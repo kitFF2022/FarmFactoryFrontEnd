@@ -72,10 +72,6 @@ function Edit_User_Data() {
 }
 //유저 데이터 받아옴
 function get_data() {
-    // var get_profile_Email = document.getElementById('profile_set_email');
-    console.log("응애애");
-
-    // var profile_pic = document.getElementById('profile_pic');
     axios.get(api + "/user/profilePic", {
         responseType: "arraybuffer",
         headers: {

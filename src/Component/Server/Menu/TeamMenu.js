@@ -10,7 +10,39 @@ function Move_Team_Add() {
     window.location.href = "/TeamAdd";
 }
 function Move_Team_Delete() {
-    window.location.href = "/TeamDelete";
+    // window.location.href = "/TeamDelete";
+    if (window.confirm('정말로 현재 팀을 삭제하시겠습니까?') === true) {
+        axios({
+            method: 'delete',
+            url: api + "/team",
+            headers: {
+                Authorization: `Bearer ${access_token}`
+            }
+
+        })
+            .then(function (response) {
+                // response
+                console.log("팀 삭제 성공함")
+                window.location.href = "/TeamMenu";
+                // document.location.reload();
+            }).catch(function (error) {
+                // 오류발생시 실행
+                console.log(error.message);
+                if (error.message === 'Network Error') {
+                    alert('No server response');
+
+                }
+                if (error.message === 'Request failed with status code 404') {
+                    alert('404 error');
+
+                }
+                else {
+                    alert(error.message);
+                }
+            });
+    }
+
+
 }
 function Move_Team_Drop() {
     window.location.href = "/TeamDrop";

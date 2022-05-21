@@ -5,7 +5,7 @@ import React from 'react'
 import Unity, { UnityContent } from "react-unity-webgl";
 
 let unityContent = new UnityContent(
-    "/Build/WebGLTest.json",
+    "/Build/FF-WebGLTestBuild.json",
     "/Build/UnityLoader.js"
 );
 
@@ -23,12 +23,12 @@ class UnityPage extends React.Component {
                 <Header />
                 <div className="UnityWrap">
                     <Unity unityContent={unityContent}
-                    style={{
-                        height: "100%",
-                        width: "90%",
-                        border: "2px solid black",
-                        background: "grey",
-                    }}/>
+                        style={{
+                            height: "100%",
+                            width: "90%",
+                            border: "2px solid black",
+                            background: "grey",
+                        }} />
                 </div>
                 <button onClick={() => page_move()}>testPage 이동</button>
             </div>
