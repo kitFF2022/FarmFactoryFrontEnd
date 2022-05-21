@@ -3,7 +3,9 @@ import SimpleImageSlider from "react-simple-image-slider";
 import './Slideshow.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
 
-
+window.onresize = function () { 
+    document.location.reload(); 
+}
 class Slideshow extends React.Component {
     constructor(props) {
         super();
