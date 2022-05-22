@@ -2,13 +2,21 @@
 
 
 ## start
-### start project with git clone
+```
+git clone
+```
 
-## init 
-### init with npm install
+## init
+```
+npm install
+```
 
 ## run
-### run with npm start
+```
+npm start
+```
 
 ## todo
-### ~~디자인 확정~~
+
+-Team 관련 처리
+-Project 관련 처리
