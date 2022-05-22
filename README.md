@@ -18,5 +18,5 @@ npm start
 
 ## todo
 
--Team 관련 처리
--Project 관련 처리
+- Team 관련 처리  
+- Project 관련 처리
