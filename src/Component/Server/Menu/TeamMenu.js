@@ -5,6 +5,61 @@ import axios from "axios";
 
 const access_token = sessionStorage.getItem('user_token');
 const api = "http://mmyu.direct.quickconnect.to:8880"
+//팀 이미지
+
+const onChangeImg = (e) => {
+    e.preventDefault();
+    const input = document.getElementById('edit_team_pic')
+    if (e.target.files) {
+        const formData = new FormData()
+        formData.append('file', input.files[0])
+        axios({
+            method: 'post',
+            url: api + '/team/profilePic',
+            data: formData,
+            headers: {
+                "Content-Type": "multipart/form-data",
+                Authorization: `Bearer ${access_token}`
+            }
+        })
+            .then(function (response) {
+                console.log(response)
+                console.log("데이터 전송 성공함")
+            })
+    }
+}
+//팀 이미지 삭제 함수
+function Delete_Teamimage() {
+    if (window.confirm('정말로 현재 팀 이미지를 삭제하시겠습니까?') === true) {
+        axios({
+            method: 'delete',
+            url: api + "/team/profilePic",
+            headers: {
+                Authorization: `Bearer ${access_token}`
+            }
+        })
+        .then(function (response) {
+            // response
+            console.log("팀 이미지 삭제 성공함");
+            // window.location.href = "/TeamMenu";
+            // document.location.reload();
+        }).catch(function (error) {
+            // 오류발생시 실행
+            console.log(error.message);
+            if (error.message === 'Network Error') {
+                alert('No server response');
+            }
+            if (error.message === 'Request failed with status code 404') {
+                alert('404 error');
+            }
+            else {
+                alert(error.message);
+            }
+        });
+    }
+    
+}
+
 //팀 추가 이동 함수
 function Move_Team_Add() {
     window.location.href = "/TeamAdd";
@@ -30,7 +85,6 @@ function Move_Team_Delete() {
                 console.log(error.message);
                 if (error.message === 'Network Error') {
                     alert('No server response');
-
                 }
                 if (error.message === 'Request failed with status code 404') {
                     alert('404 error');
@@ -53,10 +107,22 @@ function Move_Team_Edit() {
 
 //팀 데이터 변경 창
 function on_load_team() {
-    console.log("on load team 진입")
-    console.log(access_token)
     // var on_load_team = document.getElementById('on_load_team');
-
+    //팀 이미지 받아오기
+    axios.get(api + "/team/profilePic", {
+        responseType: "arraybuffer",
+        headers: {
+            Authorization: `Bearer ${access_token}`
+        }
+    })
+        .then((response) => {
+            // console.log(response)
+            document.getElementById('team_pic').src = "data:image/png;base64," + btoa(new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), ""));
+        })
+        .catch((error) => {
+            console.error(error)
+        });
+    //팀 정보 받아오기
     axios.get(api + "/team", {
         headers: {
             Authorization: `Bearer ${access_token}`
@@ -80,6 +146,20 @@ class Login extends React.Component {
                 <Header />
                 <div className="Team_editWrap">
                     <img className="Team_editlogo" src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo'></img>
+                    <br />
+                    <img id='team_pic' width="100px" height="100px" role="button" src={process.env.PUBLIC_URL + '/img/user.png'} alt='team_photo'></img>
+                    <br />
+                    <form>
+                        <input
+                            type="file"
+                            id="edit_team_pic"
+                            accept="image/jpeg,image/png"
+                            onChange={onChangeImg}
+                        />
+                        
+                    </form>
+                        <button onClick={Delete_Teamimage}>이미지 삭제</button>
+                    <br />
                     <p>현재 소속된 팀</p><p id='on_load_team'> 없음
                         {on_load_team()}
                     </p>

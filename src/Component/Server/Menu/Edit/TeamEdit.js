@@ -26,7 +26,7 @@ function Edit_Team() {
         .then(function (response) {
             // response
             console.log("데이터 전송 성공함")
-            document.window.location.href = "/TeamMenu";
+            window.location.href = "/TeamMenu";
         }).catch(function (error) {
             // 오류발생시 실행
             console.log(error.message);

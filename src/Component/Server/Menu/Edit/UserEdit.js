@@ -27,7 +27,37 @@ const onChangeImg = (e) => {
             })
     }
 }
-
+//이미지 삭제 함수
+function Delete_image() {
+    if (window.confirm('정말로 현재 이미지를 삭제하시겠습니까?') === true) {
+        axios({
+            method: 'delete',
+            url: api + "/user/profilePic",
+            headers: {
+                Authorization: `Bearer ${access_token}`
+            }
+        })
+        .then(function (response) {
+            // response
+            console.log("이미지 삭제 성공함");
+            // window.location.href = "/UserEdit";
+            // document.location.reload();
+        }).catch(function (error) {
+            // 오류발생시 실행
+            console.log(error.message);
+            if (error.message === 'Network Error') {
+                alert('No server response');
+            }
+            if (error.message === 'Request failed with status code 404') {
+                alert('404 error');
+            }
+            else {
+                alert(error.message);
+            }
+        });
+    }
+    
+}
 //유저 데이터 수정
 function Edit_User_Data() {
     var get_resister_name = document.getElementById('profile_set_name').value;
@@ -56,6 +86,7 @@ function Edit_User_Data() {
         .then(function (response) {
             console.log(response.data)
             console.log("데이터 전송 성공함")
+            window.location.href = "/";
         })
         .catch(function (error) {
             console.error(error)
@@ -121,6 +152,7 @@ class UserEdit extends React.Component {
                             onChange={onChangeImg}
                         />
                     </form>
+                    <button onClick={Delete_image}>이미지 삭제</button>
                     <br />
                     <table>
                         <tbody>
