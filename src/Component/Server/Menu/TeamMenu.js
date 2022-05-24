@@ -25,24 +25,32 @@ const onChangeImg = (e) => {
             .then(function (response) {
                 console.log(response)
                 console.log("데이터 전송 성공함")
+                window.location.reload();
             })
     }
 }
+//팀 이미지 임시 체크
+function temp_Delete_Teamimage() {
+    if (window.confirm('정말로 현재 팀 이미지를 삭제하시겠습니까?') === true) {
+        console.log("응애");
+        Delete_Teamimage();
+    }
+
+}
 //팀 이미지 삭제 함수
 function Delete_Teamimage() {
-    if (window.confirm('정말로 현재 팀 이미지를 삭제하시겠습니까?') === true) {
-        axios({
-            method: 'delete',
-            url: api + "/team/profilePic",
-            headers: {
-                Authorization: `Bearer ${access_token}`
-            }
-        })
+    axios({
+        method: 'delete',
+        url: api + "/team/profilePic",
+        headers: {
+            Authorization: `Bearer ${access_token}`
+        }
+    })
         .then(function (response) {
             // response
             console.log("팀 이미지 삭제 성공함");
-            // window.location.href = "/TeamMenu";
-            // document.location.reload();
+            window.location.href = "/TeamMenu";
+            // window.location.reload();
         }).catch(function (error) {
             // 오류발생시 실행
             console.log(error.message);
@@ -56,8 +64,6 @@ function Delete_Teamimage() {
                 alert(error.message);
             }
         });
-    }
-    
 }
 
 //팀 추가 이동 함수
@@ -77,8 +83,9 @@ function Move_Team_Delete() {
         })
             .then(function (response) {
                 // response
-                console.log("팀 삭제 성공함")
+                console.log("팀 삭제 성공함");
                 window.location.href = "/TeamMenu";
+                Delete_Teamimage();
                 // document.location.reload();
             }).catch(function (error) {
                 // 오류발생시 실행
@@ -156,9 +163,9 @@ class Login extends React.Component {
                             accept="image/jpeg,image/png"
                             onChange={onChangeImg}
                         />
-                        
+
                     </form>
-                        <button onClick={Delete_Teamimage}>이미지 삭제</button>
+                    <button onClick={temp_Delete_Teamimage}>이미지 삭제</button>
                     <br />
                     <p>현재 소속된 팀</p><p id='on_load_team'> 없음
                         {on_load_team()}

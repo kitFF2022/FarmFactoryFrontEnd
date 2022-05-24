@@ -24,6 +24,7 @@ const onChangeImg = (e) => {
             .then(function (response) {
                 console.log(response)
                 console.log("데이터 전송 성공함")
+                window.location.href = "/UserEdit";
             })
     }
 }
@@ -40,7 +41,7 @@ function Delete_image() {
         .then(function (response) {
             // response
             console.log("이미지 삭제 성공함");
-            // window.location.href = "/UserEdit";
+            window.location.href = "/UserEdit";
             // document.location.reload();
         }).catch(function (error) {
             // 오류발생시 실행
