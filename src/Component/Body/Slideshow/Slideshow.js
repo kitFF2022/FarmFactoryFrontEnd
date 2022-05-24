@@ -2,6 +2,8 @@ import React from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
 import './Slideshow.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
+import "aos/dist/aos.css";
+
 
 document.addEventListener('resize', function () {
     window.addEventListener('resize', function () {
@@ -38,8 +40,12 @@ class Slideshow extends React.Component {
         }
     }
     render() {
+        
         return (
-            <div className='Slideshow'>
+            <div className='Slideshow' 
+            data-aos="fade-up"
+            data-aos-easing="linear"
+        data-aos-offset="500">
                 <ul className='Slideshowul'>
                     <li className='Slideshowli1'>
                         <ul className='Slideshowul2'>

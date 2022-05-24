@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Download.css'
 import Loginbutton from '../Loginbutton/Loginbutton';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const Download = () => {
+    useEffect(() => {
+        AOS.init();
+    })
     return (
-        <div className="Download">
+        <div className="Download" 
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-offset="500">
             <br /><br /><br /><br /><br />
             <img src='/img/img1.jpg' id='sec3' alt="VR 사진">
             </img>

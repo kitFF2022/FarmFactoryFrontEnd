@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Tabmenu.css';
 import Vr from './Vr/Vr';
 import Application from './Application/Application';
 import Web from './Web/Web';
 import Loginbutton from '../Loginbutton/Loginbutton';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const menuList = {
@@ -28,10 +29,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="Tabmenuwrap">
-      <br/>
+      <div className="Tabmenuwrap"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-offset="500">
+        <br />
         <div className="menuBar">
-          <ul className="tabs">  
+          <ul className="tabs">
             <li className={`${this.state.menu === 0 ? 'active' : ''}`} onClick={() => this.changeMenu(0)}>VR</li>
             <li className={`${this.state.menu === 1 ? 'active' : ''}`} onClick={() => this.changeMenu(1)}>APP</li>
             <li className={`${this.state.menu === 2 ? 'active' : ''}`} onClick={() => this.changeMenu(2)}>WEB</li>
@@ -40,8 +44,8 @@ class App extends React.Component {
         <div className="contentArea">
           {menuList[this.state.menu]}
         </div>
-        <Loginbutton/>
-        
+        <Loginbutton />
+
       </div>
     )
   }

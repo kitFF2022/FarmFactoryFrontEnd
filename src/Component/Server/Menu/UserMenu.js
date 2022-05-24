@@ -31,7 +31,8 @@ function Sign_all_Delete() {
             console.log('계정 삭제');
             sessionStorage.removeItem('user_id');
             sessionStorage.removeItem('user_token');
-            window.location.href = "/";
+            sessionStorage.removeItem('user_pw');
+            // window.location.href = "/";
             
         })
         .catch((error) => {

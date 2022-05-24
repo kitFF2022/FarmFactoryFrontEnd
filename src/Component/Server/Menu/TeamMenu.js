@@ -32,7 +32,6 @@ const onChangeImg = (e) => {
 //팀 이미지 임시 체크
 function temp_Delete_Teamimage() {
     if (window.confirm('정말로 현재 팀 이미지를 삭제하시겠습니까?') === true) {
-        console.log("응애");
         Delete_Teamimage();
     }
 
@@ -55,10 +54,19 @@ function Delete_Teamimage() {
             // 오류발생시 실행
             console.log(error.message);
             if (error.message === 'Network Error') {
-                alert('No server response');
+                alert('422 No server response 서버가 동작하지 않습니다');
             }
             if (error.message === 'Request failed with status code 404') {
-                alert('404 error');
+                alert('404 error 존재하지 않는 페이지 입니다');
+            }
+            if (error.message === 'Request failed with status code 409') {
+                alert('409 error 데이터가 충돌했습니다');
+            }
+            if (error.message === 'Request failed with status code 403') {
+                alert('403 error 잘못된 데이터 입니다');
+            }
+            if (error.message === 'Request failed with status code 500') {
+                alert('500 error 서버문제 입니다');
             }
             else {
                 alert(error.message);
@@ -85,7 +93,7 @@ function Move_Team_Delete() {
                 // response
                 console.log("팀 삭제 성공함");
                 window.location.href = "/TeamMenu";
-                Delete_Teamimage();
+                // Delete_Teamimage(); //현재 필요없음
                 // document.location.reload();
             }).catch(function (error) {
                 // 오류발생시 실행
