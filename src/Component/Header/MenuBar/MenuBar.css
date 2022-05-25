@@ -59,7 +59,7 @@
 }
 
 #profile_div {
-    position: fixed;
+    position: static;
     margin: 0px;
     float: right;
     right: 5px;
