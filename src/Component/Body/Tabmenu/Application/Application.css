@@ -14,13 +14,12 @@
 }
 
 .Apptextbox>.Appimg {
-    padding: 40px;
+    padding: 40px 80px 40px 80px;
     float: left;
-    width: 45%;
-    min-width: 240px;
     max-width: 60%;
     max-height: 500px;
     max-width: 480px;
+    
 }
 
 .Apptextbox>.h1 {

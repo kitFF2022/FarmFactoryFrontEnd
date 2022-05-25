@@ -140,7 +140,7 @@ class MenuBar extends React.Component {
                                 <span id='profile_team'>로그인을</span><br />
                                 <span id='profile_name'>해주세요</span>
                                 <hr />
-                                <button id='log_in_out_button' onClick={() => login_in()}>로그인</button>
+                                <button id='log_in_out_button' background-color='#23ad96' onClick={() => login_in()}>로그인</button>
                             </div>
                         </ul>
                     </li>

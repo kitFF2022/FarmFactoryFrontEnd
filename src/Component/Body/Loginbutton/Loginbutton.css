@@ -4,20 +4,43 @@
     left: 40px;
     right: 20px;
     top: 30px;
-    
+
 }
 
 .designbutton a {
     position: relative;
-    
+
     word-break: keep-all;
     border-radius: 15px;
     padding: 1px 80px 1px 80px;
     font-size: 35px;
     /* min-width: 60px; */
-    background-color: #23ad96;
+    background: linear-gradient(45deg,
+    #1aeba5 0%,
+    #23ad96 100%);
+    /* #23ad96; */
     color: white;
     text-decoration: none;
+}
+
+.designbutton a:hover {
+    background: linear-gradient(90deg,
+    #38eed0 0%,
+    #28ceb2 100%);;
+}
+
+.designbutton a:hover::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #28ceb2;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
 }
 
 @media screen and (max-width : 710px) {
@@ -39,7 +62,7 @@
         border-radius: 15px;
         padding: 1px 10px 1px 10px;
         font-size: 35px;
-        
+
         background-color: #23ad96;
         color: white;
         text-decoration: none;
@@ -50,6 +73,7 @@
         font-style: normal;
     }
 }
+
 @media screen and (max-width : 500px) {
     .designbutton {
         text-align: center;
