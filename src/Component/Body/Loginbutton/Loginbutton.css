@@ -7,29 +7,35 @@
 
 }
 
-.designbutton a {
+.designbutton button {
     position: relative;
-
+    border-color: white;
     word-break: keep-all;
     border-radius: 15px;
     padding: 1px 80px 1px 80px;
     font-size: 35px;
     /* min-width: 60px; */
     background: linear-gradient(45deg,
-    #1aeba5 0%,
-    #23ad96 100%);
+            #1aeba5 0%,
+            #23ad96 100%);
     /* #23ad96; */
     color: white;
     text-decoration: none;
 }
 
-.designbutton a:hover {
+.designbutton button:hover {
     background: linear-gradient(90deg,
-    #38eed0 0%,
-    #28ceb2 100%);;
+            #38eed0 0%,
+            #28ceb2 100%);
+    transform: scale(1.05);
 }
 
-.designbutton a:hover::after {
+.designbutton button:active {
+    transform: scale(0.95);
+}
+
+
+.designbutton button:hover::after {
     content: "";
     width: 30px;
     height: 30px;
@@ -52,7 +58,7 @@
         left: 0px;
     }
 
-    .designbutton a {
+    .designbutton button {
 
         position: relative;
         left: 0px;

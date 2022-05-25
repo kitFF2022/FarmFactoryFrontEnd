@@ -41,7 +41,7 @@
 
 .MenuBarLiMenu>ul>a:hover,
 .MenuBarLiMenu>ul>a:visited:hover {
-
+    font-size: 18px;
     color: rgb(228, 228, 228);
 }
 
@@ -81,9 +81,9 @@
 #profile_div button {
     border-radius: 30px;
     background-color: #afe98e;
-    
+
     background: linear-gradient(90deg,
-            rgba(152, 168, 181, 1) 0%,
+            rgb(196, 208, 218) 0%,
             rgba(152, 168, 181, 1) 100%);
     color: black;
     cursor: pointer;
@@ -96,12 +96,16 @@
     transform: scale(1.1);
 }
 
+#profile_div button:active {
+    transform: scale(0.9);
+}
+
 #profile_div button:hover::after {
     content: "";
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    
+
     border: 6px solid rgba(152, 168, 181, 1);
     position: absolute;
     z-index: -1;
