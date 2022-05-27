@@ -59,7 +59,7 @@
 }
 
 #profile_div {
-    position: static;
+    position: absolute;
     margin: 0px;
     float: right;
     right: 5px;
@@ -72,6 +72,7 @@
     display: none;
     text-align: center;
     border-radius: 15px;
+    z-index: auto;
 }
 
 #profile_div img {
