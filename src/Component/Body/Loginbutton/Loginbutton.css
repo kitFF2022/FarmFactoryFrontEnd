@@ -49,21 +49,23 @@
     animation: ring 1.5s infinite;
 }
 
-@media screen and (max-width : 710px) {
+@media screen and (max-width : 1053px) {
     .designbutton {
-        text-align: left;
+        text-align: center;
         padding: 20px;
         position: relative;
         Top: 0px;
         left: 0px;
+
     }
 
     .designbutton button {
 
         position: relative;
         left: 0px;
-        right: 00px;
+        right: 0px;
         top: 0px;
+        width: 250px;
         word-break: keep-all;
         border-radius: 15px;
         padding: 1px 10px 1px 10px;

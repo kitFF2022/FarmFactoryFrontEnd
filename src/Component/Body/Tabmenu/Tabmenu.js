@@ -31,7 +31,7 @@ class App extends React.Component {
       <div className="Tabmenuwrap"
         data-aos="fade-up"
         data-aos-easing="linear"
-        data-aos-offset="500">
+        data-aos-offset="200">
         <br />
         <div className="menuBar">
           <ul className="tabs">

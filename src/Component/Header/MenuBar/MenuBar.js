@@ -62,11 +62,28 @@ function isLogin() {
                         .catch((error) => {
                             console.error(error)
                         })
-
-
                 }
-                profile_team.innerText = "팀:" + res.data.message.Team;
                 profile_name.innerText = "이름:" + res.data.message.Name;
+                //profile_team.innerText = "팀:" + res.data.message.Team;
+                if (res.data.message.Team === "True") {
+                    axios.get(api + "/team", {
+                        headers: {
+                            Authorization: `Bearer ${access_token}`
+                        }
+                    })
+                        .then((res) => {
+                            console.log(res.data.message)
+                            profile_team.innerText = "팀:" + res.data.message.Name;
+
+                        })
+                        .catch((error) => {
+                            console.error(error)
+                        })
+                }
+                else{
+                    profile_team.innerText = "팀: 없음" 
+                }
+
             })
             .catch((error) => {
                 console.error(error)

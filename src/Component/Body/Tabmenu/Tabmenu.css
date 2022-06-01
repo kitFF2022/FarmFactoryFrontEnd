@@ -1,63 +1,71 @@
 .Tabmenuwrap {
-    background-color: #f2f2f2;
+    background-color: #ececec;
     padding: 0px 0% 0px 0%;
+
     width: 100%;
     height: 780px;
 }
-.menuBar{
+
+.menuBar {
     /* padding: 1rem; */
-    
+
     width: 100%;
     margin-bottom: 1rem;
     text-align: center;
-    left : 50%;
+    left: 50%;
     right: 50%;
 }
+
 .tabs {
     position: relative;
-    Top : 0px;
+    Top: 0px;
     bottom: 0px;
     /* padding: 0px 200px 0px 200px; */
 }
-.tabs li{
-    
+
+.tabs li {
+
     font-size: 35px;
     font-weight: bold;
     display: inline-block;
     color: #57CC99;
     letter-spacing: 1px;
-   
+
     padding: 3px 20px 3px 20px;
-    margin: 0px 10% 0px 10%;;
+    margin: 0px 10% 0px 10%;
+    ;
 }
 
-.tabs li:hover{
+.tabs li:hover {
     transform: scale(1.15);
-}    
+}
 
-.tabs li:hover:after{
+.tabs li:hover:after {
     transform: scaleX(1);
 }
 
-.tabs li:after{
+.tabs li:after {
     /* display:block;
     content: '';
     border-bottom: solid 3px green;  
     transform: scaleX(0);   */
     transition: transform 100ms ease-in-out;
 }
-.tabs li.active{
+
+.tabs li.active {
     color: white;
     height: 100%;
     background-color: #8ad5c3;
     border-radius: 15px;
-    transform: scale(1.30);   
+    transform: scale(1.30);
     transition: transform 100ms ease-in-out;
 }
-.tabs li.active:after:hover{
-    transform: scale(1.3); 
+
+.tabs li.active:after:hover {
+    transform: scale(1.3);
     transform: scaleX(1);
 }
+
 @media screen and (max-width : 1053px) {
     .Tabmenuwrap {
         background-color: #f2f2f2;
@@ -65,24 +73,46 @@
         width: 100%;
         height: 780px;
     }
+.Tabmenuwrap aos-init aos-animate{
+
 }
+    .tabs li {
+
+        font-size: 30px;
+        font-weight: bold;
+        display: inline-block;
+        color: #57CC99;
+        padding: 3px 20px 3px 20px;
+        margin: 0px 20% 0px 20%;
+
+    }
+
+    .contentArea {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width : 500px) {
     .Tabmenuwrap {
         background-color: #f2f2f2;
-        padding: 0px 0% 0px 0%;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0% 0px 0%;
         width: 100%;
         height: 780px;
     }
-    .tabs li{
-    
+
+    .tabs li {
+
         font-size: 25px;
         font-weight: bold;
         display: inline-block;
         color: #57CC99;
         padding: 3px 20px 3px 20px;
-        margin: 0px 20% 0px 20%;;
+        margin: 0px 20% 0px 20%;
+        ;
     }
-    .contentArea { 
+
+    .contentArea {
         text-align: center;
     }
 }

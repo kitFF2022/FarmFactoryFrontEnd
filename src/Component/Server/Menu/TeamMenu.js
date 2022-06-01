@@ -29,7 +29,7 @@ const onChangeImg = (e) => {
             })
     }
 }
-//팀 이미지 임시 체크
+//팀 삭제시 체크
 function temp_Delete_Teamimage() {
     if (window.confirm('정말로 현재 팀 이미지를 삭제하시겠습니까?') === true) {
         Delete_Teamimage();
@@ -78,6 +78,7 @@ function Delete_Teamimage() {
 function Move_Team_Add() {
     window.location.href = "/TeamAdd";
 }
+
 function Move_Team_Delete() {
     // window.location.href = "/TeamDelete";
     if (window.confirm('정말로 현재 팀을 삭제하시겠습니까?') === true) {
@@ -99,11 +100,19 @@ function Move_Team_Delete() {
                 // 오류발생시 실행
                 console.log(error.message);
                 if (error.message === 'Network Error') {
-                    alert('No server response');
+                    alert('422 No server response 서버가 동작하지 않습니다');
                 }
                 if (error.message === 'Request failed with status code 404') {
-                    alert('404 error');
-
+                    alert('404 error 존재하지 않는 페이지 입니다');
+                }
+                if (error.message === 'Request failed with status code 409') {
+                    alert('409 error 데이터가 충돌했습니다');
+                }
+                if (error.message === 'Request failed with status code 403') {
+                    alert('403 error 잘못된 데이터 입니다');
+                }
+                if (error.message === 'Request failed with status code 500') {
+                    alert('500 error 서버문제 입니다');
                 }
                 else {
                     alert(error.message);
@@ -118,6 +127,9 @@ function Move_Team_Drop() {
 }
 function Move_Team_Edit() {
     window.location.href = "/TeamEdit";
+}
+function Move_Team_Invite() {
+    window.location.href = "/TeamInvite";
 }
 
 //팀 데이터 변경 창
@@ -134,9 +146,9 @@ function on_load_team() {
             // console.log(response)
             document.getElementById('team_pic').src = "data:image/png;base64," + btoa(new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), ""));
         })
-        .catch((error) => {
-            console.error(error)
-        });
+        // .catch((error) => {
+        //     // console.error(error)
+        // });
     //팀 정보 받아오기
     axios.get(api + "/team", {
         headers: {
@@ -179,13 +191,16 @@ class Login extends React.Component {
                         {on_load_team()}
                     </p>
                     <p><button className="Loginbutton" type="button"
-                        onClick={Move_Team_Add}>팀 추가</button></p>
+                        onClick={Move_Team_Add}>팀 생성 (HOST)</button></p>
                     <p><button className="Loginbutton" type="button"
-                        onClick={Move_Team_Edit}>팀 수정</button></p>
+                        onClick={Move_Team_Edit}>팀 이름 수정 (HOST)</button></p>
                     <p><button className="Loginbutton" type="button"
-                        onClick={Move_Team_Delete}>팀 삭제</button></p>
+                        onClick={Move_Team_Delete}>팀 삭제 (HOST)</button></p>
                     <p><button className="Loginbutton" type="button"
-                        onClick={Move_Team_Drop}>팀 탈퇴</button></p>
+                        onClick={Move_Team_Invite}>팀 초대 (HOST)</button></p>
+                    <p><button className="Loginbutton" type="button"
+                        onClick={Move_Team_Drop}>소속 팀 탈퇴 (GUEST)</button></p>
+                    
                 </div>
             </div>
         );

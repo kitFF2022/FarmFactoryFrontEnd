@@ -13,7 +13,7 @@ const Download = () => {
         <div className="Download"
             data-aos="fade-up"
             data-aos-easing="linear"
-            data-aos-offset="500">
+            data-aos-offset="200">
             <br /><br /><br /><br /><br />
             <img src='/img/smart-farming-with-agriculture-iot.jpg' id='sec3' alt="VR 사진">
             </img>
@@ -26,8 +26,9 @@ const Download = () => {
                 설계를 더욱더 손쉽게 프로젝트로!
             </span>
             <Loginbutton />
-            <br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br />
+            <br /><br />
+            {/* <br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /> */}
         </div>
 
     )

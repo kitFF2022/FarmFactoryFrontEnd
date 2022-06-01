@@ -12,16 +12,16 @@
     font-style: normal;
 }
 
-.Vrtextbox> .Vrimg {
+.Vrtextbox>.Vrimg {
     padding: 40px;
     float: left;
-    width: 65vh; 
+    width: 50%;
     min-width: 240px;
-    max-width: 70vh;
-    max-width: 480px;
+    /* max-width: 70vh; */
+    max-width: 600px;
 }
 
-.Vrtextbox > .Vrpaddingbox > .h1{
+.Vrtextbox>.Vrpaddingbox>.h1 {
     font-weight: 400;
     /* word-break: keep-all; */
     font-size: 50px;
@@ -30,57 +30,64 @@
     font-weight: normal;
     font-style: normal;
     position: relative;
-    Top : 10px;
-    left: 40px; 
-    
+    Top: 10px;
+    left: 40px;
+
 
 }
 
-.Vrtextbox >.Vrpaddingbox> .Vrtext{
+.Vrtextbox>.Vrpaddingbox>.Vrtext {
     position: relative;
-    Top : 10px;
+    Top: 10px;
     left: 40px;
     word-break: keep-all;
     color: #555555;
     font-family: 'GmarketSansLight';
     font-weight: normal;
     font-style: normal;
-    
+
     /* padding: 0px 16px 0px 16px; */
 }
 
-@media screen and (max-width : 710px) {
+@media screen and (max-width : 1053px) {
     .Vrtextbox {
         text-align: left;
     }
-    .Vrtextbox> .Vrimg { 
-        float :none;
+
+    .Vrtextbox>.Vrimg {
+        float: auto;
         padding: 0px;
-        width: 90%;
+        width: 60%;
         min-width: 240px;
-        max-width: 400px; 
+        max-width: 400px;
     }
-   
-    .Vrtextbox >.Vrpaddingbox> { 
+
+    .Vrtextbox>.Vrpaddingbox> {
         position: relative;
-        Top : 10px;
-        left: 100px; 
-        margin :10px;
-        text-align: left;
+        /* Top: 10px;
+        left: 100px;
+        margin: 10px; */
+        Top: 0px;
+        left: 0px;
+        margin: 0px;
+        text-align: center;
     }
-    .Vrtextbox > .Vrpaddingbox > .h1{
-        
+
+    .Vrtextbox>.Vrpaddingbox>.h1 {
+
         font-weight: 400;
         word-break: keep-all;
+        
         font-size: 50px;
         color: #A3DA8D;
         position: relative;
-        Top : 10px;
+        Top: 10px;
         left: 20px;
     }
-    .Vrtextbox >.Vrpaddingbox> .Vrtext{
+
+    .Vrtextbox>.Vrpaddingbox>.Vrtext {
         position: relative;
-        Top : 10px;
+        Top: 10px;
         left: 20px;
         word-break: keep-all;
     }
@@ -90,37 +97,41 @@
     .Vrtextbox {
         text-align: left;
     }
-    .Vrtextbox> .Vrimg {
-        
-        float :none;
+
+    .Vrtextbox>.Vrimg {
+
+        float: none;
         padding: 0px;
         width: 90%;
         min-width: 240px;
         max-width: 400px;
     }
-    .Vrtextbox >.Vrpaddingbox> { 
+
+    .Vrtextbox>.Vrpaddingbox> {
         position: relative;
-        Top : 10px;
-        left: 100px; 
-        margin :10px;
+        Top: 10px;
+        left: 100px;
+        margin: 10px;
         text-align: left;
     }
-    .Vrtextbox > .Vrpaddingbox > .h1{
-        
+
+    .Vrtextbox>.Vrpaddingbox>.h1 {
+
         font-weight: 400;
         word-break: keep-all;
         font-size: 40px;
         color: #A3DA8D;
         position: relative;
-        Top : 10px;
+        Top: 10px;
         left: 10px;
     }
-    .Vrtextbox >.Vrpaddingbox> .Vrtext{
+
+    .Vrtextbox>.Vrpaddingbox>.Vrtext {
         position: relative;
-        Top : 10px;
+        Top: 10px;
         left: 10px;
         word-break: keep-all;
-        
-        
+
+
     }
 }

@@ -38,26 +38,41 @@ function Delete_image() {
                 Authorization: `Bearer ${access_token}`
             }
         })
-        .then(function (response) {
-            // response
-            console.log("이미지 삭제 성공함");
-            window.location.href = "/UserEdit";
-            // document.location.reload();
-        }).catch(function (error) {
-            // 오류발생시 실행
-            console.log(error.message);
-            if (error.message === 'Network Error') {
-                alert('No server response');
-            }
-            if (error.message === 'Request failed with status code 404') {
-                alert('404 error');
-            }
-            else {
-                alert(error.message);
-            }
-        });
+            .then(function (response) {
+                // response
+                console.log("이미지 삭제 성공함");
+                window.location.href = "/UserEdit";
+                // document.location.reload();
+            }).catch(function (error) {
+                // 오류발생시 실행
+                console.log(error.message);
+                if (error.message === 'Network Error') {
+                    alert('422 No server response 서버가 동작하지 않습니다');
+                }
+                if (error.message === 'Request failed with status code 404') {
+                    alert('404 error 존재하지 않는 페이지 입니다');
+                }
+                if (error.message === 'Request failed with status code 409') {
+                    alert('409 error 데이터가 충돌했습니다');
+                }
+                if (error.message === 'Request failed with status code 403') {
+                    alert('403 error 잘못된 데이터 입니다');
+                }
+                if (error.message === 'Request failed with status code 500') {
+                    alert('500 error 서버문제 입니다');
+                }
+                else {
+                    alert(error.message);
+                }
+            });
     }
-    
+
+}
+//엔터키 입력시
+const enterkey = e => {
+    if (e.key === 'Enter') {
+        Edit_User_Data();
+    }
 }
 //유저 데이터 수정
 function Edit_User_Data() {
@@ -164,17 +179,17 @@ class UserEdit extends React.Component {
                             <tr className="id">
                                 <td><p>이름 : </p></td>
                                 <td><input type="text" id="profile_set_name"
-                                    placeholder="이름" /></td>
+                                    placeholder="이름" onKeyUp={enterkey} /></td>
                             </tr>
                             <tr className="nickname">
                                 <td><p>닉네임 : </p></td>
                                 <td><input type="text" id="profile_set_nick"
-                                    placeholder="닉네임" /></td>
+                                    placeholder="닉네임" onKeyUp={enterkey} /></td>
                             </tr>
                             <tr className="pw">
                                 <td><p>새 비밀번호 : </p></td>
                                 <td><input type="text" id="profile_set_pw"
-                                    placeholder="새 비밀번호를 입력해주세요" /></td>
+                                    placeholder="새 비밀번호를 입력해주세요" onKeyUp={enterkey} /></td>
                             </tr>
                         </tbody>
                     </table>
