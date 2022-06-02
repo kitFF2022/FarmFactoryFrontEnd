@@ -45,7 +45,7 @@ function Sign_all_Delete() {
                     alert('404 error 존재하지 않는 페이지 입니다');
                 }
                 if (error.message === 'Request failed with status code 409') {
-                    alert('409 error 데이터가 충돌했습니다');
+                    alert('409 error 데이터가 충돌했습니다. 팀을 삭제하셨는지 확인해 주세요.');
                 }
                 if (error.message === 'Request failed with status code 403') {
                     alert('403 error 잘못된 데이터 입니다');
