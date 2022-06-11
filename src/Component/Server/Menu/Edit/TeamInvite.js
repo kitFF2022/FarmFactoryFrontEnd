@@ -76,7 +76,7 @@ function User_Search() {
                 alert('422 No server response 서버가 동작하지 않습니다');
             }
             else if (error.message === 'Cannot read properties of undefined (reading `Name`)') {
-                alert('찾으려는 아이디가 존재하지 않습니다.ㅈㅁ');
+                alert('찾으려는 아이디가 존재하지 않습니다.');
             }
             else if (error.message === 'Request failed with status code 404') {
                 alert('404 error 존재하지 않는 페이지 입니다');
