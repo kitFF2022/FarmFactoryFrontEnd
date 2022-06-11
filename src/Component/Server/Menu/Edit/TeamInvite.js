@@ -18,10 +18,11 @@ function Result_Search(response) {
     td1.innerText = response.data.message[0].Name
     td2.innerText = response.data.message[0].Nickname
     td3.innerText = response.data.message[0].Emailaddr
-    if (document.getElementById("user_list").rows.length !== 0) {
+    if (document.getElementById("user_list").rows.length !== 1) {
         document.getElementById("user_list").deleteRow(table.rows.length - 1);
     }
-    // document.getElementById("result_search").detach()
+    // document.getElementById("result_search").detach()\
+
     tr.appendChild(td1)
     tr.appendChild(td2)
     tr.appendChild(td3)
@@ -74,6 +75,9 @@ function User_Search() {
             if (error.message === 'Network Error') {
                 alert('422 No server response 서버가 동작하지 않습니다');
             }
+            else if (error.message === 'Cannot read properties of undefined (reading `Name`)') {
+                alert('찾으려는 아이디가 존재하지 않습니다.ㅈㅁ');
+            }
             else if (error.message === 'Request failed with status code 404') {
                 alert('404 error 존재하지 않는 페이지 입니다');
             }
@@ -119,15 +123,17 @@ class TeamAdd extends React.Component {
                         </tbody>
                     </table>
                     <p><button className="Loginbutton" type="button"
-                        onClick={User_Search}>조회</button></p>
+                        onClick={User_Search} >조회</button></p>
                     <div >
                         <p><b>조회결과</b></p>
                         <div>
                             <table id="user_list">
                                 <thead>
-                                    <th>유저 이름</th>
-                                    <th>유저 닉네임</th>
-                                    <th>이메일(아이디)</th>
+                                    <tr>
+                                        <th>유저 이름</th>
+                                        <th>유저 닉네임</th>
+                                        <th>이메일(아이디)</th>
+                                    </tr>
                                 </thead>
                                 <tbody id="result_search">
 
