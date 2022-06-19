@@ -12,7 +12,7 @@ class Application extends React.Component {
   render() {
     return (
       <div className="Apptextbox">
-        <img className="Appimg" id="Appimg" src='/img/img2.jpg' alt="APP 사진">
+        <img className="Appimg" id="Appimg" src='/img/iphone-1936818.jpg' alt="APP 사진">
         </img>
         <br />
         <span className='h1'>App을 통한<br />농장 설계</span><br />

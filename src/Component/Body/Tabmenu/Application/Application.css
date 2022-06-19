@@ -14,13 +14,12 @@
 }
 
 .Apptextbox>.Appimg {
-    padding: 40px;
+    padding: 40px 80px 40px 80px;
     float: left;
-    width: 45%;
-    min-width: 240px;
-    max-width: 60%;
-    max-height: 500px;
-    max-width: 480px;
+    max-width: 50%;
+    max-height: 600px;
+    max-width: 600px;
+
 }
 
 .Apptextbox>.h1 {
@@ -49,17 +48,19 @@
     /* padding: 0px 16px 0px 16px; */
 }
 
-@media screen and (max-width : 500px) {
+@media screen and (max-width : 1053px) {
     .Apptextbox>.Appimg {
         padding: 0px;
         float: left;
-        width: 45%;
+        height: 30%;
         min-width: 240px;
-        max-width: 60%;
-        max-height: 500px;
-        max-width: 480px;
+        max-height: 400px;
+        padding: 20px 40px 20px 40px;
     }
-    
+
+    .Apptextbox{
+        text-align: left;
+    }
     .Apptextbox>.h1 {
         font-weight: 400;
         word-break: keep-all;
@@ -72,7 +73,7 @@
         Top: 10px;
         left: 0px;
     }
-    
+
     .Apptextbox>.Apptext {
         position: relative;
         Top: 10px;
@@ -82,7 +83,45 @@
         font-family: 'GmarketSansLight';
         font-weight: normal;
         font-style: normal;
-    
+
+        /* padding: 0px 16px 0px 16px; */
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .Apptextbox>.Appimg {
+        padding: 0px;
+        float: left;
+        width: 45%;
+        min-width: 240px;
+        max-width: 60%;
+        max-height: 500px;
+        max-width: 480px;
+    }
+
+    .Apptextbox>.h1 {
+        font-weight: 400;
+        word-break: keep-all;
+        font-size: 40px;
+        color: #A3DA8D;
+        font-family: 'NEXON Lv1 Gothic OTF Light';
+        font-weight: normal;
+        font-style: normal;
+        position: relative;
+        Top: 10px;
+        left: 0px;
+    }
+
+    .Apptextbox>.Apptext {
+        position: relative;
+        Top: 10px;
+        left: 0px;
+        word-break: keep-all;
+        color: #555555;
+        font-family: 'GmarketSansLight';
+        font-weight: normal;
+        font-style: normal;
+
         /* padding: 0px 16px 0px 16px; */
     }
 }

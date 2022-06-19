@@ -24,10 +24,56 @@ const onChangeImg = (e) => {
             .then(function (response) {
                 console.log(response)
                 console.log("데이터 전송 성공함")
+                window.location.href = "/UserEdit";
             })
     }
 }
+//이미지 삭제 함수
+function Delete_image() {
+    if (window.confirm('정말로 현재 이미지를 삭제하시겠습니까?') === true) {
+        axios({
+            method: 'delete',
+            url: api + "/user/profilePic",
+            headers: {
+                Authorization: `Bearer ${access_token}`
+            }
+        })
+            .then(function (response) {
+                // response
+                console.log("이미지 삭제 성공함");
+                window.location.href = "/UserEdit";
+                // document.location.reload();
+            }).catch(function (error) {
+                // 오류발생시 실행
+                console.log(error.message);
+                if (error.message === 'Network Error') {
+                    alert('422 No server response 서버가 동작하지 않습니다');
+                }
+                if (error.message === 'Request failed with status code 404') {
+                    alert('404 error 존재하지 않는 페이지 입니다');
+                }
+                if (error.message === 'Request failed with status code 409') {
+                    alert('409 error 데이터가 충돌했습니다');
+                }
+                if (error.message === 'Request failed with status code 403') {
+                    alert('403 error 잘못된 데이터 입니다');
+                }
+                if (error.message === 'Request failed with status code 500') {
+                    alert('500 error 서버문제 입니다');
+                }
+                else {
+                    alert(error.message);
+                }
+            });
+    }
 
+}
+//엔터키 입력시
+const enterkey = e => {
+    if (e.key === 'Enter') {
+        Edit_User_Data();
+    }
+}
 //유저 데이터 수정
 function Edit_User_Data() {
     var get_resister_name = document.getElementById('profile_set_name').value;
@@ -56,6 +102,7 @@ function Edit_User_Data() {
         .then(function (response) {
             console.log(response.data)
             console.log("데이터 전송 성공함")
+            window.location.href = "/";
         })
         .catch(function (error) {
             console.error(error)
@@ -72,10 +119,6 @@ function Edit_User_Data() {
 }
 //유저 데이터 받아옴
 function get_data() {
-    // var get_profile_Email = document.getElementById('profile_set_email');
-    console.log("응애애");
-
-    // var profile_pic = document.getElementById('profile_pic');
     axios.get(api + "/user/profilePic", {
         responseType: "arraybuffer",
         headers: {
@@ -125,6 +168,7 @@ class UserEdit extends React.Component {
                             onChange={onChangeImg}
                         />
                     </form>
+                    <button onClick={Delete_image}>이미지 삭제</button>
                     <br />
                     <table>
                         <tbody>
@@ -135,17 +179,17 @@ class UserEdit extends React.Component {
                             <tr className="id">
                                 <td><p>이름 : </p></td>
                                 <td><input type="text" id="profile_set_name"
-                                    placeholder="이름" /></td>
+                                    placeholder="이름" onKeyUp={enterkey} /></td>
                             </tr>
                             <tr className="nickname">
                                 <td><p>닉네임 : </p></td>
                                 <td><input type="text" id="profile_set_nick"
-                                    placeholder="닉네임" /></td>
+                                    placeholder="닉네임" onKeyUp={enterkey} /></td>
                             </tr>
                             <tr className="pw">
                                 <td><p>새 비밀번호 : </p></td>
                                 <td><input type="text" id="profile_set_pw"
-                                    placeholder="새 비밀번호를 입력해주세요" /></td>
+                                    placeholder="새 비밀번호를 입력해주세요" onKeyUp={enterkey} /></td>
                             </tr>
                         </tbody>
                     </table>

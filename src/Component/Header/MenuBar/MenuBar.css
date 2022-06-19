@@ -41,7 +41,7 @@
 
 .MenuBarLiMenu>ul>a:hover,
 .MenuBarLiMenu>ul>a:visited:hover {
-
+    font-size: 18px;
     color: rgb(228, 228, 228);
 }
 
@@ -59,15 +59,77 @@
 }
 
 #profile_div {
-    position: fixed;
+    position: absolute;
+    margin: 0px;
+    float: right;
     right: 5px;
     width: 200px;
-    background-color: grey;
+    background-color: rgba(211, 223, 227, 1);
+    color: rgb(0, 0, 0);
     border-style: solid;
+    border-color: white;
+    border-width: 4px;
     display: none;
     text-align: center;
-
+    border-radius: 15px;
+    z-index: auto;
 }
+
+#profile_div img {
+    border-radius: 30px;
+}
+
+#profile_div button {
+    border-radius: 30px;
+    background-color: #afe98e;
+
+    background: linear-gradient(90deg,
+            rgb(196, 208, 218) 0%,
+            rgba(152, 168, 181, 1) 100%);
+    color: black;
+    cursor: pointer;
+    border: none;
+    box-shadow: 12px 12px 24px rgba(152, 168, 181, 0.64);
+    transition: 0.3s;
+}
+
+#profile_div button:hover {
+    transform: scale(1.1);
+}
+
+#profile_div button:active {
+    transform: scale(0.9);
+}
+
+#profile_div button:hover::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+
+    border: 6px solid rgba(152, 168, 181, 1);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
 
 @media screen and (max-width : 500px) {
     .MenuBarLiLogo {
@@ -92,7 +154,7 @@
 
     .MenuBarLiMenu ul {
         padding: 0px;
-        
+
     }
 
     .MenuBarLiUser {

@@ -52,6 +52,7 @@
     }
     table tbody tr td p{
         width: 110px;
+        text-align: center;
     }
     table tbody tr td{
         padding: 0;
