@@ -1,0 +1,53 @@
+.MapWrap {
+    text-align: left;
+    padding: 0px 60px 0px 60px;
+    margin-bottom: 25%;
+
+}
+
+.MapWrap>.h1 {
+    position: relative;
+    Top: 10px;
+    left: 40px;
+    word-break: keep-all;
+    font-size: 50px;
+    color: #98d680;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.MapWrap>.h2 {
+    position: relative;
+    Top: 10px;
+    left: 40px;
+    font-size: 40px;
+    color: #4EC993;
+    letter-spacing: 4px;
+    font-family: 'KoPubDotumMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.MapWrap>span {
+    position: relative;
+    Top: 10px;
+    left: 40px;
+    word-break: keep-all;
+    font-size: 18px;
+    color: #555555;
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.MapWrap>#map {
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    display: block;
+    vertical-align: middle;
+}

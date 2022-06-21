@@ -17,6 +17,7 @@ import UnityPage from './Component/Unity/UnityPage';
 import TestUnityPage from './Component/Unity/TestUnityPage';
 import Unitychecklogin from './Component/Unity/Unitychecklogin';
 import Servicechecklogin from './Component/Server/Servicechecklogin';
+import Location from './Component/GPS/Location';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/Servicechecklogin" element={<Servicechecklogin />} />
         <Route path="/UnityPage" element={<UnityPage />} />
         <Route path="/TestUnityPage" element={<TestUnityPage />} />
+        <Route path="/Location" element={<Location />} />
       </Routes>
 
     </div>

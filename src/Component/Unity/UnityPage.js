@@ -7,7 +7,7 @@ import Unity, { UnityContent } from "react-unity-webgl";
 // SendMessage(objectName, methodName, value);
 
 let unityContent = new UnityContent(
-    "/Build/FF-WebGLTestBuild.json",
+    "/Build/realbuild.json",
     "/Build/UnityLoader.js"
 );
 
