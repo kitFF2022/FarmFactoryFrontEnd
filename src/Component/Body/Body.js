@@ -3,7 +3,7 @@ import './Body.css'
 import Tabmenu from './Tabmenu/Tabmenu';
 import Download from './Download/Download';
 import Slideshow from "./Slideshow/Slideshow";
-import Location from '../GPS/Location';
+// import Location from '../GPS/Location';
 
 class Body extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class Body extends React.Component {
                 <Slideshow />
                 <Tabmenu />
                 <Download />
-                <Location/>
+                {/* <Location/> */}
             </div>
         );
     }
